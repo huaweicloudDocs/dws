@@ -10,11 +10,16 @@
 
 ## 调用接口步骤<a name="s30966dd89b974431b4a2dc5585f57591"></a>
 
-1.  发送“POST https://_**IAM的Endpoint**_/v3/auth/tokens”，获取IAM的Endpoint及消息体中的区域名称。
+1.  发送获取用户Token的请求“POST https://_**IAM的Endpoint**_/v3/auth/tokens”。
 
-    请参考[地区和终端节点](http://developer.huaweicloud.com/dev/endpoint)。
+    请求中的参数“IAM的Endpoint”，请参考[地区和终端节点](http://developer.huaweicloud.com/dev/endpoint?IAM)进行获取。
 
-    当服务区域名称为“所有”时，选择IAM“华北-北京一”的Endpoint。
+    获取请求消息体中的以下参数：
+
+    -   user name：用户名称。
+    -   user password：用户登录时的密码。
+    -   domain name：用户所属的企业账户名称。
+    -   project id：项目ID，请参考[获取项目编号](获取项目编号.md)进行获取。假设id是"0215ef11e49d4743be23dd97a1561e91"。
 
     请求内容示例如下： 
 
@@ -40,7 +45,7 @@
         },
         "scope": {
           "project": {
-            "id": "0215ef11e49d4743be23dd97a1561e91" //假设id是"0215ef11e49d4743be23dd97a1561e91"       
+            "id": "0215ef11e49d4743be23dd97a1561e91"      
           }
         }
       }

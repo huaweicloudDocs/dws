@@ -2,7 +2,7 @@
 
 公有云API符合RESTful API设计理论。REST从资源的角度观察整个网络，分布在各处的资源由URI（Uniform Resource Identifier）确定，客户端的应用通过URL（Unified Resource Locator）获取资源。URL的一般格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
 
-公有云接口采用HTTP传输协议，请求/响应报文使用JSON报文，媒体类型表示为Application/json。
+公有云接口采用HTTPS传输协议，请求/响应报文使用JSON报文，媒体类型表示为Application/json。
 
 DWS提供REST（Representational State Transfer）API。
 
@@ -20,7 +20,7 @@ REST API请求/响应对可以分为五个部分：
 
 请求URI由如下部分组成。
 
-**\{URI-scheme\} :// \{**Endpoint**\} / \{resource-path\} ? \{query-string\}**
+**\{URI-scheme\}://\{**Endpoint**\}/\{resource-path\}?\{query-string\}**
 
 尽管请求URI包含在请求消息头中，但大多数语言或框架都要求您从请求消息中单独传递它，所以我们在此单独拿出来强调。
 
@@ -40,7 +40,7 @@ REST API请求/响应对可以分为五个部分：
 </tr>
 <tr id="r0a6857d6fe6d4fce8d6be92ac2d85ac4"><td class="cellrowborder" valign="top" width="24.529999999999998%" headers="mcps1.2.3.1.1 "><p id="a401f5fffdbb74832aefd02ed62b12d06"><a name="a401f5fffdbb74832aefd02ed62b12d06"></a><a name="a401f5fffdbb74832aefd02ed62b12d06"></a>Endpoint</p>
 </td>
-<td class="cellrowborder" valign="top" width="75.47%" headers="mcps1.2.3.1.2 "><p id="p18353144310492"><a name="p18353144310492"></a><a name="p18353144310492"></a>指定承载REST服务端点的服务器域名或IP，从<a href="http://developer.huaweicloud.com/endpoint" target="_blank" rel="noopener noreferrer">地区和终端节点</a>获取。</p>
+<td class="cellrowborder" valign="top" width="75.47%" headers="mcps1.2.3.1.2 "><p id="p18353144310492"><a name="p18353144310492"></a><a name="p18353144310492"></a>指定承载REST服务端点的服务器域名或IP，从<a href="http://developer.huaweicloud.com/endpoint?DWS" target="_blank" rel="noopener noreferrer">地区和终端节点</a>获取。</p>
 </td>
 </tr>
 <tr id="rd2d49f3e7b1d438caf6ab53cce66ec97"><td class="cellrowborder" valign="top" width="24.529999999999998%" headers="mcps1.2.3.1.1 "><p id="a5b75990f065c4b7b896eeb4e557c021b"><a name="a5b75990f065c4b7b896eeb4e557c021b"></a><a name="a5b75990f065c4b7b896eeb4e557c021b"></a>resource-path</p>
@@ -48,7 +48,7 @@ REST API请求/响应对可以分为五个部分：
 <td class="cellrowborder" valign="top" width="75.47%" headers="mcps1.2.3.1.2 "><p id="abf194a57d125451ebfc7409a9229bfe7"><a name="abf194a57d125451ebfc7409a9229bfe7"></a><a name="abf194a57d125451ebfc7409a9229bfe7"></a>资源路径，也即API访问路径。从具体接口的URI模块获取，例如“v3/auth/tokens”。</p>
 </td>
 </tr>
-<tr id="r61990e7fa5204b8faf9a648efad2457b"><td class="cellrowborder" valign="top" width="24.529999999999998%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0091558233_p393966455"><a name="zh-cn_topic_0091558233_p393966455"></a><a name="zh-cn_topic_0091558233_p393966455"></a>Query string</p>
+<tr id="r61990e7fa5204b8faf9a648efad2457b"><td class="cellrowborder" valign="top" width="24.529999999999998%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0091558233_p393966455"><a name="zh-cn_topic_0091558233_p393966455"></a><a name="zh-cn_topic_0091558233_p393966455"></a>query-string</p>
 </td>
 <td class="cellrowborder" valign="top" width="75.47%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0091558233_p159401867517"><a name="zh-cn_topic_0091558233_p159401867517"></a><a name="zh-cn_topic_0091558233_p159401867517"></a>可选参数，例如API版本或资源选择标准。</p>
 </td>
@@ -105,7 +105,7 @@ REST API请求/响应对可以分为五个部分：
     </tbody>
     </table>
 
--   可选的附加请求头字段，如指定的URI和HTTP方法所要求的字段。详细的公共请求消息头字段请参见[表3](#t6dd8d2d3a6694f2fbebfdf810fc86819)，其中请求认证信息请参见[Token认证](Token认证.md)。
+-   可选的附加请求头字段，如指定的URI和HTTP方法所要求的字段。详细的公共请求消息头字段请参见[表3](#t6dd8d2d3a6694f2fbebfdf810fc86819)。
 
     **表 3**  公共请求消息头
 
@@ -120,38 +120,7 @@ REST API请求/响应对可以分为五个部分：
     </th>
     </tr>
     </thead>
-    <tbody><tr id="row42618114350"><td class="cellrowborder" valign="top" width="19.74%" headers="mcps1.2.5.1.1 "><p id="p15264191183511"><a name="p15264191183511"></a><a name="p15264191183511"></a>x-sdk-date</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="26.490000000000002%" headers="mcps1.2.5.1.2 "><p id="p1926814111357"><a name="p1926814111357"></a><a name="p1926814111357"></a>请求的发生时间，格式为(YYYYMMDD'T'HHMMSS'Z')。</p>
-    <p id="p13270111103511"><a name="p13270111103511"></a><a name="p13270111103511"></a>取值为当前系统的GMT时间。</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="19.93%" headers="mcps1.2.5.1.3 "><p id="p202731111356"><a name="p202731111356"></a><a name="p202731111356"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="33.839999999999996%" headers="mcps1.2.5.1.4 "><p id="p1427891113519"><a name="p1427891113519"></a><a name="p1427891113519"></a>20150907T101459Z</p>
-    </td>
-    </tr>
-    <tr id="row6279141193520"><td class="cellrowborder" valign="top" width="19.74%" headers="mcps1.2.5.1.1 "><p id="p19282011183516"><a name="p19282011183516"></a><a name="p19282011183516"></a>Authorization</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="26.490000000000002%" headers="mcps1.2.5.1.2 "><p id="p14286121116357"><a name="p14286121116357"></a><a name="p14286121116357"></a>签名认证信息。</p>
-    <p id="p828714113359"><a name="p828714113359"></a><a name="p828714113359"></a>该值来源于请求签名结果。</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="19.93%" headers="mcps1.2.5.1.3 "><p id="p1329301118353"><a name="p1329301118353"></a><a name="p1329301118353"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="33.839999999999996%" headers="mcps1.2.5.1.4 "><p id="p15298151183510"><a name="p15298151183510"></a><a name="p15298151183510"></a>SDK-HMAC-SHA256 Credential=ZIRRKMTWPTQFQI1WKNKB/20150907//ec2/sdk_request, SignedHeaders=content-type;host;x-sdk-date, Signature=55741b610f3c9fa3ae40b5a8021ebf7ebc2a28a603fc62d25cb3bfe6608e1994</p>
-    </td>
-    </tr>
-    <tr id="row22991911183517"><td class="cellrowborder" valign="top" width="19.74%" headers="mcps1.2.5.1.1 "><p id="p5302121115353"><a name="p5302121115353"></a><a name="p5302121115353"></a>Host</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="26.490000000000002%" headers="mcps1.2.5.1.2 "><p id="p14305171117356"><a name="p14305171117356"></a><a name="p14305171117356"></a>请求的服务器信息，从服务API的URL中获取。值为hostname[:port]。端口缺省时使用默认的端口，https的默认端口为443。</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="19.93%" headers="mcps1.2.5.1.3 "><p id="p18308171133520"><a name="p18308171133520"></a><a name="p18308171133520"></a>否</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="33.839999999999996%" headers="mcps1.2.5.1.4 "><p id="p631131110350"><a name="p631131110350"></a><a name="p631131110350"></a>code.test.com</p>
-    <p id="p231215113351"><a name="p231215113351"></a><a name="p231215113351"></a>or</p>
-    <p id="p63131311193514"><a name="p63131311193514"></a><a name="p63131311193514"></a>code.test.com:443</p>
-    </td>
-    </tr>
-    <tr id="row8315511183512"><td class="cellrowborder" valign="top" width="19.74%" headers="mcps1.2.5.1.1 "><p id="p1319111153520"><a name="p1319111153520"></a><a name="p1319111153520"></a>Content-type</p>
+    <tbody><tr id="row8315511183512"><td class="cellrowborder" valign="top" width="19.74%" headers="mcps1.2.5.1.1 "><p id="p1319111153520"><a name="p1319111153520"></a><a name="p1319111153520"></a>Content-type</p>
     </td>
     <td class="cellrowborder" valign="top" width="26.490000000000002%" headers="mcps1.2.5.1.2 "><p id="p1732715119359"><a name="p1732715119359"></a><a name="p1732715119359"></a>发送的实体的MIME类型。</p>
     </td>
@@ -181,9 +150,10 @@ REST API请求/响应对可以分为五个部分：
     </tr>
     <tr id="row15370141153515"><td class="cellrowborder" valign="top" width="19.74%" headers="mcps1.2.5.1.1 "><p id="p03731811153514"><a name="p03731811153514"></a><a name="p03731811153514"></a>X-Auth-Token</p>
     </td>
-    <td class="cellrowborder" valign="top" width="26.490000000000002%" headers="mcps1.2.5.1.2 "><p id="p6376111163511"><a name="p6376111163511"></a><a name="p6376111163511"></a>用户Token。</p>
+    <td class="cellrowborder" valign="top" width="26.490000000000002%" headers="mcps1.2.5.1.2 "><p id="p6376111163511"><a name="p6376111163511"></a><a name="p6376111163511"></a>用户Token。请参见<a href="Token认证.md">Token认证</a>进行获取。</p>
     </td>
     <td class="cellrowborder" valign="top" width="19.93%" headers="mcps1.2.5.1.3 "><p id="p1138091113518"><a name="p1138091113518"></a><a name="p1138091113518"></a>是</p>
+    <p id="p1179346141516"><a name="p1179346141516"></a><a name="p1179346141516"></a>使用Token认证该字段必选。</p>
     </td>
     <td class="cellrowborder" valign="top" width="33.839999999999996%" headers="mcps1.2.5.1.4 "><p id="p7384111118359"><a name="p7384111118359"></a><a name="p7384111118359"></a>-</p>
     </td>
@@ -276,6 +246,6 @@ REST API请求/响应对可以分为五个部分：
 
 -   REST客户端
 
-    Mozilla、Google都为REST提供了图形化的浏览器插件，发送处理请求消息。针对Firefox，请参见[Firefox REST Client](https://addons.mozilla.org/en-US/firefox/addon/restclient/)。针对Chrome，请参见[Postman Interceptor](https://chrome.google.com/webstore/detail/postman-interceptor/aicmkgpgakddgnaphhhpliifpcfhicfo)。
+    Mozilla、Google都为REST提供了图形化的浏览器插件，发送处理请求消息。针对Firefox，请参见[Firefox REST Client](https://addons.mozilla.org/en-US/firefox/addon/restclient/)。针对Chrome，请参见[Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)。
 
 
