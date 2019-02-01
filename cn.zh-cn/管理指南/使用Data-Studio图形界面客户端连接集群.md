@@ -18,7 +18,7 @@ DataStudio可供下载的版本分为“Windows x86“和“Windows x64“两种
 
 1.  通过访问以下地址登录DWS管理控制台：[https://console.huaweicloud.com/dws](https://console.huaweicloud.com/dws)。
 2.  单击“连接管理“。
-3.  在“下载客户端和驱动“页面，选择对应版本的“Data Studio图形界面客户端“。请根据操作系统类型，选择“Windows x86“或“Windows x64“，单击“下载“，如[图1](#zh-cn_topic_0107187019_fig68962081218)所示。
+3.  在“下载客户端和驱动“页面，选择对应版本的“Data Studio图形界面客户端“。请根据操作系统类型，选择“Windows x86“或“Windows x64“，单击“下载“。
 
     **图 1**  下载客户端<a name="zh-cn_topic_0107187019_fig68962081218"></a>  
     ![](figures/下载客户端.png "下载客户端")

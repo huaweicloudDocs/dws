@@ -18,7 +18,7 @@ DWS支持SSL认证方式的连接，以加密DWS客户端与数据库之间传�
 ## 设置SSL连接<a name="section478703071283"></a>
 
 1.  通过访问以下地址登录DWS管理控制台：[https://console.huaweicloud.com/dws](https://console.huaweicloud.com/dws)。
-2.  单击“集群管理“。
+2.  在左侧导航树中，单击“集群管理“。
 3.  在集群列表中，单击指定集群的名称，然后单击“安全设置“。
 
     默认显示“配置状态“为“已同步“，表示页面显示的是数据库当前最新结果。
