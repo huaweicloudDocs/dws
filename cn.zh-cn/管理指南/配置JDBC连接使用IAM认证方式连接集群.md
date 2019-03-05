@@ -3,7 +3,7 @@
 当使用JDBC应用程序连接集群时，您可以在JDBC连接中配置IAM用户名及其用户凭证等信息，在连接数据库时系统就会自动生成临时数据库凭证，从而成功连接到数据库。
 
 >![](public_sys-resources/icon-note.gif) **说明：**   
->当前只支持DWS提供的配套1.3.1以上版本（包括1.3.1版本）集群的JDBC驱动程序使用IAM认证方式访问数据库。请先参考[下载JDBC或ODBC驱动](下载JDBC或ODBC驱动.md)下载JDBC驱动程序。  
+>当前只支持DWS 1.3.1以上版本（包括1.3.1版本）的集群及其配套的JDBC驱动程序使用IAM认证方式访问数据库。请先参考[下载JDBC或ODBC驱动](下载JDBC或ODBC驱动.md)下载JDBC驱动程序。  
 
 ## 配置JDBC连接参数<a name="section660621017949"></a>
 
@@ -21,7 +21,7 @@
 <td class="cellrowborder" valign="top" width="87%" headers="mcps1.2.3.1.2 "><p id="p21919088194147"><a name="p21919088194147"></a><a name="p21919088194147"></a>gsjdbc4.jar/gsjdbc200.jar数据库连接描述符。示例如下：</p>
 <p id="p19802965194147"><a name="p19802965194147"></a><a name="p19802965194147"></a>jdbc:dws:iam://dws-IAM-demo:cn-north-1/postgres?AccessKeyID=XXXXXXXXXXXXXXXXXXXX&amp;SecretAccessKey=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&amp;DbUser=user_test&amp;AutoCreate=true</p>
 <div class="note" id="note66045482194147"><a name="note66045482194147"></a><a name="note66045482194147"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul22562631194147"></a><a name="ul22562631194147"></a><ul id="ul22562631194147"><li>jdbc:dws:iam是url格式的前缀。</li><li>dws-IAM-demo为数据库集群名称。</li><li>cn-north-1是集群所在的区域。有关DWS的区域信息，请参考<a href="https://developer.huaweicloud.com/endpoint" target="_blank" rel="noopener noreferrer">地区和终端节点</a>。</li><li>postgres是要连接的数据库名。</li><li>AccessKeyID/SecretAccessKey为参数DbUser指定的IAM用户所对应的访问密钥ID和秘密访问密钥。</li><li>DbUser请设置为IAM用户名，注意，当前版本暂不支持IAM用户名中含有中划线的情况。<a name="ul1742725215153"></a><a name="ul1742725215153"></a><ul id="ul1742725215153"><li>如果数据库中已存在DbUser指定的用户，则临时用户凭证具有与现有用户相同的权限。</li><li>如果数据库中不存在DbUser指定的用户，且AutoCreate参数值为true，则自动创建一个以DbUser参数值作为用户名的新用户，默认创建的用户为数据库普通用户。</li></ul>
-</li><li>AutoCreate可以不设置，默认为true。该参数表示是否在数据库中自动创建一个以DbUser参数值作为用户名的数据库用户。<a name="ul1483102224417"></a><a name="ul1483102224417"></a><ul id="ul1483102224417"><li>true表示自动创建。如果用户已存在则不会再创建。</li><li>false表示不会自动创建。如果数据库中不存在DbUser指定的用户名将返回失败。</li></ul>
+</li><li>AutoCreate可以不设置，默认为false。该参数表示是否在数据库中自动创建一个以DbUser参数值作为用户名的数据库用户。<a name="ul1483102224417"></a><a name="ul1483102224417"></a><ul id="ul1483102224417"><li>true表示自动创建。如果用户已存在则不会再创建。</li><li>false表示不会自动创建。如果数据库中不存在DbUser指定的用户名将返回失败。</li></ul>
 </li></ul>
 </div></div>
 </td>
