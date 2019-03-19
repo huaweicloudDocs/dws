@@ -120,7 +120,30 @@ REST API请求/响应对可以分为五个部分：
     </th>
     </tr>
     </thead>
-    <tbody><tr id="row8315511183512"><td class="cellrowborder" valign="top" width="19.74%" headers="mcps1.2.5.1.1 "><p id="p1319111153520"><a name="p1319111153520"></a><a name="p1319111153520"></a>Content-type</p>
+    <tbody><tr id="row42618114350"><td class="cellrowborder" valign="top" width="19.74%" headers="mcps1.2.5.1.1 "><p id="p15264191183511"><a name="p15264191183511"></a><a name="p15264191183511"></a>x-sdk-date</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="26.490000000000002%" headers="mcps1.2.5.1.2 "><p id="p1926814111357"><a name="p1926814111357"></a><a name="p1926814111357"></a>请求的发生时间，格式为(YYYYMMDD'T'HHMMSS'Z')。</p>
+    <p id="p13270111103511"><a name="p13270111103511"></a><a name="p13270111103511"></a>取值为当前系统的GMT时间。</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="19.93%" headers="mcps1.2.5.1.3 "><p id="p202731111356"><a name="p202731111356"></a><a name="p202731111356"></a>否</p>
+    <p id="p102751114359"><a name="p102751114359"></a><a name="p102751114359"></a>使用AK/SK认证时必选。</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="33.839999999999996%" headers="mcps1.2.5.1.4 "><p id="p1427891113519"><a name="p1427891113519"></a><a name="p1427891113519"></a>20150907T101459Z</p>
+    </td>
+    </tr>
+    <tr id="row22991911183517"><td class="cellrowborder" valign="top" width="19.74%" headers="mcps1.2.5.1.1 "><p id="p5302121115353"><a name="p5302121115353"></a><a name="p5302121115353"></a>Host</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="26.490000000000002%" headers="mcps1.2.5.1.2 "><p id="p14305171117356"><a name="p14305171117356"></a><a name="p14305171117356"></a>请求的服务器信息，从服务API的URL中获取。值为hostname[:port]。端口缺省时使用默认的端口，https的默认端口为443。</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="19.93%" headers="mcps1.2.5.1.3 "><p id="p18308171133520"><a name="p18308171133520"></a><a name="p18308171133520"></a>否</p>
+    <p id="p730914111359"><a name="p730914111359"></a><a name="p730914111359"></a>使用AK/SK认证时必选。</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="33.839999999999996%" headers="mcps1.2.5.1.4 "><p id="p631131110350"><a name="p631131110350"></a><a name="p631131110350"></a>code.test.com</p>
+    <p id="p231215113351"><a name="p231215113351"></a><a name="p231215113351"></a>or</p>
+    <p id="p63131311193514"><a name="p63131311193514"></a><a name="p63131311193514"></a>code.test.com:443</p>
+    </td>
+    </tr>
+    <tr id="row8315511183512"><td class="cellrowborder" valign="top" width="19.74%" headers="mcps1.2.5.1.1 "><p id="p1319111153520"><a name="p1319111153520"></a><a name="p1319111153520"></a>Content-type</p>
     </td>
     <td class="cellrowborder" valign="top" width="26.490000000000002%" headers="mcps1.2.5.1.2 "><p id="p1732715119359"><a name="p1732715119359"></a><a name="p1732715119359"></a>发送的实体的MIME类型。</p>
     </td>
