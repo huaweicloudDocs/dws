@@ -18,7 +18,7 @@
 
     ```
     #!/usr/bin/python
-    # -*- coding: UTF-8 -*-
+    # -*- coding: UTF-8 -*- 
     
     import psycopg2
     def CreateTable(connection):
@@ -119,6 +119,8 @@
     ```
 
 3.  按照实际集群信息，修改python\_dws.py文件中的集群公网访问地址、集群端口号、数据库名称、数据库用户名、数据库密码。
+
+    psycopg2接口不提供重试连接的能力，您需要在业务代码中实现重试处理。
 
     ```
     connection = psycopg2.connect(host='10.154.70.231', port='8000', database='postgres', user='dbadmin', password='Bigdata_2013')

@@ -7,7 +7,7 @@ DWS支持在Linux或Windows环境下使用JDBC应用程序连接数据库。应�
 >![](public_sys-resources/icon-note.gif) **说明：**   
 >SSL模式安全性高于普通模式，建议在使用JDBC连接DWS集群时采用SSL模式。  
 
-JDBC接口的使用方法，请参见：[https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/)。
+JDBC接口的使用方法，请自行查阅官方文档。
 
 ## 前提条件<a name="section1584133941514"></a>
 
@@ -16,7 +16,7 @@ JDBC接口的使用方法，请参见：[https://docs.oracle.com/javase/8/docs/t
 
     DWS也支持开源的JDBC驱动程序：PostgreSQL JDBC驱动程序9.3-1103或更高版本。
 
--   已下载SSL证书文件，请参见[下载SSL证书](下载SSL证书.md)。
+-   已下载SSL证书文件，请参见[（可选）下载SSL证书](（可选）下载SSL证书.md)。
 
 ## 使用JDBC连接数据库<a name="section2993721114437"></a>
 
@@ -24,16 +24,14 @@ JDBC接口的使用方法，请参见：[https://docs.oracle.com/javase/8/docs/t
 
 1.  是否采用SSL方式连接DWS集群。
     -   是：
-        1.  为DWS集群开启SSL连接，默认为开启。具体操作，请参见[设置SSL连接](设置SSL连接.md)。
+        1.  为DWS集群开启SSL连接，默认为开启。具体操作，请参见[（可选）设置SSL连接](（可选）设置SSL连接.md)。
         2.  请确认是采用证书认证方式还是密码认证方式。
             -   采用证书认证方式：执行[2](#li55435426144245)。
             -   采用密码认证方式：执行[4](#li19649431459)。
 
-
     -   否：
-        1.  为DWS集群关闭SSL连接，默认为开启。具体操作，请参见[设置SSL连接](设置SSL连接.md)。
+        1.  为DWS集群关闭SSL连接，默认为开启。具体操作，请参见[（可选）设置SSL连接](（可选）设置SSL连接.md)。
         2.  执行[4](#li19649431459)。
-
 
 2.  <a name="li55435426144245"></a>（可选）如果使用Linux环境，使用WinScp工具将SSL证书上传到Linux环境上。
 3.  配置证书以使用SSL加密连接。
@@ -63,7 +61,6 @@ JDBC接口的使用方法，请参见：[https://docs.oracle.com/javase/8/docs/t
 
         **keytool** **-importkeystore** **-deststorepass** _Gauss@MppDB_ **-destkeystore** _client.jks_ **-srckeystore** _client.pkcs12_ **-srcstorepass** _key123_ **-srcstoretype** _PKCS12_ **-alias** _1_
 
-
 4.  <a name="li19649431459"></a>解压已下载的JDBC驱动得到“gsjdbc4.jar“，
 5.  在应用程序的工程中，设置引用Jar包。
 
@@ -78,7 +75,7 @@ JDBC接口的使用方法，请参见：[https://docs.oracle.com/javase/8/docs/t
     <dependency>
         <groupId>com.huaweicloud.dws</groupId>
         <artifactId>huaweicloud-dws-jdbc</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.0</version> 
     </dependency>
     ```
 
@@ -89,9 +86,11 @@ JDBC接口的使用方法，请参见：[https://docs.oracle.com/javase/8/docs/t
     -   在代码中隐含装载：Class.forName\("org.postgresql.Driver"\);
     -   在JVM启动时参数传递：java -Djdbc.drivers=org.postgresql.Driver jdbctest
 
-7.  使用JDBC的数据库连接方法DriverManager.getConnection\(\)。
+7.  调用JDBC的数据库连接方法DriverManager.getConnection\(\)连接DWS数据库。
 
-    此方法支持以下重载：
+    JDBC接口不提供重试连接的能力，您需要在业务代码中实现重试处理。
+
+    DriverManager.getConnection\(\)方法支持以下重载：
 
     -   DriverManager.getConnection\(String url\);
     -   DriverManager.getConnection\(String url, Properties info\);
@@ -100,15 +99,15 @@ JDBC接口的使用方法，请参见：[https://docs.oracle.com/javase/8/docs/t
     **表 1**  数据库连接参数
 
     <a name="zh-cn_topic_0004406724_table51197761"></a>
-    <table><thead align="left"><tr id="zh-cn_topic_0004406724_row61561215"><th class="cellrowborder" valign="top" width="35.23%" id="mcps1.2.3.1.1"><p id="zh-cn_topic_0004406724_p2535073"><a name="zh-cn_topic_0004406724_p2535073"></a><a name="zh-cn_topic_0004406724_p2535073"></a><strong id="b50623360142047"><a name="b50623360142047"></a><a name="b50623360142047"></a>参数</strong></p>
+    <table><thead align="left"><tr id="zh-cn_topic_0004406724_row61561215"><th class="cellrowborder" valign="top" width="16.619999999999997%" id="mcps1.2.3.1.1"><p id="zh-cn_topic_0004406724_p2535073"><a name="zh-cn_topic_0004406724_p2535073"></a><a name="zh-cn_topic_0004406724_p2535073"></a><strong id="b50623360142047"><a name="b50623360142047"></a><a name="b50623360142047"></a>参数</strong></p>
     </th>
-    <th class="cellrowborder" valign="top" width="64.77000000000001%" id="mcps1.2.3.1.2"><p id="zh-cn_topic_0004406724_p33599649"><a name="zh-cn_topic_0004406724_p33599649"></a><a name="zh-cn_topic_0004406724_p33599649"></a><strong id="b6851456142047"><a name="b6851456142047"></a><a name="b6851456142047"></a>描述</strong></p>
+    <th class="cellrowborder" valign="top" width="83.38%" id="mcps1.2.3.1.2"><p id="zh-cn_topic_0004406724_p33599649"><a name="zh-cn_topic_0004406724_p33599649"></a><a name="zh-cn_topic_0004406724_p33599649"></a><strong id="b6851456142047"><a name="b6851456142047"></a><a name="b6851456142047"></a>描述</strong></p>
     </th>
     </tr>
     </thead>
-    <tbody><tr id="zh-cn_topic_0004406724_row42455976"><td class="cellrowborder" valign="top" width="35.23%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0004406724_p57939919"><a name="zh-cn_topic_0004406724_p57939919"></a><a name="zh-cn_topic_0004406724_p57939919"></a>url</p>
+    <tbody><tr id="zh-cn_topic_0004406724_row42455976"><td class="cellrowborder" valign="top" width="16.619999999999997%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0004406724_p57939919"><a name="zh-cn_topic_0004406724_p57939919"></a><a name="zh-cn_topic_0004406724_p57939919"></a>url</p>
     </td>
-    <td class="cellrowborder" valign="top" width="64.77000000000001%" headers="mcps1.2.3.1.2 "><p id="p61624548134633"><a name="p61624548134633"></a><a name="p61624548134633"></a>数据库连接描述符，可以在管理控制台查看，具体步骤请参见<a href="获取集群连接地址.md">获取集群连接地址</a>。</p>
+    <td class="cellrowborder" valign="top" width="83.38%" headers="mcps1.2.3.1.2 "><p id="p61624548134633"><a name="p61624548134633"></a><a name="p61624548134633"></a>数据库连接描述符，可以在管理控制台查看，具体步骤请参见<a href="获取集群连接地址.md">获取集群连接地址</a>。</p>
     <p id="zh-cn_topic_0004406724_p59332072"><a name="zh-cn_topic_0004406724_p59332072"></a><a name="zh-cn_topic_0004406724_p59332072"></a>url的格式如下：</p>
     <p id="p190710141363"><a name="p190710141363"></a><a name="p190710141363"></a>jdbc:postgresql://host:port/database</p>
     <div class="note" id="zh-cn_topic_0004406724_note1343464"><a name="zh-cn_topic_0004406724_note1343464"></a><a name="zh-cn_topic_0004406724_note1343464"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul32509781145934"></a><a name="ul32509781145934"></a><ul id="ul32509781145934"><li>database为要连接的数据库名称。</li><li>host为数据库服务器名称。</li><li>port为数据库服务器端口。</li></ul>
@@ -116,20 +115,20 @@ JDBC接口的使用方法，请参见：[https://docs.oracle.com/javase/8/docs/t
     </div></div>
     </td>
     </tr>
-    <tr id="zh-cn_topic_0004406724_row16695882"><td class="cellrowborder" valign="top" width="35.23%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0004406724_p14273515"><a name="zh-cn_topic_0004406724_p14273515"></a><a name="zh-cn_topic_0004406724_p14273515"></a>info</p>
+    <tr id="zh-cn_topic_0004406724_row16695882"><td class="cellrowborder" valign="top" width="16.619999999999997%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0004406724_p14273515"><a name="zh-cn_topic_0004406724_p14273515"></a><a name="zh-cn_topic_0004406724_p14273515"></a>info</p>
     </td>
-    <td class="cellrowborder" valign="top" width="64.77000000000001%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0004406724_p35914293"><a name="zh-cn_topic_0004406724_p35914293"></a><a name="zh-cn_topic_0004406724_p35914293"></a>数据库连接属性。常用的属性如下：</p>
+    <td class="cellrowborder" valign="top" width="83.38%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0004406724_p35914293"><a name="zh-cn_topic_0004406724_p35914293"></a><a name="zh-cn_topic_0004406724_p35914293"></a>数据库连接属性。常用的属性如下：</p>
     <a name="zh-cn_topic_0004406724_ul60523322"></a><a name="zh-cn_topic_0004406724_ul60523322"></a><ul id="zh-cn_topic_0004406724_ul60523322"><li>user：String类型。表示创建连接的数据库用户。</li><li>password：String类型。表示数据库用户的密码。</li><li>ssl：Boolean类型。表示是否使用SSL连接。</li><li>loglevel：Integer类型。确定对象LogStream或LogWriter对类DriverManager的当前值打印的日志量。目前支持：com.edb.Driver.DEBUG和com.edb.Driver.INFO。如果把参数loglevel的值设定为INFO，那么将只包含少量的日志信息，而如果设定为DEBUG，那么将产生详细的日志信息。</li><li>charSet：String类型。表示在向数据库发送数据或从数据库接收数据时使用到的字符集。</li><li>prepareThreshold：Integer类型。用于确定在转换为服务器端的预备语句之前，要求执行方法PreparedStatement的次数。缺省值是5。</li></ul>
     </td>
     </tr>
-    <tr id="zh-cn_topic_0004406724_row63199906"><td class="cellrowborder" valign="top" width="35.23%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0004406724_p5711640"><a name="zh-cn_topic_0004406724_p5711640"></a><a name="zh-cn_topic_0004406724_p5711640"></a>user</p>
+    <tr id="zh-cn_topic_0004406724_row63199906"><td class="cellrowborder" valign="top" width="16.619999999999997%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0004406724_p5711640"><a name="zh-cn_topic_0004406724_p5711640"></a><a name="zh-cn_topic_0004406724_p5711640"></a>user</p>
     </td>
-    <td class="cellrowborder" valign="top" width="64.77000000000001%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0004406724_p4700076"><a name="zh-cn_topic_0004406724_p4700076"></a><a name="zh-cn_topic_0004406724_p4700076"></a>数据库用户。</p>
+    <td class="cellrowborder" valign="top" width="83.38%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0004406724_p4700076"><a name="zh-cn_topic_0004406724_p4700076"></a><a name="zh-cn_topic_0004406724_p4700076"></a>数据库用户。</p>
     </td>
     </tr>
-    <tr id="zh-cn_topic_0004406724_row58485413"><td class="cellrowborder" valign="top" width="35.23%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0004406724_p66603434"><a name="zh-cn_topic_0004406724_p66603434"></a><a name="zh-cn_topic_0004406724_p66603434"></a>password</p>
+    <tr id="zh-cn_topic_0004406724_row58485413"><td class="cellrowborder" valign="top" width="16.619999999999997%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0004406724_p66603434"><a name="zh-cn_topic_0004406724_p66603434"></a><a name="zh-cn_topic_0004406724_p66603434"></a>password</p>
     </td>
-    <td class="cellrowborder" valign="top" width="64.77000000000001%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0004406724_p22788321"><a name="zh-cn_topic_0004406724_p22788321"></a><a name="zh-cn_topic_0004406724_p22788321"></a>数据库用户的密码。</p>
+    <td class="cellrowborder" valign="top" width="83.38%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0004406724_p22788321"><a name="zh-cn_topic_0004406724_p22788321"></a><a name="zh-cn_topic_0004406724_p22788321"></a>数据库用户的密码。</p>
     </td>
     </tr>
     </tbody>
@@ -248,7 +247,6 @@ JDBC接口的使用方法，请参见：[https://docs.oracle.com/javase/8/docs/t
         ```
         stmt.close();
         ```
-
 
 9.  调用方法close\(\)关闭连接。
 

@@ -18,9 +18,10 @@
 </thead>
 <tbody><tr id="row35428286194147"><td class="cellrowborder" valign="top" width="13%" headers="mcps1.2.3.1.1 "><p id="p23266394194147"><a name="p23266394194147"></a><a name="p23266394194147"></a>url</p>
 </td>
-<td class="cellrowborder" valign="top" width="87%" headers="mcps1.2.3.1.2 "><p id="p21919088194147"><a name="p21919088194147"></a><a name="p21919088194147"></a>gsjdbc4.jar/gsjdbc200.jar数据库连接描述符。示例如下：</p>
+<td class="cellrowborder" valign="top" width="87%" headers="mcps1.2.3.1.2 "><p id="p21919088194147"><a name="p21919088194147"></a><a name="p21919088194147"></a>gsjdbc4.jar/gsjdbc200.jar数据库连接描述符。JDBC接口不提供重试连接的能力，您需要在业务代码中实现重试连接的处理。url示例如下：</p>
 <p id="p19802965194147"><a name="p19802965194147"></a><a name="p19802965194147"></a>jdbc:dws:iam://dws-IAM-demo:cn-north-1/postgres?AccessKeyID=XXXXXXXXXXXXXXXXXXXX&amp;SecretAccessKey=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&amp;DbUser=user_test&amp;AutoCreate=true</p>
-<div class="note" id="note66045482194147"><a name="note66045482194147"></a><a name="note66045482194147"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul22562631194147"></a><a name="ul22562631194147"></a><ul id="ul22562631194147"><li>jdbc:dws:iam是url格式的前缀。</li><li>dws-IAM-demo为数据库集群名称。</li><li>cn-north-1是集群所在的区域。有关DWS的区域信息，请参考<a href="https://developer.huaweicloud.com/endpoint" target="_blank" rel="noopener noreferrer">地区和终端节点</a>。</li><li>postgres是要连接的数据库名。</li><li>AccessKeyID/SecretAccessKey为参数DbUser指定的IAM用户所对应的访问密钥ID和秘密访问密钥。</li><li>DbUser请设置为IAM用户名，注意，当前版本暂不支持IAM用户名中含有中划线的情况。<a name="ul1742725215153"></a><a name="ul1742725215153"></a><ul id="ul1742725215153"><li>如果数据库中已存在DbUser指定的用户，则临时用户凭证具有与现有用户相同的权限。</li><li>如果数据库中不存在DbUser指定的用户，且AutoCreate参数值为true，则自动创建一个以DbUser参数值作为用户名的新用户，默认创建的用户为数据库普通用户。</li></ul>
+<div class="note" id="note66045482194147"><a name="note66045482194147"></a><a name="note66045482194147"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul22562631194147"></a><a name="ul22562631194147"></a><ul id="ul22562631194147"><li>jdbc:dws:iam是url格式的前缀。</li><li>dws-IAM-demo为数据库集群名称。</li><li>cn-north-1是集群所在的区域。<p id="p57681719132012"><a name="p57681719132012"></a><a name="p57681719132012"></a>有关DWS的区域信息，请参考<a href="https://developer.huaweicloud.com/endpoint" target="_blank" rel="noopener noreferrer">地区和终端节点</a>。</p>
+</li><li>postgres是要连接的数据库名。</li><li>AccessKeyID/SecretAccessKey为参数DbUser指定的IAM用户所对应的访问密钥ID和秘密访问密钥。</li><li>DbUser请设置为IAM用户名，注意，当前版本暂不支持IAM用户名中含有中划线的情况。<a name="ul1742725215153"></a><a name="ul1742725215153"></a><ul id="ul1742725215153"><li>如果数据库中已存在DbUser指定的用户，则临时用户凭证具有与现有用户相同的权限。</li><li>如果数据库中不存在DbUser指定的用户，且AutoCreate参数值为true，则自动创建一个以DbUser参数值作为用户名的新用户，默认创建的用户为数据库普通用户。</li></ul>
 </li><li>AutoCreate可以不设置，默认为false。该参数表示是否在数据库中自动创建一个以DbUser参数值作为用户名的数据库用户。<a name="ul1483102224417"></a><a name="ul1483102224417"></a><ul id="ul1483102224417"><li>true表示自动创建。如果用户已存在则不会再创建。</li><li>false表示不会自动创建。如果数据库中不存在DbUser指定的用户名将返回失败。</li></ul>
 </li></ul>
 </div></div>
@@ -41,7 +42,7 @@
 ```
 //以下用例以gsjdbc4.jar为例
 //以下代码将获取数据库连接操作封装为一个接口，可通过给定集群所在的区域、集群名称、AccessKeyID、SecretAccessKey及对应的IAM用户名来连接数据库。
-public static Connection GetConnection(String clustername, String regionname, String AK, String SK, String username)
+public static Connection GetConnection(String clustername, String regionname, String AK, String SK, String username) 
     {
         //驱动类。
         String driver = "org.postgresql.Driver";

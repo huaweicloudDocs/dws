@@ -1,6 +1,6 @@
 # 使用扩展应用pgAdmin4连接集群<a name="dws_01_0098"></a>
 
-DWS集成了扩展应用开源客户端工具pgAdmin4 Web版，用户无需下载pgAdmin4工具和安装，只要在DWS管理控制台为集群添加扩展应用，就可以使用扩展应用pgAdmin4连接集群。该特性目前正在公测中，用户可以提交工单申请公测。
+DWS集成了扩展应用开源客户端工具pgAdmin4 Web版，用户无需下载和安装pgAdmin4工具，只要在DWS管理控制台为集群添加扩展应用，就可以使用扩展应用pgAdmin4连接集群。该特性目前正在公测中，用户可以提交工单申请公测。
 
 通过扩展应用连接集群，只支持通过集群的内网地址或内网域名进行连接，连接时，您必须指定集群连接地址、数据库名称、端口以及数据库用户名和密码。
 
@@ -14,7 +14,7 @@ DWS集成了扩展应用开源客户端工具pgAdmin4 Web版，用户无需下�
 
     -   方向：入方向
     -   协议：必须包含TCP，例如TCP、全部。
-    -   端口范围：设置为DWS集群提供服务的数据库端口，例如“8000”。
+    -   端口：设置为DWS集群提供服务的数据库端口，例如“8000”。
     -   源地址：设置的IP地址需要包含DWS客户端主机的IP地址，例如“192.168.0.10/32”。
 
         **图 1**  入方向的规则<a name="zh-cn_topic_0106894502_fig375721424212"></a>  
@@ -37,9 +37,8 @@ DWS集成了扩展应用开源客户端工具pgAdmin4 Web版，用户无需下�
     -   “应用登录密码“：设置注册的登录密码。
     -   “确认密码“：再次输入密码。
 
-        **图 2**  添加扩展应用<a name="dws_01_0097_fig4816182163513"></a>  
+        **图 2**  添加扩展应用<a name="zh-cn_topic_0107749986_fig1391813131809"></a>  
         ![](figures/添加扩展应用.png "添加扩展应用")
-
 
 6.  单击“确定“，在“扩展应用“页面显示系统开始创建扩展应用。
 
@@ -58,12 +57,12 @@ DWS集成了扩展应用开源客户端工具pgAdmin4 Web版，用户无需下�
 4.  单击“Login“，登录到pgAdmin4 Web客户端。
 5.  在左侧导航栏中，单击“Servers \> Create \> Server“。
 
-    **图 4**  Create Server<a name="dws_01_0090_fig4135152881614"></a>  
+    **图 4**  Create Server<a name="zh-cn_topic_0106894595_fig4135152881614"></a>  
     ![](figures/Create-Server.png "Create-Server")
 
 6.  在创建服务器连接窗口的“General“页签，填写“Name“。
 
-    **图 5**  Create Server - General<a name="dws_01_0090_fig963819507256"></a>  
+    **图 5**  Create Server - General<a name="zh-cn_topic_0106894595_fig963819507256"></a>  
     ![](figures/Create-Server---General.png "Create-Server---General")
 
 7.  在“Connection“页签，填写如下集群相关信息。
@@ -79,7 +78,7 @@ DWS集成了扩展应用开源客户端工具pgAdmin4 Web版，用户无需下�
 
 8.  （可选）在“SSL“页签，填写如下集群相关信息。SSL模式安全性高于普通模式，建议在客户端使用SSL模式。
 
-    下载SSL证书，参见[下载SSL证书](下载SSL证书.md)，解压证书文件到指定路径。
+    下载SSL证书，参见[（可选）下载SSL证书](（可选）下载SSL证书.md)，解压证书文件到指定路径。
 
     -   “SSL mode“：在下拉列表中选择SSL模式：“Allow“，“Prefer“，“Require“，“Disable“，“Verify-CA“\(DWS不支持“Verify-Full“模式\)。如果将“SSL mode“设为“Verify-CA“，则必须选择根证书。
     -   “Client certificate“：单击![](figures/icon_dws_pg_login_set_parm.png)，选择解压目录下的“sslcert\\client.crt“文件。
@@ -88,9 +87,8 @@ DWS集成了扩展应用开源客户端工具pgAdmin4 Web版，用户无需下�
     -   “Certificate revocation list“：（可选）被撤销的数字证书列表。一个由认证中心废除的所有认证的时间戳组成的列表。
     -   “SSL compression“：是否启用证书压缩传送。选择“True“开启压缩传送，选择“False“不启用压缩传送。在本例中选择默认状态“False“。
 
-        **图 7**  Create Server - SSL<a name="dws_01_0090_fig42341644105716"></a>  
+        **图 7**  Create Server - SSL<a name="zh-cn_topic_0106894595_fig42341644105716"></a>  
         ![](figures/Create-Server---SSL.png "Create-Server---SSL")
-
 
 9.  连接配置完成后，单击“Save“。
 

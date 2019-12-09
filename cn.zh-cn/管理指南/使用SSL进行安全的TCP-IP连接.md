@@ -3,9 +3,9 @@
 如果客户端或JDBC/ODBC应用程序要使用SSL连接方式，用户必须在客户端或应用程序代码中配置相关的SSL连接参数。DWS管理控制台提供了客户端所需的SSL证书，该SSL证书包含了客户端所需的默认证书、私钥、根证书以及私钥密码加密文件。请将该SSL证书下载到客户端所在的主机上，然后在客户端中指定证书所在的路径。
 
 >![](public_sys-resources/icon-note.gif) **说明：**   
->使用默认的证书可能存在安全风险，为了提高系统安全性，强烈建议用户定期更换证书以避免被破解的风险。如果需要更换证书，请联系客服人员。  
+>使用默认的证书可能存在安全风险，为了提高系统安全性，强烈建议用户定期更换证书以避免被破解的风险。如果需要更换证书，请联系客服。  
 
-了解SSL证书的更多信息，请参见[下载SSL证书](下载SSL证书.md)。本章节主要介绍以下内容：
+了解SSL证书的更多信息，请参见[（可选）下载SSL证书](（可选）下载SSL证书.md)。本章节主要介绍以下内容：
 
 -   [在gsql客户端配置SSL认证相关的数字证书参数](#zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_s559f387461c440218ff2b33983a69004)
 -   [SSL认证方式及客户端参数介绍](#zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_sf0c701b38d03417b8c969d148cd70223)
@@ -14,18 +14,25 @@
 
 DWS在集群部署完成后，默认已开启SSL认证模式。服务器端证书，私钥以及根证书已经默认配置完成。用户需要配置客户端的相关参数。
 
-1.  登录DWS管理控制台，下载SSL证书，并将SSL证书上传到安装gsql客户端的主机上。
-    1.  请参见[下载SSL证书](下载SSL证书.md)中的步骤，下载SSL证书。
-    2.  使用WinSCP工具将SSL证书“dws\_ssl\_cert.tar.gz”上传到客户端主机，例如，存放到“/home/dbadmin/dws\_ssl/”目录下。
-    3.  使用PuTTY工具远程登录客户端主机。
-    4.  执行以下命令进入SSL证书的存放目录，并解压SSL证书：
+1.  登录DWS管理控制台，进入“连接管理”页面，下载SSL证书。
 
-        **cd /home/dbadmin/dws\_ssl/**
+    关于SSL证书的更多信息，请参见[（可选）下载SSL证书](（可选）下载SSL证书.md)。
 
-        **tar -xvf dws\_ssl\_cert.tar.gz**
+    **图 1**  SSL证书下载<a name="fig6639466014"></a>  
+    ![](figures/SSL证书下载.png "SSL证书下载")
 
+2.  使用文件传输工具（例如WinSCP工具）将SSL证书上传到客户端主机。
 
-2.  在gsql客户端主机上，配置SSL认证相关的数字证书参数。
+    例如，将下载的证书“dws\_ssl\_cert.tar.gz”存放到“/home/dbadmin/dws\_ssl/”目录下。
+
+3.  使用SSH远程连接工具（例如PuTTY）登录gsql客户端主机，然后执行以下命令进入SSL证书的存放目录，并解压SSL证书：
+
+    ```
+    cd /home/dbadmin/dws_ssl/
+    tar -xvf dws_ssl_cert.tar.gz
+    ```
+
+4.  在gsql客户端主机上，执行export命令，配置SSL认证相关的数字证书参数。
 
     SSL认证有两种认证方式：双向认证和单向认证，认证方式不同用户所需配置的客户端环境变量也不同，详细介绍请参见[SSL认证方式及客户端参数介绍](#zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_sf0c701b38d03417b8c969d148cd70223)。
 
@@ -45,11 +52,11 @@ DWS在集群部署完成后，默认已开启SSL认证模式。服务器端证�
     export PGSSLROOTCERT="/home/dbadmin/dws_ssl/sslcert/cacert.pem"
     ```
 
-    >![](public_sys-resources/icon-notice.gif) **注意：**   
+    >![](public_sys-resources/icon-notice.gif) **须知：**   
     >-   从安全性考虑，建议使用双向认证方式。  
     >-   配置客户端环境变量，必须包含文件的绝对路径。  
 
-3.  修改客户端密钥的权限。
+5.  修改客户端密钥的权限。
 
     客户端根证书，密钥，证书以及密钥密码加密文件的权限，需保证权限为600。如果权限不满足要求，则客户端无法以SSL连接到集群。
 

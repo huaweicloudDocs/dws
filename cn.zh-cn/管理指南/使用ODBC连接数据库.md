@@ -2,7 +2,7 @@
 
 DWS支持使用ODBC应用程序连接数据库。应用程序可以在公有云环境的弹性云服务器中，或者互联网环境连接数据库。
 
-ODBC接口的使用方法，请参见：[https://docs.microsoft.com/en-us/sql/odbc/reference/syntax/odbc-api-reference](https://docs.microsoft.com/en-us/sql/odbc/reference/syntax/odbc-api-reference)。
+ODBC接口的使用方法，请自行查阅官方文档。
 
 ## 前提条件<a name="section17871125219214"></a>
 
@@ -10,8 +10,8 @@ ODBC接口的使用方法，请参见：[https://docs.microsoft.com/en-us/sql/od
 
     DWS也支持开源的ODBC驱动程序：PostgreSQL ODBC 09.01.0200或更高版本。
 
--   已下载开源unixODBC代码文件，支持版本为2.3.0，下载地址：http://sourceforge.net/projects/unixodbc/files/unixODBC/2.3.0/unixODBC-2.3.0.tar.gz/download。
--   已下载SSL证书文件，请参见[下载SSL证书](下载SSL证书.md)。
+-   已下载开源unixODBC代码文件，支持版本为2.3.0，下载地址：[https://sourceforge.net/projects/unixodbc/files/unixODBC/2.3.0/unixODBC-2.3.0.tar.gz/download](https://sourceforge.net/projects/unixodbc/files/unixODBC/2.3.0/unixODBC-2.3.0.tar.gz/download)
+-   已下载SSL证书文件，请参见[（可选）下载SSL证书](（可选）下载SSL证书.md)。
 
 ## 在Linux环境使用ODBC连接<a name="section42307202184151"></a>
 
@@ -41,7 +41,6 @@ ODBC接口的使用方法，请参见：[https://docs.microsoft.com/en-us/sql/od
         **make**
 
         **make install**
-
 
 4.  替换驱动文件。
     1.  解压“dws\_odbc\_driver\_for\_linux.tar.gz“。
@@ -189,7 +188,7 @@ ODBC接口的使用方法，请参见：[https://docs.microsoft.com/en-us/sql/od
     | help [tablename]                      | 
     | quit                                  | 
     |                                       | 
-    +---------------------------------------+ 
+    +---------------------------------------+  
     SQL> 
     ```
 
@@ -229,7 +228,6 @@ ODBC接口的使用方法，请参见：[https://docs.microsoft.com/en-us/sql/od
 
         或者单击“开始菜单-\>控制面板-\>系统和安全-\>管理工具-\>数据源\(ODBC\)”打开驱动管理器。
 
-
 4.  配置连接数据源。
     1.  在打开的驱动管理器上，选择“用户DSN-\>添加-\>PostgreSQL Unicode“，然后进行配置。
 
@@ -242,11 +240,13 @@ ODBC接口的使用方法，请参见：[https://docs.microsoft.com/en-us/sql/od
 
 5.  编写ODBC样例程序连接数据源。
 
+    ODBC接口不提供重试连接数据库的能力，您需要在业务代码中实现重试连接的处理。
+
     样例代码如下：
 
     ```
     // 此示例演示如何通过ODBC方式获取DWS中的数据。
-    // DBtest.c (compile with: libodbc.so)   
+    // DBtest.c (compile with: libodbc.so)  
     #include <stdlib.h> 
     #include <stdio.h> 
     #include <sqlext.h>

@@ -32,7 +32,7 @@ DWS支持开源PostgreSQL客户端。
 -   已获取DWS集群的公网访问地址，含IP地址和端口。具体请参见[获取集群连接地址](获取集群连接地址.md)。
 -   已配置DWS集群所属的安全组，添加入规则允许用户的IP地址使用TCP访问端口。
 
-    具体步骤，请参见[《虚拟私有云用户指南》](https://support.huaweicloud.com/vpc/index.html)中“添加安全组规则“章节。
+    具体步骤，请参见《虚拟私有云用户指南》中的[添加安全组规则](https://support.huaweicloud.com/usermanual-vpc/zh-cn_topic_0030969470.html)章节。
 
 
 ## 使用pgAdmin连接集群<a name="section2825650154610"></a>
@@ -68,7 +68,7 @@ DWS支持在互联网环境中使用pgAdmin工具连接集群中的数据库。�
 
 7.  （可选）在“SSL“页签，填写如下集群相关信息。SSL模式安全性高于普通模式，建议在客户端使用SSL模式。
 
-    下载SSL证书，参见[下载SSL证书](下载SSL证书.md)，解压证书文件到指定路径。
+    下载SSL证书，参见[（可选）下载SSL证书](（可选）下载SSL证书.md)，解压证书文件到指定路径。
 
     -   “SSL mode“：在下拉列表中选择SSL模式：“Allow“，“Prefer“，“Require“，“Disable“，“Verify-CA“\(DWS不支持“Verify-Full“模式\)。如果将“SSL mode“设为“Verify-CA“，则必须选择根证书。
     -   “Client certificate“：单击![](figures/icon_dws_pg_login_set_parm.png)，选择解压目录下的“sslcert\\client.crt“文件。
@@ -79,7 +79,6 @@ DWS支持在互联网环境中使用pgAdmin工具连接集群中的数据库。�
 
         **图 4**  Create Server - SSL<a name="fig42341644105716"></a>  
         ![](figures/Create-Server---SSL.png "Create-Server---SSL")
-
 
 8.  连接配置完成后，单击“Save“。
 
