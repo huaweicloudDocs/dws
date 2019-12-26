@@ -12,7 +12,7 @@
 
     执行上传gsql操作的用户需要对客户端主机的目标存放目录有完全控制权限。
 
-    或者，您也可以在SSH远程登录待安装gsql的Linux主机后，在Linux命令窗口，执行以下命令下载gsql客户端：
+    或者，您也可以先SSH远程登录到需要安装gsql的Linux主机，然后在Linux命令窗口，执行以下命令下载gsql客户端：
 
     **wget https://obs.myhwclouds.com/dws/download/dws\_client\_redhat\_x64.tar.gz --no-check-certificate**
 

@@ -26,21 +26,17 @@ DWS集成了扩展应用开源客户端工具pgAdmin4 Web版，用户无需下�
 
 1.  通过访问以下地址登录DWS管理控制台：[https://console.huaweicloud.com/dws](https://console.huaweicloud.com/dws)。
 2.  在左侧导航栏中，单击“集群管理“。
-
-    默认显示用户所有的集群列表。
-
 3.  在集群列表中，单击指定集群的名称，打开“扩展应用“页面。
-4.  单击“添加应用“。
-5.  在“添加应用“页面填写以下参数。然后勾选“已了解pgAdmin4的使用限制，了解更多...“。
+4.  单击“添加应用“，在弹出对话框中配置以下参数，然后勾选“我已阅读并同意公测特性试用协议和pgAdmin4的使用限制“。
     -   “应用名称“：选择要添加的扩展应用，如pgAdmin4。
     -   “应用登录账号“：设置注册的登录账号，请使用邮箱地址作为登录账号。
     -   “应用登录密码“：设置注册的登录密码。
     -   “确认密码“：再次输入密码。
 
-        **图 2**  添加扩展应用<a name="zh-cn_topic_0107749986_fig1391813131809"></a>  
+        **图 2**  添加扩展应用<a name="dws_01_0097_fig1391813131809"></a>  
         ![](figures/添加扩展应用.png "添加扩展应用")
 
-6.  单击“确定“，在“扩展应用“页面显示系统开始创建扩展应用。
+5.  单击“确定“，在“扩展应用“页面显示系统开始创建扩展应用。
 
     等待约15分钟，当新添加的扩展应用的“运行状态“显示为“可用“时，表示扩展应用添加成功。
 
@@ -57,12 +53,12 @@ DWS集成了扩展应用开源客户端工具pgAdmin4 Web版，用户无需下�
 4.  单击“Login“，登录到pgAdmin4 Web客户端。
 5.  在左侧导航栏中，单击“Servers \> Create \> Server“。
 
-    **图 4**  Create Server<a name="zh-cn_topic_0106894595_fig4135152881614"></a>  
+    **图 4**  Create Server<a name="dws_01_0090_fig4135152881614"></a>  
     ![](figures/Create-Server.png "Create-Server")
 
 6.  在创建服务器连接窗口的“General“页签，填写“Name“。
 
-    **图 5**  Create Server - General<a name="zh-cn_topic_0106894595_fig963819507256"></a>  
+    **图 5**  Create Server - General<a name="dws_01_0090_fig963819507256"></a>  
     ![](figures/Create-Server---General.png "Create-Server---General")
 
 7.  在“Connection“页签，填写如下集群相关信息。
@@ -87,7 +83,7 @@ DWS集成了扩展应用开源客户端工具pgAdmin4 Web版，用户无需下�
     -   “Certificate revocation list“：（可选）被撤销的数字证书列表。一个由认证中心废除的所有认证的时间戳组成的列表。
     -   “SSL compression“：是否启用证书压缩传送。选择“True“开启压缩传送，选择“False“不启用压缩传送。在本例中选择默认状态“False“。
 
-        **图 7**  Create Server - SSL<a name="zh-cn_topic_0106894595_fig42341644105716"></a>  
+        **图 7**  Create Server - SSL<a name="dws_01_0090_fig42341644105716"></a>  
         ![](figures/Create-Server---SSL.png "Create-Server---SSL")
 
 9.  连接配置完成后，单击“Save“。

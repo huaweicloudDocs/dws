@@ -4,14 +4,14 @@
 
 策略结构包括：策略版本号（Version）、策略授权语句（Statement）和策略依赖（Depends）。
 
-**图 1** RBAC策略结构<a name="fig86683014414"></a>  
+**图 1**  RBAC策略结构<a name="fig86683014414"></a>  
 ![](figures/RBAC策略结构.jpg "RBAC策略结构")
 
 ## 策略语法<a name="section1590162924117"></a>
 
 如下以DWS服务的“DWS Administrator”为例，说明RBAC策略语法。
 
-**图 2**  设置RBAC策略<a name="fig1553619614420"></a>  
+**图 2**  设置RBAC策略<a name="fig13383143711518"></a>  
 ![](figures/设置RBAC策略.png "设置RBAC策略")
 
 ```

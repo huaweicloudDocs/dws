@@ -19,12 +19,12 @@
 
 1.  在IAM控制台，单击左侧导航栏的“策略”，在右上角选择“创建自定义策略”。
 
-    **图 1**  创建自定义策略<a name="fig1229416334531"></a>  
+    **图 1**  创建自定义策略<a name="fig3635195245012"></a>  
     ![](figures/创建自定义策略.png "创建自定义策略")
 
 2.  在“创建自定义策略”中，配置如下信息：
 
-    **图 2**  可视化视图<a name="fig12191518532"></a>  
+    **图 2**  可视化视图<a name="fig5361518115113"></a>  
     ![](figures/可视化视图.png "可视化视图")
 
     -   “策略名称”：填写“创建集群“。
@@ -44,12 +44,12 @@
 
 1.  在IAM控制台，单击左侧导航栏的“策略”，在右上角选择“创建自定义策略”。
 
-    **图 3**  创建策略<a name="fig172814395546"></a>  
+    **图 3**  创建策略<a name="fig6551162711515"></a>  
     ![](figures/创建策略.png "创建策略")
 
 2.  在“创建自定义策略”中，填写如下参数。
 
-    **图 4**  JSON视图<a name="fig10683111225512"></a>  
+    **图 4**  JSON视图<a name="fig80203335115"></a>  
     ![](figures/JSON视图.png "JSON视图")
 
     -   “策略名称”：填写“创建集群”。
@@ -148,371 +148,371 @@
 
 -   **管理控制台操作**
 
-    DWS资源操作及对应的授权项如[表1](#zh-cn_topic_0167929270_table42061239124614)所示。
+    DWS资源操作及对应的授权项如[表1](#dws_01_0143_table42061239124614)所示。
 
 
 **表 1**  DWS资源操作授权项列表
 
-<a name="zh-cn_topic_0167929270_table42061239124614"></a>
-<table><thead align="left"><tr id="zh-cn_topic_0167929270_row126809551465"><th class="cellrowborder" valign="top" width="22.6%" id="mcps1.2.5.1.1"><p id="zh-cn_topic_0167929270_p6682105517467"><a name="zh-cn_topic_0167929270_p6682105517467"></a><a name="zh-cn_topic_0167929270_p6682105517467"></a>DWS资源操作</p>
+<a name="dws_01_0143_table42061239124614"></a>
+<table><thead align="left"><tr id="dws_01_0143_row126809551465"><th class="cellrowborder" valign="top" width="22.6%" id="mcps1.2.5.1.1"><p id="dws_01_0143_p6682105517467"><a name="dws_01_0143_p6682105517467"></a><a name="dws_01_0143_p6682105517467"></a>DWS资源操作</p>
 </th>
-<th class="cellrowborder" valign="top" width="31.830000000000002%" id="mcps1.2.5.1.2"><p id="zh-cn_topic_0167929270_p1568215520468"><a name="zh-cn_topic_0167929270_p1568215520468"></a><a name="zh-cn_topic_0167929270_p1568215520468"></a>授权项</p>
+<th class="cellrowborder" valign="top" width="31.830000000000002%" id="mcps1.2.5.1.2"><p id="dws_01_0143_p1568215520468"><a name="dws_01_0143_p1568215520468"></a><a name="dws_01_0143_p1568215520468"></a>授权项</p>
 </th>
-<th class="cellrowborder" valign="top" width="26.19%" id="mcps1.2.5.1.3"><p id="zh-cn_topic_0167929270_p19816133712378"><a name="zh-cn_topic_0167929270_p19816133712378"></a><a name="zh-cn_topic_0167929270_p19816133712378"></a>依赖的授权项</p>
+<th class="cellrowborder" valign="top" width="26.19%" id="mcps1.2.5.1.3"><p id="dws_01_0143_p19816133712378"><a name="dws_01_0143_p19816133712378"></a><a name="dws_01_0143_p19816133712378"></a>依赖的授权项</p>
 </th>
-<th class="cellrowborder" valign="top" width="19.38%" id="mcps1.2.5.1.4"><p id="zh-cn_topic_0167929270_p29118351780"><a name="zh-cn_topic_0167929270_p29118351780"></a><a name="zh-cn_topic_0167929270_p29118351780"></a>授权项作用域</p>
+<th class="cellrowborder" valign="top" width="19.38%" id="mcps1.2.5.1.4"><p id="dws_01_0143_p29118351780"><a name="dws_01_0143_p29118351780"></a><a name="dws_01_0143_p29118351780"></a>授权项作用域</p>
 </th>
 </tr>
 </thead>
-<tbody><tr id="zh-cn_topic_0167929270_row1251733919468"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p1951710394465"><a name="zh-cn_topic_0167929270_p1951710394465"></a><a name="zh-cn_topic_0167929270_p1951710394465"></a>创建/恢复集群</p>
+<tbody><tr id="dws_01_0143_row1251733919468"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p1951710394465"><a name="dws_01_0143_p1951710394465"></a><a name="dws_01_0143_p1951710394465"></a>创建/恢复集群</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p251773918465"><a name="zh-cn_topic_0167929270_p251773918465"></a><a name="zh-cn_topic_0167929270_p251773918465"></a>"dws:cluster:create"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p251773918465"><a name="dws_01_0143_p251773918465"></a><a name="dws_01_0143_p251773918465"></a>"dws:cluster:create"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p18466195820403"><a name="zh-cn_topic_0167929270_p18466195820403"></a><a name="zh-cn_topic_0167929270_p18466195820403"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p124661058174012"><a name="zh-cn_topic_0167929270_p124661058174012"></a><a name="zh-cn_topic_0167929270_p124661058174012"></a>"dws:*:list*",</p>
-<p id="zh-cn_topic_0167929270_p446655811403"><a name="zh-cn_topic_0167929270_p446655811403"></a><a name="zh-cn_topic_0167929270_p446655811403"></a>"ecs:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p174662585409"><a name="zh-cn_topic_0167929270_p174662585409"></a><a name="zh-cn_topic_0167929270_p174662585409"></a>"ecs:*:list*",</p>
-<p id="zh-cn_topic_0167929270_p5437182411460"><a name="zh-cn_topic_0167929270_p5437182411460"></a><a name="zh-cn_topic_0167929270_p5437182411460"></a>"ecs:*:create*",</p>
-<p id="zh-cn_topic_0167929270_p8466458154015"><a name="zh-cn_topic_0167929270_p8466458154015"></a><a name="zh-cn_topic_0167929270_p8466458154015"></a>"vpc:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p846605874012"><a name="zh-cn_topic_0167929270_p846605874012"></a><a name="zh-cn_topic_0167929270_p846605874012"></a>"vpc:*:list*",</p>
-<p id="zh-cn_topic_0167929270_p175636481462"><a name="zh-cn_topic_0167929270_p175636481462"></a><a name="zh-cn_topic_0167929270_p175636481462"></a>"vpc:*:create*",</p>
-<p id="zh-cn_topic_0167929270_p9466155818405"><a name="zh-cn_topic_0167929270_p9466155818405"></a><a name="zh-cn_topic_0167929270_p9466155818405"></a>"evs:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p746625854020"><a name="zh-cn_topic_0167929270_p746625854020"></a><a name="zh-cn_topic_0167929270_p746625854020"></a>"evs:*:list*",</p>
-<p id="zh-cn_topic_0167929270_p11641633174712"><a name="zh-cn_topic_0167929270_p11641633174712"></a><a name="zh-cn_topic_0167929270_p11641633174712"></a>"evs:*:create*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p18466195820403"><a name="dws_01_0143_p18466195820403"></a><a name="dws_01_0143_p18466195820403"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p124661058174012"><a name="dws_01_0143_p124661058174012"></a><a name="dws_01_0143_p124661058174012"></a>"dws:*:list*",</p>
+<p id="dws_01_0143_p446655811403"><a name="dws_01_0143_p446655811403"></a><a name="dws_01_0143_p446655811403"></a>"ecs:*:get*",</p>
+<p id="dws_01_0143_p174662585409"><a name="dws_01_0143_p174662585409"></a><a name="dws_01_0143_p174662585409"></a>"ecs:*:list*",</p>
+<p id="dws_01_0143_p5437182411460"><a name="dws_01_0143_p5437182411460"></a><a name="dws_01_0143_p5437182411460"></a>"ecs:*:create*",</p>
+<p id="dws_01_0143_p8466458154015"><a name="dws_01_0143_p8466458154015"></a><a name="dws_01_0143_p8466458154015"></a>"vpc:*:get*",</p>
+<p id="dws_01_0143_p846605874012"><a name="dws_01_0143_p846605874012"></a><a name="dws_01_0143_p846605874012"></a>"vpc:*:list*",</p>
+<p id="dws_01_0143_p175636481462"><a name="dws_01_0143_p175636481462"></a><a name="dws_01_0143_p175636481462"></a>"vpc:*:create*",</p>
+<p id="dws_01_0143_p9466155818405"><a name="dws_01_0143_p9466155818405"></a><a name="dws_01_0143_p9466155818405"></a>"evs:*:get*",</p>
+<p id="dws_01_0143_p746625854020"><a name="dws_01_0143_p746625854020"></a><a name="dws_01_0143_p746625854020"></a>"evs:*:list*",</p>
+<p id="dws_01_0143_p11641633174712"><a name="dws_01_0143_p11641633174712"></a><a name="dws_01_0143_p11641633174712"></a>"evs:*:create*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul256051910917"></a><a name="zh-cn_topic_0167929270_ul256051910917"></a><ul id="zh-cn_topic_0167929270_ul256051910917"><li>支持：<a name="zh-cn_topic_0167929270_ul116171620113612"></a><a name="zh-cn_topic_0167929270_ul116171620113612"></a><ul id="zh-cn_topic_0167929270_ul116171620113612"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul256051910917"></a><a name="dws_01_0143_ul256051910917"></a><ul id="dws_01_0143_ul256051910917"><li>支持：<a name="dws_01_0143_ul116171620113612"></a><a name="dws_01_0143_ul116171620113612"></a><ul id="dws_01_0143_ul116171620113612"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row66381515377"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p1664915153712"><a name="zh-cn_topic_0167929270_p1664915153712"></a><a name="zh-cn_topic_0167929270_p1664915153712"></a>获取集群列表</p>
+<tr id="dws_01_0143_row66381515377"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p1664915153712"><a name="dws_01_0143_p1664915153712"></a><a name="dws_01_0143_p1664915153712"></a>获取集群列表</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p1337420187387"><a name="zh-cn_topic_0167929270_p1337420187387"></a><a name="zh-cn_topic_0167929270_p1337420187387"></a>"dws:cluster:list"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p1337420187387"><a name="dws_01_0143_p1337420187387"></a><a name="dws_01_0143_p1337420187387"></a>"dws:cluster:list"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p18345331134114"><a name="zh-cn_topic_0167929270_p18345331134114"></a><a name="zh-cn_topic_0167929270_p18345331134114"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p17346123114113"><a name="zh-cn_topic_0167929270_p17346123114113"></a><a name="zh-cn_topic_0167929270_p17346123114113"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p18345331134114"><a name="dws_01_0143_p18345331134114"></a><a name="dws_01_0143_p18345331134114"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p17346123114113"><a name="dws_01_0143_p17346123114113"></a><a name="dws_01_0143_p17346123114113"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul59551841194911"></a><a name="zh-cn_topic_0167929270_ul59551841194911"></a><ul id="zh-cn_topic_0167929270_ul59551841194911"><li>支持：<a name="zh-cn_topic_0167929270_ul79551541144912"></a><a name="zh-cn_topic_0167929270_ul79551541144912"></a><ul id="zh-cn_topic_0167929270_ul79551541144912"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul59551841194911"></a><a name="dws_01_0143_ul59551841194911"></a><ul id="dws_01_0143_ul59551841194911"><li>支持：<a name="dws_01_0143_ul79551541144912"></a><a name="dws_01_0143_ul79551541144912"></a><ul id="dws_01_0143_ul79551541144912"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row3462101724118"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p2462217134117"><a name="zh-cn_topic_0167929270_p2462217134117"></a><a name="zh-cn_topic_0167929270_p2462217134117"></a>获取单个集群详情</p>
+<tr id="dws_01_0143_row3462101724118"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p2462217134117"><a name="dws_01_0143_p2462217134117"></a><a name="dws_01_0143_p2462217134117"></a>获取单个集群详情</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p32111415193917"><a name="zh-cn_topic_0167929270_p32111415193917"></a><a name="zh-cn_topic_0167929270_p32111415193917"></a>"dws:cluster:getDetail"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p32111415193917"><a name="dws_01_0143_p32111415193917"></a><a name="dws_01_0143_p32111415193917"></a>"dws:cluster:getDetail"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p39402517421"><a name="zh-cn_topic_0167929270_p39402517421"></a><a name="zh-cn_topic_0167929270_p39402517421"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p794010510424"><a name="zh-cn_topic_0167929270_p794010510424"></a><a name="zh-cn_topic_0167929270_p794010510424"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p39402517421"><a name="dws_01_0143_p39402517421"></a><a name="dws_01_0143_p39402517421"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p794010510424"><a name="dws_01_0143_p794010510424"></a><a name="dws_01_0143_p794010510424"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul185353433497"></a><a name="zh-cn_topic_0167929270_ul185353433497"></a><ul id="zh-cn_topic_0167929270_ul185353433497"><li>支持：<a name="zh-cn_topic_0167929270_ul125351643194910"></a><a name="zh-cn_topic_0167929270_ul125351643194910"></a><ul id="zh-cn_topic_0167929270_ul125351643194910"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul185353433497"></a><a name="dws_01_0143_ul185353433497"></a><ul id="dws_01_0143_ul185353433497"><li>支持：<a name="dws_01_0143_ul125351643194910"></a><a name="dws_01_0143_ul125351643194910"></a><ul id="dws_01_0143_ul125351643194910"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row17517439134615"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p1051710394469"><a name="zh-cn_topic_0167929270_p1051710394469"></a><a name="zh-cn_topic_0167929270_p1051710394469"></a>设置自动快照</p>
+<tr id="dws_01_0143_row17517439134615"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p1051710394469"><a name="dws_01_0143_p1051710394469"></a><a name="dws_01_0143_p1051710394469"></a>设置自动快照</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p951715398468"><a name="zh-cn_topic_0167929270_p951715398468"></a><a name="zh-cn_topic_0167929270_p951715398468"></a>"dws:cluster:setAutomatedSnapshot"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p951715398468"><a name="dws_01_0143_p951715398468"></a><a name="dws_01_0143_p951715398468"></a>"dws:cluster:setAutomatedSnapshot"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p1857671614216"><a name="zh-cn_topic_0167929270_p1857671614216"></a><a name="zh-cn_topic_0167929270_p1857671614216"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p165761016124218"><a name="zh-cn_topic_0167929270_p165761016124218"></a><a name="zh-cn_topic_0167929270_p165761016124218"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p1857671614216"><a name="dws_01_0143_p1857671614216"></a><a name="dws_01_0143_p1857671614216"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p165761016124218"><a name="dws_01_0143_p165761016124218"></a><a name="dws_01_0143_p165761016124218"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul4837194617495"></a><a name="zh-cn_topic_0167929270_ul4837194617495"></a><ul id="zh-cn_topic_0167929270_ul4837194617495"><li>支持：<a name="zh-cn_topic_0167929270_ul158371946144910"></a><a name="zh-cn_topic_0167929270_ul158371946144910"></a><ul id="zh-cn_topic_0167929270_ul158371946144910"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul4837194617495"></a><a name="dws_01_0143_ul4837194617495"></a><ul id="dws_01_0143_ul4837194617495"><li>支持：<a name="dws_01_0143_ul158371946144910"></a><a name="dws_01_0143_ul158371946144910"></a><ul id="dws_01_0143_ul158371946144910"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row65171439164611"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p651703920469"><a name="zh-cn_topic_0167929270_p651703920469"></a><a name="zh-cn_topic_0167929270_p651703920469"></a>设置安全参数/参数组</p>
+<tr id="dws_01_0143_row65171439164611"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p651703920469"><a name="dws_01_0143_p651703920469"></a><a name="dws_01_0143_p651703920469"></a>设置安全参数/参数组</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p451733910466"><a name="zh-cn_topic_0167929270_p451733910466"></a><a name="zh-cn_topic_0167929270_p451733910466"></a>"dws:cluster:setParameter"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p451733910466"><a name="dws_01_0143_p451733910466"></a><a name="dws_01_0143_p451733910466"></a>"dws:cluster:setParameter"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p141711925154215"><a name="zh-cn_topic_0167929270_p141711925154215"></a><a name="zh-cn_topic_0167929270_p141711925154215"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p51711250428"><a name="zh-cn_topic_0167929270_p51711250428"></a><a name="zh-cn_topic_0167929270_p51711250428"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p141711925154215"><a name="dws_01_0143_p141711925154215"></a><a name="dws_01_0143_p141711925154215"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p51711250428"><a name="dws_01_0143_p51711250428"></a><a name="dws_01_0143_p51711250428"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul6124749134914"></a><a name="zh-cn_topic_0167929270_ul6124749134914"></a><ul id="zh-cn_topic_0167929270_ul6124749134914"><li>支持：<a name="zh-cn_topic_0167929270_ul412417497499"></a><a name="zh-cn_topic_0167929270_ul412417497499"></a><ul id="zh-cn_topic_0167929270_ul412417497499"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul6124749134914"></a><a name="dws_01_0143_ul6124749134914"></a><ul id="dws_01_0143_ul6124749134914"><li>支持：<a name="dws_01_0143_ul412417497499"></a><a name="dws_01_0143_ul412417497499"></a><ul id="dws_01_0143_ul412417497499"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row251718395468"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p9517639154610"><a name="zh-cn_topic_0167929270_p9517639154610"></a><a name="zh-cn_topic_0167929270_p9517639154610"></a>重启集群</p>
+<tr id="dws_01_0143_row251718395468"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p9517639154610"><a name="dws_01_0143_p9517639154610"></a><a name="dws_01_0143_p9517639154610"></a>重启集群</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p18517639104615"><a name="zh-cn_topic_0167929270_p18517639104615"></a><a name="zh-cn_topic_0167929270_p18517639104615"></a>"dws:cluster:restart"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p18517639104615"><a name="dws_01_0143_p18517639104615"></a><a name="dws_01_0143_p18517639104615"></a>"dws:cluster:restart"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p15218633184217"><a name="zh-cn_topic_0167929270_p15218633184217"></a><a name="zh-cn_topic_0167929270_p15218633184217"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p721815339423"><a name="zh-cn_topic_0167929270_p721815339423"></a><a name="zh-cn_topic_0167929270_p721815339423"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p15218633184217"><a name="dws_01_0143_p15218633184217"></a><a name="dws_01_0143_p15218633184217"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p721815339423"><a name="dws_01_0143_p721815339423"></a><a name="dws_01_0143_p721815339423"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul142518516492"></a><a name="zh-cn_topic_0167929270_ul142518516492"></a><ul id="zh-cn_topic_0167929270_ul142518516492"><li>支持：<a name="zh-cn_topic_0167929270_ul62615134919"></a><a name="zh-cn_topic_0167929270_ul62615134919"></a><ul id="zh-cn_topic_0167929270_ul62615134919"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul142518516492"></a><a name="dws_01_0143_ul142518516492"></a><ul id="dws_01_0143_ul142518516492"><li>支持：<a name="dws_01_0143_ul62615134919"></a><a name="dws_01_0143_ul62615134919"></a><ul id="dws_01_0143_ul62615134919"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row15517143911462"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p451710393460"><a name="zh-cn_topic_0167929270_p451710393460"></a><a name="zh-cn_topic_0167929270_p451710393460"></a>扩容集群</p>
+<tr id="dws_01_0143_row15517143911462"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p451710393460"><a name="dws_01_0143_p451710393460"></a><a name="dws_01_0143_p451710393460"></a>扩容集群</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p14517183912467"><a name="zh-cn_topic_0167929270_p14517183912467"></a><a name="zh-cn_topic_0167929270_p14517183912467"></a>"dws:cluster:scaleOut"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p14517183912467"><a name="dws_01_0143_p14517183912467"></a><a name="dws_01_0143_p14517183912467"></a>"dws:cluster:scaleOut"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p1949819717431"><a name="zh-cn_topic_0167929270_p1949819717431"></a><a name="zh-cn_topic_0167929270_p1949819717431"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p24981571437"><a name="zh-cn_topic_0167929270_p24981571437"></a><a name="zh-cn_topic_0167929270_p24981571437"></a>"dws:*:list*",</p>
-<p id="zh-cn_topic_0167929270_p1498273439"><a name="zh-cn_topic_0167929270_p1498273439"></a><a name="zh-cn_topic_0167929270_p1498273439"></a>"ecs:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p94988764311"><a name="zh-cn_topic_0167929270_p94988764311"></a><a name="zh-cn_topic_0167929270_p94988764311"></a>"ecs:*:list*",</p>
-<p id="zh-cn_topic_0167929270_p16416112665110"><a name="zh-cn_topic_0167929270_p16416112665110"></a><a name="zh-cn_topic_0167929270_p16416112665110"></a>"ecs:*:create*",</p>
-<p id="zh-cn_topic_0167929270_p84983716432"><a name="zh-cn_topic_0167929270_p84983716432"></a><a name="zh-cn_topic_0167929270_p84983716432"></a>"vpc:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p849867174316"><a name="zh-cn_topic_0167929270_p849867174316"></a><a name="zh-cn_topic_0167929270_p849867174316"></a>"vpc:*:list*",</p>
-<p id="zh-cn_topic_0167929270_p889573435111"><a name="zh-cn_topic_0167929270_p889573435111"></a><a name="zh-cn_topic_0167929270_p889573435111"></a>"vpc:*:create*",</p>
-<p id="zh-cn_topic_0167929270_p1049815714316"><a name="zh-cn_topic_0167929270_p1049815714316"></a><a name="zh-cn_topic_0167929270_p1049815714316"></a>"evs:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p16498177194313"><a name="zh-cn_topic_0167929270_p16498177194313"></a><a name="zh-cn_topic_0167929270_p16498177194313"></a>"evs:*:list*",</p>
-<p id="zh-cn_topic_0167929270_p8586174419515"><a name="zh-cn_topic_0167929270_p8586174419515"></a><a name="zh-cn_topic_0167929270_p8586174419515"></a>"evs:*:create*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p1949819717431"><a name="dws_01_0143_p1949819717431"></a><a name="dws_01_0143_p1949819717431"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p24981571437"><a name="dws_01_0143_p24981571437"></a><a name="dws_01_0143_p24981571437"></a>"dws:*:list*",</p>
+<p id="dws_01_0143_p1498273439"><a name="dws_01_0143_p1498273439"></a><a name="dws_01_0143_p1498273439"></a>"ecs:*:get*",</p>
+<p id="dws_01_0143_p94988764311"><a name="dws_01_0143_p94988764311"></a><a name="dws_01_0143_p94988764311"></a>"ecs:*:list*",</p>
+<p id="dws_01_0143_p16416112665110"><a name="dws_01_0143_p16416112665110"></a><a name="dws_01_0143_p16416112665110"></a>"ecs:*:create*",</p>
+<p id="dws_01_0143_p84983716432"><a name="dws_01_0143_p84983716432"></a><a name="dws_01_0143_p84983716432"></a>"vpc:*:get*",</p>
+<p id="dws_01_0143_p849867174316"><a name="dws_01_0143_p849867174316"></a><a name="dws_01_0143_p849867174316"></a>"vpc:*:list*",</p>
+<p id="dws_01_0143_p889573435111"><a name="dws_01_0143_p889573435111"></a><a name="dws_01_0143_p889573435111"></a>"vpc:*:create*",</p>
+<p id="dws_01_0143_p1049815714316"><a name="dws_01_0143_p1049815714316"></a><a name="dws_01_0143_p1049815714316"></a>"evs:*:get*",</p>
+<p id="dws_01_0143_p16498177194313"><a name="dws_01_0143_p16498177194313"></a><a name="dws_01_0143_p16498177194313"></a>"evs:*:list*",</p>
+<p id="dws_01_0143_p8586174419515"><a name="dws_01_0143_p8586174419515"></a><a name="dws_01_0143_p8586174419515"></a>"evs:*:create*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul63713520492"></a><a name="zh-cn_topic_0167929270_ul63713520492"></a><ul id="zh-cn_topic_0167929270_ul63713520492"><li>支持：<a name="zh-cn_topic_0167929270_ul1372155215493"></a><a name="zh-cn_topic_0167929270_ul1372155215493"></a><ul id="zh-cn_topic_0167929270_ul1372155215493"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul63713520492"></a><a name="dws_01_0143_ul63713520492"></a><ul id="dws_01_0143_ul63713520492"><li>支持：<a name="dws_01_0143_ul1372155215493"></a><a name="dws_01_0143_ul1372155215493"></a><ul id="dws_01_0143_ul1372155215493"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row934253544214"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p7342035134218"><a name="zh-cn_topic_0167929270_p7342035134218"></a><a name="zh-cn_topic_0167929270_p7342035134218"></a>调整大小</p>
+<tr id="dws_01_0143_row934253544214"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p7342035134218"><a name="dws_01_0143_p7342035134218"></a><a name="dws_01_0143_p7342035134218"></a>调整大小</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p477434513919"><a name="zh-cn_topic_0167929270_p477434513919"></a><a name="zh-cn_topic_0167929270_p477434513919"></a>dws:openAPICluster:resize</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p477434513919"><a name="dws_01_0143_p477434513919"></a><a name="dws_01_0143_p477434513919"></a>dws:openAPICluster:resize</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p19263164914435"><a name="zh-cn_topic_0167929270_p19263164914435"></a><a name="zh-cn_topic_0167929270_p19263164914435"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p10263134964313"><a name="zh-cn_topic_0167929270_p10263134964313"></a><a name="zh-cn_topic_0167929270_p10263134964313"></a>"dws:*:list*",</p>
-<p id="zh-cn_topic_0167929270_p1326424904314"><a name="zh-cn_topic_0167929270_p1326424904314"></a><a name="zh-cn_topic_0167929270_p1326424904314"></a>"ecs:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p1726404917435"><a name="zh-cn_topic_0167929270_p1726404917435"></a><a name="zh-cn_topic_0167929270_p1726404917435"></a>"ecs:*:list*",</p>
-<p id="zh-cn_topic_0167929270_p66782026115716"><a name="zh-cn_topic_0167929270_p66782026115716"></a><a name="zh-cn_topic_0167929270_p66782026115716"></a>"ecs:*:create*",</p>
-<p id="zh-cn_topic_0167929270_p426474994320"><a name="zh-cn_topic_0167929270_p426474994320"></a><a name="zh-cn_topic_0167929270_p426474994320"></a>"vpc:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p326415494436"><a name="zh-cn_topic_0167929270_p326415494436"></a><a name="zh-cn_topic_0167929270_p326415494436"></a>"vpc:*:list*",</p>
-<p id="zh-cn_topic_0167929270_p17349202025719"><a name="zh-cn_topic_0167929270_p17349202025719"></a><a name="zh-cn_topic_0167929270_p17349202025719"></a>"vpc:*:create*",</p>
-<p id="zh-cn_topic_0167929270_p182642491433"><a name="zh-cn_topic_0167929270_p182642491433"></a><a name="zh-cn_topic_0167929270_p182642491433"></a>"evs:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p102642499438"><a name="zh-cn_topic_0167929270_p102642499438"></a><a name="zh-cn_topic_0167929270_p102642499438"></a>"evs:*:list*",</p>
-<p id="zh-cn_topic_0167929270_p5281213145712"><a name="zh-cn_topic_0167929270_p5281213145712"></a><a name="zh-cn_topic_0167929270_p5281213145712"></a>"evs:*:create*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p19263164914435"><a name="dws_01_0143_p19263164914435"></a><a name="dws_01_0143_p19263164914435"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p10263134964313"><a name="dws_01_0143_p10263134964313"></a><a name="dws_01_0143_p10263134964313"></a>"dws:*:list*",</p>
+<p id="dws_01_0143_p1326424904314"><a name="dws_01_0143_p1326424904314"></a><a name="dws_01_0143_p1326424904314"></a>"ecs:*:get*",</p>
+<p id="dws_01_0143_p1726404917435"><a name="dws_01_0143_p1726404917435"></a><a name="dws_01_0143_p1726404917435"></a>"ecs:*:list*",</p>
+<p id="dws_01_0143_p66782026115716"><a name="dws_01_0143_p66782026115716"></a><a name="dws_01_0143_p66782026115716"></a>"ecs:*:create*",</p>
+<p id="dws_01_0143_p426474994320"><a name="dws_01_0143_p426474994320"></a><a name="dws_01_0143_p426474994320"></a>"vpc:*:get*",</p>
+<p id="dws_01_0143_p326415494436"><a name="dws_01_0143_p326415494436"></a><a name="dws_01_0143_p326415494436"></a>"vpc:*:list*",</p>
+<p id="dws_01_0143_p17349202025719"><a name="dws_01_0143_p17349202025719"></a><a name="dws_01_0143_p17349202025719"></a>"vpc:*:create*",</p>
+<p id="dws_01_0143_p182642491433"><a name="dws_01_0143_p182642491433"></a><a name="dws_01_0143_p182642491433"></a>"evs:*:get*",</p>
+<p id="dws_01_0143_p102642499438"><a name="dws_01_0143_p102642499438"></a><a name="dws_01_0143_p102642499438"></a>"evs:*:list*",</p>
+<p id="dws_01_0143_p5281213145712"><a name="dws_01_0143_p5281213145712"></a><a name="dws_01_0143_p5281213145712"></a>"evs:*:create*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul3911185410496"></a><a name="zh-cn_topic_0167929270_ul3911185410496"></a><ul id="zh-cn_topic_0167929270_ul3911185410496"><li>支持：<a name="zh-cn_topic_0167929270_ul7911354184920"></a><a name="zh-cn_topic_0167929270_ul7911354184920"></a><ul id="zh-cn_topic_0167929270_ul7911354184920"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul3911185410496"></a><a name="dws_01_0143_ul3911185410496"></a><ul id="dws_01_0143_ul3911185410496"><li>支持：<a name="dws_01_0143_ul7911354184920"></a><a name="dws_01_0143_ul7911354184920"></a><ul id="dws_01_0143_ul7911354184920"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row19517193934617"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p4517173917468"><a name="zh-cn_topic_0167929270_p4517173917468"></a><a name="zh-cn_topic_0167929270_p4517173917468"></a>重置密码</p>
+<tr id="dws_01_0143_row19517193934617"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p4517173917468"><a name="dws_01_0143_p4517173917468"></a><a name="dws_01_0143_p4517173917468"></a>重置密码</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p1751703919469"><a name="zh-cn_topic_0167929270_p1751703919469"></a><a name="zh-cn_topic_0167929270_p1751703919469"></a>"dws:cluster:resetPassword"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p1751703919469"><a name="dws_01_0143_p1751703919469"></a><a name="dws_01_0143_p1751703919469"></a>"dws:cluster:resetPassword"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p1664710159444"><a name="zh-cn_topic_0167929270_p1664710159444"></a><a name="zh-cn_topic_0167929270_p1664710159444"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p6647121524416"><a name="zh-cn_topic_0167929270_p6647121524416"></a><a name="zh-cn_topic_0167929270_p6647121524416"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p1664710159444"><a name="dws_01_0143_p1664710159444"></a><a name="dws_01_0143_p1664710159444"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p6647121524416"><a name="dws_01_0143_p6647121524416"></a><a name="dws_01_0143_p6647121524416"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul1150035714492"></a><a name="zh-cn_topic_0167929270_ul1150035714492"></a><ul id="zh-cn_topic_0167929270_ul1150035714492"><li>支持：<a name="zh-cn_topic_0167929270_ul750045714493"></a><a name="zh-cn_topic_0167929270_ul750045714493"></a><ul id="zh-cn_topic_0167929270_ul750045714493"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul1150035714492"></a><a name="dws_01_0143_ul1150035714492"></a><ul id="dws_01_0143_ul1150035714492"><li>支持：<a name="dws_01_0143_ul750045714493"></a><a name="dws_01_0143_ul750045714493"></a><ul id="dws_01_0143_ul750045714493"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row20517139104611"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p12517739134610"><a name="zh-cn_topic_0167929270_p12517739134610"></a><a name="zh-cn_topic_0167929270_p12517739134610"></a>应用参数模板</p>
+<tr id="dws_01_0143_row20517139104611"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p12517739134610"><a name="dws_01_0143_p12517739134610"></a><a name="dws_01_0143_p12517739134610"></a>应用参数模板</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p2517103924618"><a name="zh-cn_topic_0167929270_p2517103924618"></a><a name="zh-cn_topic_0167929270_p2517103924618"></a>"dws:cluster:changeParameterGroup"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p2517103924618"><a name="dws_01_0143_p2517103924618"></a><a name="dws_01_0143_p2517103924618"></a>"dws:cluster:changeParameterGroup"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p36920325443"><a name="zh-cn_topic_0167929270_p36920325443"></a><a name="zh-cn_topic_0167929270_p36920325443"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p1369932104412"><a name="zh-cn_topic_0167929270_p1369932104412"></a><a name="zh-cn_topic_0167929270_p1369932104412"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p36920325443"><a name="dws_01_0143_p36920325443"></a><a name="dws_01_0143_p36920325443"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p1369932104412"><a name="dws_01_0143_p1369932104412"></a><a name="dws_01_0143_p1369932104412"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul222165964917"></a><a name="zh-cn_topic_0167929270_ul222165964917"></a><ul id="zh-cn_topic_0167929270_ul222165964917"><li>支持：<a name="zh-cn_topic_0167929270_ul62217592496"></a><a name="zh-cn_topic_0167929270_ul62217592496"></a><ul id="zh-cn_topic_0167929270_ul62217592496"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul222165964917"></a><a name="dws_01_0143_ul222165964917"></a><ul id="dws_01_0143_ul222165964917"><li>支持：<a name="dws_01_0143_ul62217592496"></a><a name="dws_01_0143_ul62217592496"></a><ul id="dws_01_0143_ul62217592496"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row15171539134619"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p13517123912467"><a name="zh-cn_topic_0167929270_p13517123912467"></a><a name="zh-cn_topic_0167929270_p13517123912467"></a>删除集群</p>
+<tr id="dws_01_0143_row15171539134619"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p13517123912467"><a name="dws_01_0143_p13517123912467"></a><a name="dws_01_0143_p13517123912467"></a>删除集群</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p5517163913466"><a name="zh-cn_topic_0167929270_p5517163913466"></a><a name="zh-cn_topic_0167929270_p5517163913466"></a>"dws:cluster:delete"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p5517163913466"><a name="dws_01_0143_p5517163913466"></a><a name="dws_01_0143_p5517163913466"></a>"dws:cluster:delete"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p11694149154715"><a name="zh-cn_topic_0167929270_p11694149154715"></a><a name="zh-cn_topic_0167929270_p11694149154715"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p186945495478"><a name="zh-cn_topic_0167929270_p186945495478"></a><a name="zh-cn_topic_0167929270_p186945495478"></a>"dws:*:list*",</p>
-<p id="zh-cn_topic_0167929270_p369415495472"><a name="zh-cn_topic_0167929270_p369415495472"></a><a name="zh-cn_topic_0167929270_p369415495472"></a>"ecs:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p10694249174712"><a name="zh-cn_topic_0167929270_p10694249174712"></a><a name="zh-cn_topic_0167929270_p10694249174712"></a>"ecs:*:list*",</p>
-<p id="zh-cn_topic_0167929270_p124571814125813"><a name="zh-cn_topic_0167929270_p124571814125813"></a><a name="zh-cn_topic_0167929270_p124571814125813"></a>"ecs:*:delete*",</p>
-<p id="zh-cn_topic_0167929270_p1169411493474"><a name="zh-cn_topic_0167929270_p1169411493474"></a><a name="zh-cn_topic_0167929270_p1169411493474"></a>"vpc:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p6694164915478"><a name="zh-cn_topic_0167929270_p6694164915478"></a><a name="zh-cn_topic_0167929270_p6694164915478"></a>"vpc:*:list*",</p>
-<p id="zh-cn_topic_0167929270_p1810913316580"><a name="zh-cn_topic_0167929270_p1810913316580"></a><a name="zh-cn_topic_0167929270_p1810913316580"></a>"vpc:*:delete*",</p>
-<p id="zh-cn_topic_0167929270_p12694124984715"><a name="zh-cn_topic_0167929270_p12694124984715"></a><a name="zh-cn_topic_0167929270_p12694124984715"></a>"evs:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p4694949194716"><a name="zh-cn_topic_0167929270_p4694949194716"></a><a name="zh-cn_topic_0167929270_p4694949194716"></a>"evs:*:list*",</p>
-<p id="zh-cn_topic_0167929270_p522917717592"><a name="zh-cn_topic_0167929270_p522917717592"></a><a name="zh-cn_topic_0167929270_p522917717592"></a>"evs:*:delete*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p11694149154715"><a name="dws_01_0143_p11694149154715"></a><a name="dws_01_0143_p11694149154715"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p186945495478"><a name="dws_01_0143_p186945495478"></a><a name="dws_01_0143_p186945495478"></a>"dws:*:list*",</p>
+<p id="dws_01_0143_p369415495472"><a name="dws_01_0143_p369415495472"></a><a name="dws_01_0143_p369415495472"></a>"ecs:*:get*",</p>
+<p id="dws_01_0143_p10694249174712"><a name="dws_01_0143_p10694249174712"></a><a name="dws_01_0143_p10694249174712"></a>"ecs:*:list*",</p>
+<p id="dws_01_0143_p124571814125813"><a name="dws_01_0143_p124571814125813"></a><a name="dws_01_0143_p124571814125813"></a>"ecs:*:delete*",</p>
+<p id="dws_01_0143_p1169411493474"><a name="dws_01_0143_p1169411493474"></a><a name="dws_01_0143_p1169411493474"></a>"vpc:*:get*",</p>
+<p id="dws_01_0143_p6694164915478"><a name="dws_01_0143_p6694164915478"></a><a name="dws_01_0143_p6694164915478"></a>"vpc:*:list*",</p>
+<p id="dws_01_0143_p1810913316580"><a name="dws_01_0143_p1810913316580"></a><a name="dws_01_0143_p1810913316580"></a>"vpc:*:delete*",</p>
+<p id="dws_01_0143_p12694124984715"><a name="dws_01_0143_p12694124984715"></a><a name="dws_01_0143_p12694124984715"></a>"evs:*:get*",</p>
+<p id="dws_01_0143_p4694949194716"><a name="dws_01_0143_p4694949194716"></a><a name="dws_01_0143_p4694949194716"></a>"evs:*:list*",</p>
+<p id="dws_01_0143_p522917717592"><a name="dws_01_0143_p522917717592"></a><a name="dws_01_0143_p522917717592"></a>"evs:*:delete*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul1791612175018"></a><a name="zh-cn_topic_0167929270_ul1791612175018"></a><ul id="zh-cn_topic_0167929270_ul1791612175018"><li>支持：<a name="zh-cn_topic_0167929270_ul891681175012"></a><a name="zh-cn_topic_0167929270_ul891681175012"></a><ul id="zh-cn_topic_0167929270_ul891681175012"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul1791612175018"></a><a name="dws_01_0143_ul1791612175018"></a><ul id="dws_01_0143_ul1791612175018"><li>支持：<a name="dws_01_0143_ul891681175012"></a><a name="dws_01_0143_ul891681175012"></a><ul id="dws_01_0143_ul891681175012"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row15517339114613"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p1551763904612"><a name="zh-cn_topic_0167929270_p1551763904612"></a><a name="zh-cn_topic_0167929270_p1551763904612"></a>设置可维护时间段</p>
+<tr id="dws_01_0143_row15517339114613"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p1551763904612"><a name="dws_01_0143_p1551763904612"></a><a name="dws_01_0143_p1551763904612"></a>设置可维护时间段</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p17517183954617"><a name="zh-cn_topic_0167929270_p17517183954617"></a><a name="zh-cn_topic_0167929270_p17517183954617"></a>"dws:cluster:setMaintainceWindow"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p17517183954617"><a name="dws_01_0143_p17517183954617"></a><a name="dws_01_0143_p17517183954617"></a>"dws:cluster:setMaintainceWindow"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p1272392440"><a name="zh-cn_topic_0167929270_p1272392440"></a><a name="zh-cn_topic_0167929270_p1272392440"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p17271539194415"><a name="zh-cn_topic_0167929270_p17271539194415"></a><a name="zh-cn_topic_0167929270_p17271539194415"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p1272392440"><a name="dws_01_0143_p1272392440"></a><a name="dws_01_0143_p1272392440"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p17271539194415"><a name="dws_01_0143_p17271539194415"></a><a name="dws_01_0143_p17271539194415"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul192601942507"></a><a name="zh-cn_topic_0167929270_ul192601942507"></a><ul id="zh-cn_topic_0167929270_ul192601942507"><li>支持：<a name="zh-cn_topic_0167929270_ul13260134115011"></a><a name="zh-cn_topic_0167929270_ul13260134115011"></a><ul id="zh-cn_topic_0167929270_ul13260134115011"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul192601942507"></a><a name="dws_01_0143_ul192601942507"></a><ul id="dws_01_0143_ul192601942507"><li>支持：<a name="dws_01_0143_ul13260134115011"></a><a name="dws_01_0143_ul13260134115011"></a><ul id="dws_01_0143_ul13260134115011"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row451733964610"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p6517173919466"><a name="zh-cn_topic_0167929270_p6517173919466"></a><a name="zh-cn_topic_0167929270_p6517173919466"></a>绑定EIP</p>
+<tr id="dws_01_0143_row451733964610"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p6517173919466"><a name="dws_01_0143_p6517173919466"></a><a name="dws_01_0143_p6517173919466"></a>绑定EIP</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p15179392462"><a name="zh-cn_topic_0167929270_p15179392462"></a><a name="zh-cn_topic_0167929270_p15179392462"></a>"dws:eip:operate"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p15179392462"><a name="dws_01_0143_p15179392462"></a><a name="dws_01_0143_p15179392462"></a>"dws:eip:operate"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p17401124204418"><a name="zh-cn_topic_0167929270_p17401124204418"></a><a name="zh-cn_topic_0167929270_p17401124204418"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p5401124220447"><a name="zh-cn_topic_0167929270_p5401124220447"></a><a name="zh-cn_topic_0167929270_p5401124220447"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p17401124204418"><a name="dws_01_0143_p17401124204418"></a><a name="dws_01_0143_p17401124204418"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p5401124220447"><a name="dws_01_0143_p5401124220447"></a><a name="dws_01_0143_p5401124220447"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul118106135015"></a><a name="zh-cn_topic_0167929270_ul118106135015"></a><ul id="zh-cn_topic_0167929270_ul118106135015"><li>支持：<a name="zh-cn_topic_0167929270_ul1418116125017"></a><a name="zh-cn_topic_0167929270_ul1418116125017"></a><ul id="zh-cn_topic_0167929270_ul1418116125017"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul118106135015"></a><a name="dws_01_0143_ul118106135015"></a><ul id="dws_01_0143_ul118106135015"><li>支持：<a name="dws_01_0143_ul1418116125017"></a><a name="dws_01_0143_ul1418116125017"></a><ul id="dws_01_0143_ul1418116125017"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row10517173919460"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p2051763964619"><a name="zh-cn_topic_0167929270_p2051763964619"></a><a name="zh-cn_topic_0167929270_p2051763964619"></a>解绑EIP</p>
+<tr id="dws_01_0143_row10517173919460"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p2051763964619"><a name="dws_01_0143_p2051763964619"></a><a name="dws_01_0143_p2051763964619"></a>解绑EIP</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p20517183974617"><a name="zh-cn_topic_0167929270_p20517183974617"></a><a name="zh-cn_topic_0167929270_p20517183974617"></a>"dws:eip:operate"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p20517183974617"><a name="dws_01_0143_p20517183974617"></a><a name="dws_01_0143_p20517183974617"></a>"dws:eip:operate"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p3468174674411"><a name="zh-cn_topic_0167929270_p3468174674411"></a><a name="zh-cn_topic_0167929270_p3468174674411"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p446864674412"><a name="zh-cn_topic_0167929270_p446864674412"></a><a name="zh-cn_topic_0167929270_p446864674412"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p3468174674411"><a name="dws_01_0143_p3468174674411"></a><a name="dws_01_0143_p3468174674411"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p446864674412"><a name="dws_01_0143_p446864674412"></a><a name="dws_01_0143_p446864674412"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul109106817502"></a><a name="zh-cn_topic_0167929270_ul109106817502"></a><ul id="zh-cn_topic_0167929270_ul109106817502"><li>支持：<a name="zh-cn_topic_0167929270_ul1691018812506"></a><a name="zh-cn_topic_0167929270_ul1691018812506"></a><ul id="zh-cn_topic_0167929270_ul1691018812506"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul109106817502"></a><a name="dws_01_0143_ul109106817502"></a><ul id="dws_01_0143_ul109106817502"><li>支持：<a name="dws_01_0143_ul1691018812506"></a><a name="dws_01_0143_ul1691018812506"></a><ul id="dws_01_0143_ul1691018812506"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row1851710393464"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p1851716395462"><a name="zh-cn_topic_0167929270_p1851716395462"></a><a name="zh-cn_topic_0167929270_p1851716395462"></a>创建DNS域名</p>
+<tr id="dws_01_0143_row1851710393464"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p1851716395462"><a name="dws_01_0143_p1851716395462"></a><a name="dws_01_0143_p1851716395462"></a>创建DNS域名</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p65172039164617"><a name="zh-cn_topic_0167929270_p65172039164617"></a><a name="zh-cn_topic_0167929270_p65172039164617"></a>"dws:dns:create"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p65172039164617"><a name="dws_01_0143_p65172039164617"></a><a name="dws_01_0143_p65172039164617"></a>"dws:dns:create"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p1175313499443"><a name="zh-cn_topic_0167929270_p1175313499443"></a><a name="zh-cn_topic_0167929270_p1175313499443"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p12753349144416"><a name="zh-cn_topic_0167929270_p12753349144416"></a><a name="zh-cn_topic_0167929270_p12753349144416"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p1175313499443"><a name="dws_01_0143_p1175313499443"></a><a name="dws_01_0143_p1175313499443"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p12753349144416"><a name="dws_01_0143_p12753349144416"></a><a name="dws_01_0143_p12753349144416"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul8740101065011"></a><a name="zh-cn_topic_0167929270_ul8740101065011"></a><ul id="zh-cn_topic_0167929270_ul8740101065011"><li>支持：<a name="zh-cn_topic_0167929270_ul15740141065016"></a><a name="zh-cn_topic_0167929270_ul15740141065016"></a><ul id="zh-cn_topic_0167929270_ul15740141065016"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul8740101065011"></a><a name="dws_01_0143_ul8740101065011"></a><ul id="dws_01_0143_ul8740101065011"><li>支持：<a name="dws_01_0143_ul15740141065016"></a><a name="dws_01_0143_ul15740141065016"></a><ul id="dws_01_0143_ul15740141065016"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row12517143964618"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p5517439164619"><a name="zh-cn_topic_0167929270_p5517439164619"></a><a name="zh-cn_topic_0167929270_p5517439164619"></a>释放DNS域名</p>
+<tr id="dws_01_0143_row12517143964618"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p5517439164619"><a name="dws_01_0143_p5517439164619"></a><a name="dws_01_0143_p5517439164619"></a>释放DNS域名</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p65191439194611"><a name="zh-cn_topic_0167929270_p65191439194611"></a><a name="zh-cn_topic_0167929270_p65191439194611"></a>"dws:dns:release"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p65191439194611"><a name="dws_01_0143_p65191439194611"></a><a name="dws_01_0143_p65191439194611"></a>"dws:dns:release"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p583855364415"><a name="zh-cn_topic_0167929270_p583855364415"></a><a name="zh-cn_topic_0167929270_p583855364415"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p178381253174410"><a name="zh-cn_topic_0167929270_p178381253174410"></a><a name="zh-cn_topic_0167929270_p178381253174410"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p583855364415"><a name="dws_01_0143_p583855364415"></a><a name="dws_01_0143_p583855364415"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p178381253174410"><a name="dws_01_0143_p178381253174410"></a><a name="dws_01_0143_p178381253174410"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul1214511345013"></a><a name="zh-cn_topic_0167929270_ul1214511345013"></a><ul id="zh-cn_topic_0167929270_ul1214511345013"><li>支持：<a name="zh-cn_topic_0167929270_ul111451713185010"></a><a name="zh-cn_topic_0167929270_ul111451713185010"></a><ul id="zh-cn_topic_0167929270_ul111451713185010"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul1214511345013"></a><a name="dws_01_0143_ul1214511345013"></a><ul id="dws_01_0143_ul1214511345013"><li>支持：<a name="dws_01_0143_ul111451713185010"></a><a name="dws_01_0143_ul111451713185010"></a><ul id="dws_01_0143_ul111451713185010"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row851903916463"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p135191739104613"><a name="zh-cn_topic_0167929270_p135191739104613"></a><a name="zh-cn_topic_0167929270_p135191739104613"></a>修改DNS域名</p>
+<tr id="dws_01_0143_row851903916463"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p135191739104613"><a name="dws_01_0143_p135191739104613"></a><a name="dws_01_0143_p135191739104613"></a>修改DNS域名</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p2519139114618"><a name="zh-cn_topic_0167929270_p2519139114618"></a><a name="zh-cn_topic_0167929270_p2519139114618"></a>"dws:dns:edit"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p2519139114618"><a name="dws_01_0143_p2519139114618"></a><a name="dws_01_0143_p2519139114618"></a>"dws:dns:edit"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p915917575448"><a name="zh-cn_topic_0167929270_p915917575448"></a><a name="zh-cn_topic_0167929270_p915917575448"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p21594579449"><a name="zh-cn_topic_0167929270_p21594579449"></a><a name="zh-cn_topic_0167929270_p21594579449"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p915917575448"><a name="dws_01_0143_p915917575448"></a><a name="dws_01_0143_p915917575448"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p21594579449"><a name="dws_01_0143_p21594579449"></a><a name="dws_01_0143_p21594579449"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul171718159508"></a><a name="zh-cn_topic_0167929270_ul171718159508"></a><ul id="zh-cn_topic_0167929270_ul171718159508"><li>支持：<a name="zh-cn_topic_0167929270_ul91718156508"></a><a name="zh-cn_topic_0167929270_ul91718156508"></a><ul id="zh-cn_topic_0167929270_ul91718156508"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul171718159508"></a><a name="dws_01_0143_ul171718159508"></a><ul id="dws_01_0143_ul171718159508"><li>支持：<a name="dws_01_0143_ul91718156508"></a><a name="dws_01_0143_ul91718156508"></a><ul id="dws_01_0143_ul91718156508"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row19519133914613"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p14519133974620"><a name="zh-cn_topic_0167929270_p14519133974620"></a><a name="zh-cn_topic_0167929270_p14519133974620"></a>创建MRS连接</p>
+<tr id="dws_01_0143_row19519133914613"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p14519133974620"><a name="dws_01_0143_p14519133974620"></a><a name="dws_01_0143_p14519133974620"></a>创建MRS连接</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p17519839134612"><a name="zh-cn_topic_0167929270_p17519839134612"></a><a name="zh-cn_topic_0167929270_p17519839134612"></a>"dws:MRSConnection:create"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p17519839134612"><a name="dws_01_0143_p17519839134612"></a><a name="dws_01_0143_p17519839134612"></a>"dws:MRSConnection:create"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p63537134515"><a name="zh-cn_topic_0167929270_p63537134515"></a><a name="zh-cn_topic_0167929270_p63537134515"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p0353315459"><a name="zh-cn_topic_0167929270_p0353315459"></a><a name="zh-cn_topic_0167929270_p0353315459"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p63537134515"><a name="dws_01_0143_p63537134515"></a><a name="dws_01_0143_p63537134515"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p0353315459"><a name="dws_01_0143_p0353315459"></a><a name="dws_01_0143_p0353315459"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul1589631705018"></a><a name="zh-cn_topic_0167929270_ul1589631705018"></a><ul id="zh-cn_topic_0167929270_ul1589631705018"><li>支持：<a name="zh-cn_topic_0167929270_ul148971417115011"></a><a name="zh-cn_topic_0167929270_ul148971417115011"></a><ul id="zh-cn_topic_0167929270_ul148971417115011"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul1589631705018"></a><a name="dws_01_0143_ul1589631705018"></a><ul id="dws_01_0143_ul1589631705018"><li>支持：<a name="dws_01_0143_ul148971417115011"></a><a name="dws_01_0143_ul148971417115011"></a><ul id="dws_01_0143_ul148971417115011"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row165191739144619"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p14519183917463"><a name="zh-cn_topic_0167929270_p14519183917463"></a><a name="zh-cn_topic_0167929270_p14519183917463"></a>更新MRS连接</p>
+<tr id="dws_01_0143_row165191739144619"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p14519183917463"><a name="dws_01_0143_p14519183917463"></a><a name="dws_01_0143_p14519183917463"></a>更新MRS连接</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p4519153914614"><a name="zh-cn_topic_0167929270_p4519153914614"></a><a name="zh-cn_topic_0167929270_p4519153914614"></a>"dws:MRSConnection:update"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p4519153914614"><a name="dws_01_0143_p4519153914614"></a><a name="dws_01_0143_p4519153914614"></a>"dws:MRSConnection:update"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p12506849455"><a name="zh-cn_topic_0167929270_p12506849455"></a><a name="zh-cn_topic_0167929270_p12506849455"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p1150612414459"><a name="zh-cn_topic_0167929270_p1150612414459"></a><a name="zh-cn_topic_0167929270_p1150612414459"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p12506849455"><a name="dws_01_0143_p12506849455"></a><a name="dws_01_0143_p12506849455"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p1150612414459"><a name="dws_01_0143_p1150612414459"></a><a name="dws_01_0143_p1150612414459"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul1716141905012"></a><a name="zh-cn_topic_0167929270_ul1716141905012"></a><ul id="zh-cn_topic_0167929270_ul1716141905012"><li>支持：<a name="zh-cn_topic_0167929270_ul11717161920508"></a><a name="zh-cn_topic_0167929270_ul11717161920508"></a><ul id="zh-cn_topic_0167929270_ul11717161920508"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul1716141905012"></a><a name="dws_01_0143_ul1716141905012"></a><ul id="dws_01_0143_ul1716141905012"><li>支持：<a name="dws_01_0143_ul11717161920508"></a><a name="dws_01_0143_ul11717161920508"></a><ul id="dws_01_0143_ul11717161920508"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row1951914391467"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p125191539154618"><a name="zh-cn_topic_0167929270_p125191539154618"></a><a name="zh-cn_topic_0167929270_p125191539154618"></a>删除MRS连接</p>
+<tr id="dws_01_0143_row1951914391467"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p125191539154618"><a name="dws_01_0143_p125191539154618"></a><a name="dws_01_0143_p125191539154618"></a>删除MRS连接</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p12519113915465"><a name="zh-cn_topic_0167929270_p12519113915465"></a><a name="zh-cn_topic_0167929270_p12519113915465"></a>"dws:MRSConnection:delete"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p12519113915465"><a name="dws_01_0143_p12519113915465"></a><a name="dws_01_0143_p12519113915465"></a>"dws:MRSConnection:delete"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p83521582455"><a name="zh-cn_topic_0167929270_p83521582455"></a><a name="zh-cn_topic_0167929270_p83521582455"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p13531683451"><a name="zh-cn_topic_0167929270_p13531683451"></a><a name="zh-cn_topic_0167929270_p13531683451"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p83521582455"><a name="dws_01_0143_p83521582455"></a><a name="dws_01_0143_p83521582455"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p13531683451"><a name="dws_01_0143_p13531683451"></a><a name="dws_01_0143_p13531683451"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul11249102245014"></a><a name="zh-cn_topic_0167929270_ul11249102245014"></a><ul id="zh-cn_topic_0167929270_ul11249102245014"><li>支持：<a name="zh-cn_topic_0167929270_ul122506225502"></a><a name="zh-cn_topic_0167929270_ul122506225502"></a><ul id="zh-cn_topic_0167929270_ul122506225502"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul11249102245014"></a><a name="dws_01_0143_ul11249102245014"></a><ul id="dws_01_0143_ul11249102245014"><li>支持：<a name="dws_01_0143_ul122506225502"></a><a name="dws_01_0143_ul122506225502"></a><ul id="dws_01_0143_ul122506225502"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row951943954612"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p55191839174618"><a name="zh-cn_topic_0167929270_p55191839174618"></a><a name="zh-cn_topic_0167929270_p55191839174618"></a>添加/删除标签</p>
+<tr id="dws_01_0143_row951943954612"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p55191839174618"><a name="dws_01_0143_p55191839174618"></a><a name="dws_01_0143_p55191839174618"></a>添加/删除标签</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p175191139194616"><a name="zh-cn_topic_0167929270_p175191139194616"></a><a name="zh-cn_topic_0167929270_p175191139194616"></a>"dws:tag:addAndDelete"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p175191139194616"><a name="dws_01_0143_p175191139194616"></a><a name="dws_01_0143_p175191139194616"></a>"dws:tag:addAndDelete"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p352351194520"><a name="zh-cn_topic_0167929270_p352351194520"></a><a name="zh-cn_topic_0167929270_p352351194520"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p652313117456"><a name="zh-cn_topic_0167929270_p652313117456"></a><a name="zh-cn_topic_0167929270_p652313117456"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p352351194520"><a name="dws_01_0143_p352351194520"></a><a name="dws_01_0143_p352351194520"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p652313117456"><a name="dws_01_0143_p652313117456"></a><a name="dws_01_0143_p652313117456"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul19144624165010"></a><a name="zh-cn_topic_0167929270_ul19144624165010"></a><ul id="zh-cn_topic_0167929270_ul19144624165010"><li>支持：<a name="zh-cn_topic_0167929270_ul3144624195016"></a><a name="zh-cn_topic_0167929270_ul3144624195016"></a><ul id="zh-cn_topic_0167929270_ul3144624195016"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul19144624165010"></a><a name="dws_01_0143_ul19144624165010"></a><ul id="dws_01_0143_ul19144624165010"><li>支持：<a name="dws_01_0143_ul3144624195016"></a><a name="dws_01_0143_ul3144624195016"></a><ul id="dws_01_0143_ul3144624195016"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row1651993914460"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p951953984616"><a name="zh-cn_topic_0167929270_p951953984616"></a><a name="zh-cn_topic_0167929270_p951953984616"></a>编辑标签</p>
+<tr id="dws_01_0143_row1651993914460"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p951953984616"><a name="dws_01_0143_p951953984616"></a><a name="dws_01_0143_p951953984616"></a>编辑标签</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p125197391461"><a name="zh-cn_topic_0167929270_p125197391461"></a><a name="zh-cn_topic_0167929270_p125197391461"></a>"dws:tag:edit"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p125197391461"><a name="dws_01_0143_p125197391461"></a><a name="dws_01_0143_p125197391461"></a>"dws:tag:edit"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p13388171594515"><a name="zh-cn_topic_0167929270_p13388171594515"></a><a name="zh-cn_topic_0167929270_p13388171594515"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p153886151456"><a name="zh-cn_topic_0167929270_p153886151456"></a><a name="zh-cn_topic_0167929270_p153886151456"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p13388171594515"><a name="dws_01_0143_p13388171594515"></a><a name="dws_01_0143_p13388171594515"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p153886151456"><a name="dws_01_0143_p153886151456"></a><a name="dws_01_0143_p153886151456"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul165545115502"></a><a name="zh-cn_topic_0167929270_ul165545115502"></a><ul id="zh-cn_topic_0167929270_ul165545115502"><li>支持：<a name="zh-cn_topic_0167929270_ul165519511504"></a><a name="zh-cn_topic_0167929270_ul165519511504"></a><ul id="zh-cn_topic_0167929270_ul165519511504"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul165545115502"></a><a name="dws_01_0143_ul165545115502"></a><ul id="dws_01_0143_ul165545115502"><li>支持：<a name="dws_01_0143_ul165519511504"></a><a name="dws_01_0143_ul165519511504"></a><ul id="dws_01_0143_ul165519511504"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row1251993924617"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p551923934612"><a name="zh-cn_topic_0167929270_p551923934612"></a><a name="zh-cn_topic_0167929270_p551923934612"></a>创建快照</p>
+<tr id="dws_01_0143_row1251993924617"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p551923934612"><a name="dws_01_0143_p551923934612"></a><a name="dws_01_0143_p551923934612"></a>创建快照</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p1051910399466"><a name="zh-cn_topic_0167929270_p1051910399466"></a><a name="zh-cn_topic_0167929270_p1051910399466"></a>"dws:snapshot:create"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p1051910399466"><a name="dws_01_0143_p1051910399466"></a><a name="dws_01_0143_p1051910399466"></a>"dws:snapshot:create"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p82031917457"><a name="zh-cn_topic_0167929270_p82031917457"></a><a name="zh-cn_topic_0167929270_p82031917457"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p1520131954515"><a name="zh-cn_topic_0167929270_p1520131954515"></a><a name="zh-cn_topic_0167929270_p1520131954515"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p82031917457"><a name="dws_01_0143_p82031917457"></a><a name="dws_01_0143_p82031917457"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p1520131954515"><a name="dws_01_0143_p1520131954515"></a><a name="dws_01_0143_p1520131954515"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul7706115315012"></a><a name="zh-cn_topic_0167929270_ul7706115315012"></a><ul id="zh-cn_topic_0167929270_ul7706115315012"><li>支持：<a name="zh-cn_topic_0167929270_ul47069535503"></a><a name="zh-cn_topic_0167929270_ul47069535503"></a><ul id="zh-cn_topic_0167929270_ul47069535503"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul7706115315012"></a><a name="dws_01_0143_ul7706115315012"></a><ul id="dws_01_0143_ul7706115315012"><li>支持：<a name="dws_01_0143_ul47069535503"></a><a name="dws_01_0143_ul47069535503"></a><ul id="dws_01_0143_ul47069535503"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row16984715449"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p698519113443"><a name="zh-cn_topic_0167929270_p698519113443"></a><a name="zh-cn_topic_0167929270_p698519113443"></a>获取快照列表</p>
+<tr id="dws_01_0143_row16984715449"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p698519113443"><a name="dws_01_0143_p698519113443"></a><a name="dws_01_0143_p698519113443"></a>获取快照列表</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p8756712407"><a name="zh-cn_topic_0167929270_p8756712407"></a><a name="zh-cn_topic_0167929270_p8756712407"></a>"dws:snapshot:list"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p8756712407"><a name="dws_01_0143_p8756712407"></a><a name="dws_01_0143_p8756712407"></a>"dws:snapshot:list"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p13101131534716"><a name="zh-cn_topic_0167929270_p13101131534716"></a><a name="zh-cn_topic_0167929270_p13101131534716"></a>"dws:*:get*"</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p13101131534716"><a name="dws_01_0143_p13101131534716"></a><a name="dws_01_0143_p13101131534716"></a>"dws:*:get*"</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul6881455205019"></a><a name="zh-cn_topic_0167929270_ul6881455205019"></a><ul id="zh-cn_topic_0167929270_ul6881455205019"><li>支持：<a name="zh-cn_topic_0167929270_ul15881145514505"></a><a name="zh-cn_topic_0167929270_ul15881145514505"></a><ul id="zh-cn_topic_0167929270_ul15881145514505"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul6881455205019"></a><a name="dws_01_0143_ul6881455205019"></a><ul id="dws_01_0143_ul6881455205019"><li>支持：<a name="dws_01_0143_ul15881145514505"></a><a name="dws_01_0143_ul15881145514505"></a><ul id="dws_01_0143_ul15881145514505"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row751993994619"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p751973915466"><a name="zh-cn_topic_0167929270_p751973915466"></a><a name="zh-cn_topic_0167929270_p751973915466"></a>删除快照</p>
+<tr id="dws_01_0143_row751993994619"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p751973915466"><a name="dws_01_0143_p751973915466"></a><a name="dws_01_0143_p751973915466"></a>删除快照</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p11519173964616"><a name="zh-cn_topic_0167929270_p11519173964616"></a><a name="zh-cn_topic_0167929270_p11519173964616"></a>"dws:snapshot:delete"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p11519173964616"><a name="dws_01_0143_p11519173964616"></a><a name="dws_01_0143_p11519173964616"></a>"dws:snapshot:delete"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p242145114716"><a name="zh-cn_topic_0167929270_p242145114716"></a><a name="zh-cn_topic_0167929270_p242145114716"></a>"dws:snapshot:list"</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p242145114716"><a name="dws_01_0143_p242145114716"></a><a name="dws_01_0143_p242145114716"></a>"dws:snapshot:list"</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul6928058105010"></a><a name="zh-cn_topic_0167929270_ul6928058105010"></a><ul id="zh-cn_topic_0167929270_ul6928058105010"><li>支持：<a name="zh-cn_topic_0167929270_ul17928458145014"></a><a name="zh-cn_topic_0167929270_ul17928458145014"></a><ul id="zh-cn_topic_0167929270_ul17928458145014"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul6928058105010"></a><a name="dws_01_0143_ul6928058105010"></a><ul id="dws_01_0143_ul6928058105010"><li>支持：<a name="dws_01_0143_ul17928458145014"></a><a name="dws_01_0143_ul17928458145014"></a><ul id="dws_01_0143_ul17928458145014"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row1451917394462"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p18519123915462"><a name="zh-cn_topic_0167929270_p18519123915462"></a><a name="zh-cn_topic_0167929270_p18519123915462"></a>复制快照</p>
+<tr id="dws_01_0143_row1451917394462"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p18519123915462"><a name="dws_01_0143_p18519123915462"></a><a name="dws_01_0143_p18519123915462"></a>复制快照</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p145192039134616"><a name="zh-cn_topic_0167929270_p145192039134616"></a><a name="zh-cn_topic_0167929270_p145192039134616"></a>"dws:snapshot:copy"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p145192039134616"><a name="dws_01_0143_p145192039134616"></a><a name="dws_01_0143_p145192039134616"></a>"dws:snapshot:copy"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p131752194713"><a name="zh-cn_topic_0167929270_p131752194713"></a><a name="zh-cn_topic_0167929270_p131752194713"></a>"dws:snapshot:list"</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p131752194713"><a name="dws_01_0143_p131752194713"></a><a name="dws_01_0143_p131752194713"></a>"dws:snapshot:list"</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul978660135116"></a><a name="zh-cn_topic_0167929270_ul978660135116"></a><ul id="zh-cn_topic_0167929270_ul978660135116"><li>支持：<a name="zh-cn_topic_0167929270_ul878620145119"></a><a name="zh-cn_topic_0167929270_ul878620145119"></a><ul id="zh-cn_topic_0167929270_ul878620145119"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul978660135116"></a><a name="dws_01_0143_ul978660135116"></a><ul id="dws_01_0143_ul978660135116"><li>支持：<a name="dws_01_0143_ul878620145119"></a><a name="dws_01_0143_ul878620145119"></a><ul id="dws_01_0143_ul878620145119"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row85191339194617"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p151911399466"><a name="zh-cn_topic_0167929270_p151911399466"></a><a name="zh-cn_topic_0167929270_p151911399466"></a>创建参数模板</p>
+<tr id="dws_01_0143_row85191339194617"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p151911399466"><a name="dws_01_0143_p151911399466"></a><a name="dws_01_0143_p151911399466"></a>创建参数模板</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p125199398465"><a name="zh-cn_topic_0167929270_p125199398465"></a><a name="zh-cn_topic_0167929270_p125199398465"></a>"dws:parameterGroup:create"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p125199398465"><a name="dws_01_0143_p125199398465"></a><a name="dws_01_0143_p125199398465"></a>"dws:parameterGroup:create"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p1832762417459"><a name="zh-cn_topic_0167929270_p1832762417459"></a><a name="zh-cn_topic_0167929270_p1832762417459"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p1132719241459"><a name="zh-cn_topic_0167929270_p1132719241459"></a><a name="zh-cn_topic_0167929270_p1132719241459"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p1832762417459"><a name="dws_01_0143_p1832762417459"></a><a name="dws_01_0143_p1832762417459"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p1132719241459"><a name="dws_01_0143_p1132719241459"></a><a name="dws_01_0143_p1132719241459"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul18618313517"></a><a name="zh-cn_topic_0167929270_ul18618313517"></a><ul id="zh-cn_topic_0167929270_ul18618313517"><li>支持：<a name="zh-cn_topic_0167929270_ul136273135117"></a><a name="zh-cn_topic_0167929270_ul136273135117"></a><ul id="zh-cn_topic_0167929270_ul136273135117"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul18618313517"></a><a name="dws_01_0143_ul18618313517"></a><ul id="dws_01_0143_ul18618313517"><li>支持：<a name="dws_01_0143_ul136273135117"></a><a name="dws_01_0143_ul136273135117"></a><ul id="dws_01_0143_ul136273135117"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row851983974610"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p15519183924619"><a name="zh-cn_topic_0167929270_p15519183924619"></a><a name="zh-cn_topic_0167929270_p15519183924619"></a>删除参数模板</p>
+<tr id="dws_01_0143_row851983974610"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p15519183924619"><a name="dws_01_0143_p15519183924619"></a><a name="dws_01_0143_p15519183924619"></a>删除参数模板</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p105191339114610"><a name="zh-cn_topic_0167929270_p105191339114610"></a><a name="zh-cn_topic_0167929270_p105191339114610"></a>"dws:parameterGroup:delete"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p105191339114610"><a name="dws_01_0143_p105191339114610"></a><a name="dws_01_0143_p105191339114610"></a>"dws:parameterGroup:delete"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p9974182754516"><a name="zh-cn_topic_0167929270_p9974182754516"></a><a name="zh-cn_topic_0167929270_p9974182754516"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p9975427134516"><a name="zh-cn_topic_0167929270_p9975427134516"></a><a name="zh-cn_topic_0167929270_p9975427134516"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p9974182754516"><a name="dws_01_0143_p9974182754516"></a><a name="dws_01_0143_p9974182754516"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p9975427134516"><a name="dws_01_0143_p9975427134516"></a><a name="dws_01_0143_p9975427134516"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul19641148513"></a><a name="zh-cn_topic_0167929270_ul19641148513"></a><ul id="zh-cn_topic_0167929270_ul19641148513"><li>支持：<a name="zh-cn_topic_0167929270_ul1164113414516"></a><a name="zh-cn_topic_0167929270_ul1164113414516"></a><ul id="zh-cn_topic_0167929270_ul1164113414516"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul19641148513"></a><a name="dws_01_0143_ul19641148513"></a><ul id="dws_01_0143_ul19641148513"><li>支持：<a name="dws_01_0143_ul1164113414516"></a><a name="dws_01_0143_ul1164113414516"></a><ul id="dws_01_0143_ul1164113414516"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
-<tr id="zh-cn_topic_0167929270_row105191239144619"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0167929270_p125191839184611"><a name="zh-cn_topic_0167929270_p125191839184611"></a><a name="zh-cn_topic_0167929270_p125191839184611"></a>修改参数模板</p>
+<tr id="dws_01_0143_row105191239144619"><td class="cellrowborder" valign="top" width="22.6%" headers="mcps1.2.5.1.1 "><p id="dws_01_0143_p125191839184611"><a name="dws_01_0143_p125191839184611"></a><a name="dws_01_0143_p125191839184611"></a>修改参数模板</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0167929270_p1951923914615"><a name="zh-cn_topic_0167929270_p1951923914615"></a><a name="zh-cn_topic_0167929270_p1951923914615"></a>"dws:parameterGroup:edit"</p>
+<td class="cellrowborder" valign="top" width="31.830000000000002%" headers="mcps1.2.5.1.2 "><p id="dws_01_0143_p1951923914615"><a name="dws_01_0143_p1951923914615"></a><a name="dws_01_0143_p1951923914615"></a>"dws:parameterGroup:edit"</p>
 </td>
-<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0167929270_p63341934114515"><a name="zh-cn_topic_0167929270_p63341934114515"></a><a name="zh-cn_topic_0167929270_p63341934114515"></a>"dws:*:get*",</p>
-<p id="zh-cn_topic_0167929270_p1334173474510"><a name="zh-cn_topic_0167929270_p1334173474510"></a><a name="zh-cn_topic_0167929270_p1334173474510"></a>"dws:*:list*",</p>
+<td class="cellrowborder" valign="top" width="26.19%" headers="mcps1.2.5.1.3 "><p id="dws_01_0143_p63341934114515"><a name="dws_01_0143_p63341934114515"></a><a name="dws_01_0143_p63341934114515"></a>"dws:*:get*",</p>
+<p id="dws_01_0143_p1334173474510"><a name="dws_01_0143_p1334173474510"></a><a name="dws_01_0143_p1334173474510"></a>"dws:*:list*",</p>
 </td>
-<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="zh-cn_topic_0167929270_ul1066636195111"></a><a name="zh-cn_topic_0167929270_ul1066636195111"></a><ul id="zh-cn_topic_0167929270_ul1066636195111"><li>支持：<a name="zh-cn_topic_0167929270_ul1366620616517"></a><a name="zh-cn_topic_0167929270_ul1366620616517"></a><ul id="zh-cn_topic_0167929270_ul1366620616517"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
+<td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.5.1.4 "><a name="dws_01_0143_ul1066636195111"></a><a name="dws_01_0143_ul1066636195111"></a><ul id="dws_01_0143_ul1066636195111"><li>支持：<a name="dws_01_0143_ul1366620616517"></a><a name="dws_01_0143_ul1366620616517"></a><ul id="dws_01_0143_ul1366620616517"><li>项目(Project)</li><li>企业项目(Enterprise Project)</li></ul>
 </li></ul>
 </td>
 </tr>
