@@ -25,9 +25,9 @@ DWS支持SSL认证方式的连接，以加密DWS客户端与数据库之间传�
 
 4.  在“SSL连接“区域中，单击“服务器端是否强制使用SSL连接“的设置开关进行设置，建议开启。
 
-    ![](figures/icon_dws_on.png)：开启，表示服务器端强制要求SSL连接。
+    ![](figures/dws_icon_on.png)：开启，表示服务器端强制要求SSL连接。
 
-    ![](figures/icon_dws_off.jpg)：关闭，表示服务器端对是否通过SSL连接不作强制要求，默认为关闭。
+    ![](figures/dws_icon_off.png)：关闭，表示服务器端对是否通过SSL连接不作强制要求，默认为关闭。
 
     **图 1**  SSL连接<a name="fig168181335124718"></a>  
     ![](figures/SSL连接.png "SSL连接")
