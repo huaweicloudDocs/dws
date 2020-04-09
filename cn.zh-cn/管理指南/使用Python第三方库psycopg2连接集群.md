@@ -12,9 +12,13 @@
 ## 在Linux环境使用psycopg2第三方库连接集群<a name="section2825650154610"></a>
 
 1.  以**root**用户登录Linux环境。
-2.  执行以下命令创建python\_dws.py文件，并把复制粘贴以下内容放进入python\_dws.py文件。
+2.  执行以下命令创建python\_dws.py文件。
 
-    **vi python\_dws.py**
+    ```
+    vi python_dws.py
+    ```
+
+    请复制粘贴以下内容放入python\_dws.py文件中：
 
     ```
     #!/usr/bin/python
@@ -128,15 +132,21 @@
 
 4.  执行以下命令，使用psycopg第三方库连接集群。
 
-    **python python\_dws.py**
+    ```
+    python python_dws.py
+    ```
 
 
 ## 在Windows环境使用psycopg2第三方库连接集群<a name="section79862501183"></a>
 
 1.  在Windows系统中，单击“开始“按钮 ，在搜索框中，键入**cmd**，然后在结果列表中单击“cmd.exe”打开命令提示符窗口。
-2.  在命令提示符窗口中，执行以下命令创建python\_dws.py文件，并把复制粘贴以下内容放进入python\_dws.py文件。
+2.  在命令提示符窗口中，执行以下命令创建python\_dws.py文件。
 
-    ****type nul\>**  python\_dws.py**
+    ```
+    type nul> python_dws.py
+    ```
+
+    请复制粘贴以下内容放入python\_dws.py文件中：
 
     ```
     #!/usr/bin/python
@@ -248,6 +258,8 @@
 
 4.  在命令提示符窗口中，执行以下命令，使用psycopg第三方库连接集群。
 
-    **python python\_dws.py**
+    ```
+    python python_dws.py
+    ```
 
 

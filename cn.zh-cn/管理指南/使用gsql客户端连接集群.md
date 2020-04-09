@@ -14,7 +14,9 @@
 
     或者，您也可以先SSH远程登录到需要安装gsql的Linux主机，然后在Linux命令窗口，执行以下命令下载gsql客户端：
 
-    **wget https://obs.myhwclouds.com/dws/download/dws\_client\_redhat\_x64.tar.gz --no-check-certificate**
+    ```
+    wget https://obs.myhwclouds.com/dws/download/dws_client_redhat_x64.tar.gz --no-check-certificate
+    ```
 
 3.  使用SSH会话工具，远程登录客户端主机。
 
@@ -27,9 +29,10 @@
 
 5.  执行以下命令解压客户端工具。
 
-    **cd <客户端存放路径\>**
-
-    ****tar -xvf dws\_client\_redhat\_x64.tar.gz****
+    ```
+    cd <客户端存放路径>
+    tar -xvf dws_client_redhat_x64.tar.gz
+    ```
 
     其中：
 
@@ -38,7 +41,9 @@
 
 6.  执行以下命令配置客户端。
 
-    **source gsql\_env.sh**
+    ```
+    source gsql_env.sh
+    ```
 
     提示以下信息表示客户端已配置成功
 
@@ -50,7 +55,9 @@
 
 7.  执行以下命令，使用gsql客户端连接DWS集群中的数据库。
 
-    **gsql -d <数据库名称\> -h <集群地址\> -U <数据库用户\> -p <数据库端口\> -r**
+    ```
+    gsql -d <数据库名称> -h <集群地址> -U <数据库用户> -p <数据库端口> -r
+    ```
 
     参数说明如下：
 
@@ -61,7 +68,9 @@
 
     例如，执行以下命令连接DWS集群的默认数据库postgres：
 
-    ****gsql -d postgres -h 10.168.0.74 -U dbadmin -p 8000 -r****
+    ```
+    gsql -d postgres -h 10.168.0.74 -U dbadmin -p 8000 -r
+    ```
 
     根据界面提示输入密码后，显示如下信息表示gsql工具已经连接成功：
 
@@ -83,9 +92,10 @@ TPC-DS是数据库决策支持测试基准。通过使用TPC-DS的测试数据�
 1.  使用SSH远程连接工具登录gsql客户端主机。
 2.  在Linux命令窗口，执行以下命令，切换到指定目录并设置用户导入样例数据的用户密钥和OBS访问地址。
 
-    **cd ./sample**
-
-    **/bin/bash setup.sh -ak <**_**Access\_Key\_Id**_**_\>_  -sk <_Secret\_Access\_Key\>_  -obs\_location obs.myhwclouds.com**
+    ```
+    cd ./sample
+    /bin/bash setup.sh -ak <Access_Key_Id> -sk <Secret_Access_Key> -obs_location obs.myhwclouds.com
+    ```
 
     系统显示以下信息表示设置成功：
 
@@ -100,11 +110,15 @@ TPC-DS是数据库决策支持测试基准。通过使用TPC-DS的测试数据�
 
     命令格式：
 
-    **gsql -d <_数据库名称_\> -h <_集群公网访问地址\>_  -U <_管理员用户\>_  -p <_数据仓库端口\>_  -f <_样例数据脚本保存路径\> -r_**
+    ```
+    gsql -d <数据库名称> -h <集群公网访问地址> -U <管理员用户> -p <数据仓库端口> -f <样例数据脚本保存路径> -r
+    ```
 
     命令示例：
 
-    **gsql -d postgres -h 10.168.0.74 -U dbadmin -p 8000 -f tpcds\_load\_data\_from\_obs.sql -r**
+    ```
+    gsql -d postgres -h 10.168.0.74 -U dbadmin -p 8000 -f tpcds_load_data_from_obs.sql -r
+    ```
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
     >命令中样例数据脚本“tpcds\_load\_data\_from\_obs.sql“存放在DWS客户端的sample目录下，如“dws\_client\_redhat\_x64\\sample“。  
@@ -120,9 +134,10 @@ TPC-DS是数据库决策支持测试基准。通过使用TPC-DS的测试数据�
 
 1.  在Linux命令窗口，执行以下命令，切换到指定目录并查询样例数据。
 
-    **cd sample/query\_sql/**
-
-    **/bin/bash tpcds100x.sh**
+    ```
+    cd sample/query_sql/
+    /bin/bash tpcds100x.sh
+    ```
 
 2.  根据命令提示，输入集群公网访问地址的IP地址、数据库端口、数据库名称、数据库访问用户以及用户密码。
 

@@ -41,9 +41,10 @@ JDBC接口的使用方法，请自行查阅官方文档。
 
     2.  打开“命令提示符“程序，切换到“$SSL\_PATH\\dws\_ssl\_cert\\sslcert”路径下，执行以下两条命令，转化根证书并导入到trustStore中。
 
-        **openssl** **x509** **-in** _cacert.pem_ **-out** _cacert.crt.der_ **-outform** _der_
-
-        **keytool** **-keystore** _mytruststore_ **-alias** _cacert_ **-import** **-file** _cacert.crt.der_
+        ```
+        openssl x509 -in cacert.pem -out cacert.crt.der -outform der
+        keytool -keystore mytruststore -alias cacert -import -file cacert.crt.der
+        ```
 
         -   “cacert.pem“为解压后获取的根证书。
         -   “cacert.crt.der“为生成的中间文件。根据实际情况，可以填写保存到其他路径，也可以自定义文件名称。
@@ -53,13 +54,17 @@ JDBC接口的使用方法，请自行查阅官方文档。
 
     3.  执行以下命令转化客户端私钥。
 
-        **openssl** **pkcs12** **-export** **-out** _client.pkcs12_ **-in** _client.crt_ **-inkey** _client.key_
+        ```
+        openssl pkcs12 -export -out client.pkcs12 -in client.crt -inkey client.key
+        ```
 
         需要输入客户端私钥的密码“Gauss@MppDB“，然后输入并确认用户自定义的私钥密码例如“key123“。
 
     4.  执行以下命令，将私钥导入到keyStore中。
 
-        **keytool** **-importkeystore** **-deststorepass** _Gauss@MppDB_ **-destkeystore** _client.jks_ **-srckeystore** _client.pkcs12_ **-srcstorepass** _key123_ **-srcstoretype** _PKCS12_ **-alias** _1_
+        ```
+        keytool -importkeystore -deststorepass Gauss@MppDB -destkeystore client.jks -srckeystore client.pkcs12 -srcstorepass key123 -srcstoretype PKCS12 -alias 1
+        ```
 
 4.  <a name="li19649431459"></a>解压已下载的JDBC驱动得到“gsjdbc4.jar“，
 5.  在应用程序的工程中，设置引用Jar包。
@@ -109,7 +114,7 @@ JDBC接口的使用方法，请自行查阅官方文档。
     </td>
     <td class="cellrowborder" valign="top" width="86.56%" headers="mcps1.2.3.1.2 "><p id="p61624548134633"><a name="p61624548134633"></a><a name="p61624548134633"></a>数据库连接描述符，可以在管理控制台查看，具体步骤请参见<a href="获取集群连接地址.md">获取集群连接地址</a>。</p>
     <p id="zh-cn_topic_0004406724_p59332072"><a name="zh-cn_topic_0004406724_p59332072"></a><a name="zh-cn_topic_0004406724_p59332072"></a>url的格式如下：</p>
-    <p id="p190710141363"><a name="p190710141363"></a><a name="p190710141363"></a>jdbc:postgresql://host:port/database</p>
+    <pre class="screen" id="screen164623764110"><a name="screen164623764110"></a><a name="screen164623764110"></a>jdbc:postgresql://host:port/database</pre>
     <div class="note" id="zh-cn_topic_0004406724_note1343464"><a name="zh-cn_topic_0004406724_note1343464"></a><a name="zh-cn_topic_0004406724_note1343464"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul32509781145934"></a><a name="ul32509781145934"></a><ul id="ul32509781145934"><li>database为要连接的数据库名称。</li><li>host为数据库服务器名称。</li><li>port为数据库服务器端口。</li></ul>
     <p id="zh-cn_topic_0004406724_p45689763"><a name="zh-cn_topic_0004406724_p45689763"></a><a name="zh-cn_topic_0004406724_p45689763"></a>缺省情况下，会尝试连接到localhost的8000端口的database。</p>
     </div></div>

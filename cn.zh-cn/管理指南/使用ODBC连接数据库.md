@@ -20,13 +20,16 @@ ODBC接口的使用方法，请自行查阅官方文档。
 3.  准备unixODBC。
     1.  解压unixODBC代码文件。
 
-        **tar -xvf unixODBC-2.3.0.tar.gz**
+        ```
+        tar -xvf unixODBC-2.3.0.tar.gz
+        ```
 
     2.  修改配置。
 
-        **cd unixODBC-2.3.0**
-
-        **vi configure**
+        ```
+        cd unixODBC-2.3.0
+        vi configure
+        ```
 
         将“LIB\_VERSION“修改为如下内容，并保存退出。
 
@@ -36,23 +39,27 @@ ODBC接口的使用方法，请自行查阅官方文档。
 
     3.  编译并安装。
 
-        **./configure --enable-gui=no**
-
-        **make**
-
-        **make install**
+        ```
+        ./configure --enable-gui=no
+        make
+        make install
+        ```
 
 4.  替换驱动文件。
     1.  解压“dws\_odbc\_driver\_for\_linux.tar.gz“。
 
-        **tar -xvf dws\_odbc\_driver\_for\_linux.tar.gz**
+        ```
+        tar -xvf dws_odbc_driver_for_linux.tar.gz
+        ```
 
     2.  将“dws\_odbc\_driver\_for\_linux.tar.gz“解压后“lib“目录下所有文件，替换到“/usr/local/lib“。
     3.  将“dws\_odbc\_driver\_for\_linux.tar.gz“解压后“odbc/lib“目录下的“psqlodbcw.la“和“psqlodbcw.so“，保存到“/usr/local/lib“。
 
 5.  执行以下命令，修改驱动文件配置。
 
-    **vi /usr/local/etc/odbcinst.ini**
+    ```
+    vi /usr/local/etc/odbcinst.ini
+    ```
 
     将以下内容保存到配置中
 
@@ -68,7 +75,9 @@ ODBC接口的使用方法，请自行查阅官方文档。
 
 6.  执行以下命令，修改数据源文件。
 
-    **vi /usr/local/etc/odbc.ini**
+    ```
+    vi /usr/local/etc/odbc.ini
+    ```
 
     将以下内容保存到配置文件中，并退出修改。
 
@@ -160,7 +169,9 @@ ODBC接口的使用方法，请自行查阅官方文档。
 
 7.  配置环境变量。
 
-    **vi \~/.bashrc**
+    ```
+    vi ~/.bashrc
+    ```
 
     在配置文件中追加以下内容。
 
@@ -172,11 +183,15 @@ ODBC接口的使用方法，请自行查阅官方文档。
 
 8.  导入环境变量。
 
-    **source \~/.bashrc**
+    ```
+    source ~/.bashrc
+    ```
 
 9.  执行以下命令，开始连接。
 
-    **/usr/local/bin/isql -v DWSODBC**
+    ```
+    /usr/local/bin/isql -v DWSODBC
+    ```
 
     界面显示以下信息表示连接成功：
 

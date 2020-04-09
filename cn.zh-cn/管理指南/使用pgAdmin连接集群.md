@@ -91,7 +91,9 @@ DWS支持在互联网环境中使用pgAdmin工具连接集群中的数据库。�
 
 10. 在Query Tool界面，输入如下查询命令，单击![](figures/icon_dws_excute_sql.png)或者按F5执行命令，测试连接是否成功。
 
-    **select \* from information\_schema.tables**
+    ```
+    select * from information_schema.tables
+    ```
 
     如果连接成功，“Data Output“页签中将显示一系列记录。
 
