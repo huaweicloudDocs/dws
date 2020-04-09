@@ -16,7 +16,7 @@ DataStudio可供下载的版本分为“Windows x86“和“Windows x64“两种
 
 ## 使用Data Studio连接到集群数据库<a name="section12757151571018"></a>
 
-1.  DWS提供了基于Windows平台的Data Studio图形界面客户端，该工具依赖JDK，请先在客户端主机上安装Java 1.8.0\_141或更高版本的JDK。
+1.  DWS提供了基于Windows平台的Data Studio图形界面客户端，该工具依赖JDK，请先在客户端主机上安装Java 1.8.0\_141或以上版本的JDK，但是只支持java8版本。
 
     在Windows操作系统中，您可以访问[JDK官网](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)，下载符合操作系统版本的JDK，并根据指导进行安装。
 

@@ -19,7 +19,7 @@ DWS集群已创建好，并记录集群所在的可用区、虚拟私有云和�
 1.  登录[公有云管理控制台](https://console.huaweicloud.com)。
 2.  单击“服务列表 \> EI 企业智能  \> MapReduce服务“，打开MRS管理控制台，创建MRS集群。
 
-    创建集群时，请按要求配置以下参数，其他配置无特别要求，具体操作请参见《MapReduce服务用户指南》中的[创建集群](https://support.huaweicloud.com/usermanual-mrs/zh-cn_topic_0013363945.html)章节：
+    创建集群时，请按要求配置以下参数，其他配置无特别要求，具体操作请参见《MapReduce服务用户指南》中的“配置集群 \> 创建集群“章节。
 
     -   MRS集群的可用区、虚拟私有云和子网需要和DWS集群相同。
     -   MRS集群类型，需要为“分析集群“。
@@ -55,34 +55,27 @@ DWS集群已创建好，并记录集群所在的可用区、虚拟私有云和�
     <tbody><tr id="row14104303142621"><td class="cellrowborder" valign="top" width="20.57%" headers="mcps1.2.3.1.1 "><p id="p1597924142621"><a name="p1597924142621"></a><a name="p1597924142621"></a>MRS数据源</p>
     </td>
     <td class="cellrowborder" valign="top" width="79.43%" headers="mcps1.2.3.1.2 "><p id="p62323042142621"><a name="p62323042142621"></a><a name="p62323042142621"></a>表示DWS可以连接的MRS集群，默认显示当前用户可连接的，与当前DWS集群在相同虚拟私有云和子网下且为可用状态的分析型MRS集群。</p>
-    <p id="p14147512557"><a name="p14147512557"></a><a name="p14147512557"></a>选择一个MRS集群后，将自动显示已选择的MRS是否启用了Kerberos认证。</p>
-    <p id="p27553945143210"><a name="p27553945143210"></a><a name="p27553945143210"></a>必选参数。</p>
+    <p id="p14147512557"><a name="p14147512557"></a><a name="p14147512557"></a>选择一个MRS集群后，将自动显示已选择的MRS是否启用了Kerberos认证。单击<span class="uicontrol" id="uicontrol1365112144205"><a name="uicontrol1365112144205"></a><a name="uicontrol1365112144205"></a>“查看MRS集群”</span>可进入MRS查看该MRS集群信息。</p>
+    <p id="p186481114112016"><a name="p186481114112016"></a><a name="p186481114112016"></a>如果<span class="parmname" id="parmname1528154619198"><a name="parmname1528154619198"></a><a name="parmname1528154619198"></a>“MRS数据源”</span>下拉框为空，用户可以单击<span class="uicontrol" id="uicontrol55281646181915"><a name="uicontrol55281646181915"></a><a name="uicontrol55281646181915"></a>“创建MRS集群”</span>进行创建。</p>
     </td>
     </tr>
     <tr id="row22977368142941"><td class="cellrowborder" valign="top" width="20.57%" headers="mcps1.2.3.1.1 "><p id="p49227482142941"><a name="p49227482142941"></a><a name="p49227482142941"></a>MRS用户</p>
     </td>
     <td class="cellrowborder" valign="top" width="79.43%" headers="mcps1.2.3.1.2 "><p id="p28003121142941"><a name="p28003121142941"></a><a name="p28003121142941"></a>表示DWS集群连接MRS集群时使用的用户名。仅选择Kerberos认证的MRS集群时有效。</p>
-    <p id="p53685662143230"><a name="p53685662143230"></a><a name="p53685662143230"></a>必选参数。</p>
     </td>
     </tr>
     <tr id="row65192618142942"><td class="cellrowborder" valign="top" width="20.57%" headers="mcps1.2.3.1.1 "><p id="p46110714142942"><a name="p46110714142942"></a><a name="p46110714142942"></a>用户密码</p>
     </td>
-    <td class="cellrowborder" valign="top" width="79.43%" headers="mcps1.2.3.1.2 "><p id="p43980334142942"><a name="p43980334142942"></a><a name="p43980334142942"></a>填写连接用户的密码。如果此用户密码被修改，需要重新创建连接。仅选择启用Kerberos认证的MRS集群时可用。</p>
-    <p id="p62811050143239"><a name="p62811050143239"></a><a name="p62811050143239"></a>必选参数。</p>
+    <td class="cellrowborder" valign="top" width="79.43%" headers="mcps1.2.3.1.2 "><p id="p43980334142942"><a name="p43980334142942"></a><a name="p43980334142942"></a>填写连接用户的密码。如果此用户密码被修改，需要重新创建连接。仅选择启用Kerberos认证的MRS集群时该参数有效。</p>
     </td>
     </tr>
     <tr id="row895856614324"><td class="cellrowborder" valign="top" width="20.57%" headers="mcps1.2.3.1.1 "><p id="p5455528514324"><a name="p5455528514324"></a><a name="p5455528514324"></a>描述</p>
     </td>
     <td class="cellrowborder" valign="top" width="79.43%" headers="mcps1.2.3.1.2 "><p id="p5690199714324"><a name="p5690199714324"></a><a name="p5690199714324"></a>表示此连接的说明信息。</p>
-    <p id="p36233189143252"><a name="p36233189143252"></a><a name="p36233189143252"></a>可选参数。</p>
     </td>
     </tr>
     </tbody>
     </table>
-
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   如果“MRS数据源“下拉框为空，用户可以单击“创建MRS集群“进行创建。  
-    >-   在“MRS数据源“下拉框中选中一个MRS集群后，单击“查看MRS集群“可进入MRS查看该MRS集群信息。  
 
 7.  单击“提交“保存连接。
 

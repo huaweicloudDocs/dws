@@ -39,7 +39,7 @@
 
     拒绝策略需要同时配合其他策略使用，否则没有实际作用。用户被授予的策略中，一个授权项的作用如果同时存在Allow和Deny，则遵循**Deny优先原则**。
 
-    如果您给用户授予DWS Admin的系统策略，但不希望用户拥有DWS Admin中定义的删除集群权限，您可以创建一条拒绝删除集群的自定义策略，然后同时将DWS Admin和拒绝策略授予用户，根据Deny优先原则，则用户可以对DWS执行除了删除集群外的所有操作。拒绝策略示例如下：
+    如果您给用户授予DWS FullAccess的系统策略，但不希望用户拥有DWS FullAccess中定义的删除集群权限，您可以创建一条拒绝删除集群的自定义策略，然后同时将DWS FullAccess和拒绝策略授予用户，根据Deny优先原则，则用户可以对DWS执行除了删除集群外的所有操作。拒绝策略示例如下：
 
     ```
     { 
@@ -64,16 +64,26 @@
              "Version": "1.1",  
              "Statement": [  
                      {  
+                     "Effect": "Allow",
                      "Action": [  
-                     "ecs:cloudServers:resize", 
-                     "ecs:cloudServers:delete", 
-                     "ecs:cloudServers:delete", 
-                     "dws:cluster:restart",  
-                     "dws:*:get*",
-                     "dws:*:list*"
-                      ],  
-                     "Effect": "Allow" 
-                     }  
+                            "dws:cluster:create",
+                            "dws:cluster:restart",
+                            "dws:cluster:setParameter",
+                            "dws:*:get*",
+                            "dws:*:list*",
+                            "ecs:*:get*",
+                            "ecs:*:list*",
+                            "vpc:*:get*",
+                            "vpc:*:list*"
+                      ]
+                     },
+                    { 
+    		  "Effect": "Deny", 
+                      "Action": [ 
+                            "dws:cluster:delete"
+                      ] 
+                    } 
+    
              ]  
      }
     ```

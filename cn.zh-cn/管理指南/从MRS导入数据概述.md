@@ -2,7 +2,7 @@
 
 ## 从MRS导入数据到集群<a name="section34418118183527"></a>
 
-MapReduce服务（MapReduce Service，简称MRS）是一个基于开源Hadoop生态环境而运行的大数据集群，对外提供大容量数据的存储和分析能力，可解决用户的数据存储和处理需求。具体信息可参考《MapReduce服务用户指南》。
+MapReduce服务（MapReduce Service，简称MRS）是一个基于开源Hadoop生态环境而运行的大数据集群，对外提供大容量数据的存储和分析能力，可解决用户的数据存储和处理需求。有关MRS服务的详细信息，请参考[《MapReduce服务用户指南》](https://support.huaweicloud.com/usermanual-mrs/mrs_01_0025.html)。
 
 用户可以将海量业务数据，存储在MRS的分析集群，即使用Hive/Spark组件保存。Hive/Spark的数据文件则保存在HDFS中。DWS支持在相同网络中，配置一个DWS集群连接到MRS集群，然后将数据从HDFS中的文件读取到DWS。
 
@@ -19,4 +19,5 @@ MapReduce服务（MapReduce Service，简称MRS）是一个基于开源Hadoop生
 
     具体操作步骤请参见《数据仓库服务数据库开发指南》中[从MRS导入数据到集群](https://support.huaweicloud.com/devg-dws/migrate_data_from_mrs_0001.html)章节。
 
+3.  （可选）当MRS集群的HDFS配置发生变更时，在DWS服务中，需要执行MRS数据源配置的更新操作，详情请参见[更新MRS数据源配置](更新MRS数据源配置.md)。
 

@@ -1,6 +1,6 @@
 # 使用扩展应用pgAdmin4连接集群<a name="dws_01_0098"></a>
 
-DWS集成了扩展应用开源客户端工具pgAdmin4 Web版，用户无需下载和安装pgAdmin4工具，只要在DWS管理控制台为集群添加扩展应用，就可以使用扩展应用pgAdmin4连接集群。该特性目前正在公测中，用户可以提交工单申请公测。
+DWS集成了扩展应用开源客户端工具pgAdmin4 Web版，用户无需下载和安装pgAdmin4工具，只要在DWS管理控制台为集群添加扩展应用，就可以使用扩展应用pgAdmin4连接集群。该特性目前正在公测中，用户可以提交[工单](https://console.huaweicloud.com/ticket/#/ticketindex/createIndex)申请公测。
 
 通过扩展应用连接集群，只支持通过集群的内网地址或内网域名进行连接，连接时，您必须指定集群连接地址、数据库名称、端口以及数据库用户名和密码。
 
