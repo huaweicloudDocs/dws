@@ -4,11 +4,12 @@ DWS支持SSL认证方式的连接，以加密DWS客户端与数据库之间传�
 
 在集群的“安全设置“页面可以设置是否开启“服务器端是否强制使用SSL连接“。
 
->![](public_sys-resources/icon-note.gif) **说明：**   
->-   修改安全配置参数并保存生效可能需要重启集群，将导致集群暂时不可用。  
->-   修改集群安全配置必须同时满足以下两个条件：  
->    -   集群状态为“可用“或“低性能“。  
->    -   任务信息不能处于“创建快照中“、“调整大小“、“配置中“或“重启中“。  
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>-   修改安全配置参数并保存生效可能需要重启集群，将导致集群暂时不可用。
+>-   实时数仓暂不支持SSL连接。
+>-   修改集群安全配置必须同时满足以下两个条件：
+>    -   集群状态为“可用“或“低性能“。
+>    -   任务信息不能处于“创建快照中“、“调整大小“、“配置中“或“重启中“。
 
 本章节为您介绍以下内容：
 
@@ -32,9 +33,9 @@ DWS支持SSL认证方式的连接，以加密DWS客户端与数据库之间传�
     **图 1**  SSL连接<a name="fig168181335124718"></a>  
     ![](figures/SSL连接.png "SSL连接")
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   如果使用DWS提供的gsql客户端或ODBC驱动，DWS支持的SSL协议为TLSv1.2。  
-    >-   如果使用DWS提供的JDBC驱动，支持的SSL协议有SSLv3、TLSv1、TLSv1.1、TLSv1.2。客户端与数据库之间实际使用何种SSL协议，依赖客户端使用的JDK（Java Development Kit）版本，一般JDK支持多个SSL协议。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >-   如果使用DWS提供的gsql客户端或ODBC驱动，DWS支持的SSL协议为TLSv1.2。
+    >-   如果使用DWS提供的JDBC驱动，支持的SSL协议有SSLv3、TLSv1、TLSv1.1、TLSv1.2。客户端与数据库之间实际使用何种SSL协议，依赖客户端使用的JDK（Java Development Kit）版本，一般JDK支持多个SSL协议。
 
 5.  单击“应用“。
 

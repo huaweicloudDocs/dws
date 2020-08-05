@@ -60,6 +60,8 @@ DWS提供了简单易用的Web管理控制台，帮助您快速创建数据仓�
 </td>
 </tr>
 <tr id="row860511553219"><td class="cellrowborder" rowspan="3" valign="top" width="16.41%" headers="mcps1.2.5.1.1 "><p id="p860513551216"><a name="p860513551216"></a><a name="p860513551216"></a>管理和监控集群</p>
+<p id="p1786973731516"><a name="p1786973731516"></a><a name="p1786973731516"></a></p>
+<p id="p38691437161517"><a name="p38691437161517"></a><a name="p38691437161517"></a></p>
 </td>
 <td class="cellrowborder" valign="top" width="12.879999999999999%" headers="mcps1.2.5.1.2 "><p id="p156054553217"><a name="p156054553217"></a><a name="p156054553217"></a>管理集群</p>
 </td>
@@ -79,7 +81,7 @@ DWS提供了简单易用的Web管理控制台，帮助您快速创建数据仓�
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.5.1.2 "><p id="p72541519114012"><a name="p72541519114012"></a><a name="p72541519114012"></a>您可以通过监控集群、审计日志、事件通知、资源与负载管理，了解集群的运行状况和性能。</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.5.1.3 "><a name="ul8102554205215"></a><a name="ul8102554205215"></a><ul id="ul8102554205215"><li><a href="监控集群.md">监控集群</a></li><li><a href="事件通知概述.md">事件通知</a></li><li><a href="查看管理控制台关键操作审计日志.md">审计日志</a></li><li><a href="https://support.huaweicloud.com/devg-dws/dws_04_0921.html" target="_blank" rel="noopener noreferrer">资源负载管理</a></li></ul>
+<td class="cellrowborder" valign="top" headers="mcps1.2.5.1.3 "><a name="ul8102554205215"></a><a name="ul8102554205215"></a><ul id="ul8102554205215"><li><a href="监控集群.md">监控集群</a></li><li><a href="事件通知概述.md">事件通知</a></li><li><a href="审计日志.md">审计日志</a></li><li><a href="https://support.huaweicloud.com/devg-dws/dws_04_0921.html" target="_blank" rel="noopener noreferrer">资源负载管理</a></li></ul>
 </td>
 </tr>
 </tbody>

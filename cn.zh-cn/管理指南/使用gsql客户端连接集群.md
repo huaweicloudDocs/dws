@@ -24,20 +24,20 @@
 
 4.  （可选）如果要使用SSL方式连接集群，请参考[使用SSL进行安全的TCP/IP连接](使用SSL进行安全的TCP-IP连接.md)章节，在客户端主机配置SSL认证相关的参数。
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >SSL连接方式的安全性高于非SSL方式，建议在客户端使用SSL连接方式。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >SSL连接方式的安全性高于非SSL方式，建议在客户端使用SSL连接方式。
 
 5.  执行以下命令解压客户端工具。
 
     ```
     cd <客户端存放路径>
-    tar -xvf dws_client_redhat_x64.tar.gz
+    tar -xvf dws_client_redhat_x86.tar.gz
     ```
 
     其中：
 
     -   <客户端存放路径\>：请替换为实际的客户端存放路径。
-    -   dws\_client\_redhat\_x64.tar.gz：这是“RedHat x64“对应的客户端工具包名称，请替换为实际下载的包名。
+    -   dws\_client\_redhat\_x86.tar.gz：这是“RedHat x86“对应的客户端工具包名称，请替换为实际下载的包名。
 
 6.  执行以下命令配置客户端。
 
@@ -103,8 +103,8 @@ TPC-DS是数据库决策支持测试基准。通过使用TPC-DS的测试数据�
     setup successfully!
     ```
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    ><Access\_Key\_Id\>和<Secret\_Access\_Key\>：分别表示访问密钥ID和私有访问密钥。请参见[创建访问密钥（AK和SK）](https://support.huaweicloud.com/devg-dws/dws_04_add_ak_sk.html)进行获取。然后，将获取到的值替换到创建外表语句中。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    ><Access\_Key\_Id\>和<Secret\_Access\_Key\>：分别表示访问密钥ID和私有访问密钥。请参见[创建访问密钥（AK和SK）](https://support.huaweicloud.com/devg-dws/dws_04_add_ak_sk.html)进行获取。然后，将获取到的值替换到创建外表语句中。
 
 3.  在Linux命令窗口，执行以下命令，将样例数据导入数据仓库。
 
@@ -120,8 +120,8 @@ TPC-DS是数据库决策支持测试基准。通过使用TPC-DS的测试数据�
     gsql -d postgres -h 10.168.0.74 -U dbadmin -p 8000 -f tpcds_load_data_from_obs.sql -r
     ```
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >命令中样例数据脚本“tpcds\_load\_data\_from\_obs.sql“存放在DWS客户端的sample目录下，如“dws\_client\_redhat\_x64\\sample“。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >命令中样例数据脚本“tpcds\_load\_data\_from\_obs.sql“存放在DWS客户端的sample目录下，如“dws\_client\_redhat\_x64\\sample“。
 
     根据界面提示输入管理员密码，成功连接集群数据库后，系统会自动创建样例数据对应的外表用于关联集群外的数据，然后再创建存放样例数据的目标表，最后通过外表将数据导入到目标表中。
 

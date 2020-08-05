@@ -2,8 +2,8 @@
 
 当使用JDBC应用程序连接集群时，您可以在JDBC连接中配置IAM用户名及其用户凭证等信息，在连接数据库时系统就会自动生成临时数据库凭证，从而成功连接到数据库。
 
->![](public_sys-resources/icon-note.gif) **说明：**   
->当前只支持DWS 1.3.1以上版本（包括1.3.1版本）的集群及其配套的JDBC驱动程序使用IAM认证方式访问数据库。请先参考[下载JDBC或ODBC驱动](下载JDBC或ODBC驱动.md)下载JDBC驱动程序。  
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>当前只支持DWS 1.3.1以上版本（包括1.3.1版本）的集群及其配套的JDBC驱动程序使用IAM认证方式访问数据库。请先参考[下载JDBC或ODBC驱动](下载JDBC或ODBC驱动.md)下载JDBC驱动程序。
 
 ## 配置JDBC连接参数<a name="section660621017949"></a>
 

@@ -92,3 +92,7 @@
 </tbody>
 </table>
 
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>在使用RBAC鉴权时要注意Depends参数，使用时要把依赖的其他权限同时授予。
+>例如DWS Administrator权限使用时依赖Server Administrator以及Tenant Guest，在给用户授权时要同时把依赖的两个权限授予用户。
+

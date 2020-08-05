@@ -4,8 +4,8 @@ DWS支持在Linux或Windows环境下使用JDBC应用程序连接数据库。应�
 
 用户通过JDBC连接DWS集群时，可以选择是否采用SSL认证方式。SSL认证用于加密客户端和服务器之间的通讯数据，为敏感数据在Internet上的传输提供了一种安全保障手段。DWS管理控制台提供了自签的证书供用户下载。使用该证书，用户需要配置客户端程序，使证书可用，此过程依赖于openssl工具以及java自带的keytool工具。
 
->![](public_sys-resources/icon-note.gif) **说明：**   
->SSL模式安全性高于普通模式，建议在使用JDBC连接DWS集群时采用SSL模式。  
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>SSL模式安全性高于普通模式，建议在使用JDBC连接DWS集群时采用SSL模式。
 
 JDBC接口的使用方法，请自行查阅官方文档。
 

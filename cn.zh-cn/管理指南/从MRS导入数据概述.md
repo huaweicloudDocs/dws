@@ -1,4 +1,4 @@
-# 从MRS导入数据概述<a name="zh-cn_topic_0065840553"></a>
+# 从MRS导入数据概述<a name="dws_01_0055"></a>
 
 ## 从MRS导入数据到集群<a name="section34418118183527"></a>
 
@@ -12,8 +12,8 @@ MapReduce服务（MapReduce Service，简称MRS）是一个基于开源Hadoop生
 
 1.  在DWS集群创建一个MRS数据源连接，具体操作步骤请参见[创建MRS数据源连接](创建MRS数据源连接.md)。
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >连接在数据库中使用“外部服务器“表示。一个DWS集群可以和多个MRS集群建立连接，但一个DWS集群只能与同一个MRS集群建立一个连接。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >连接在数据库中使用“外部服务器“表示。一个DWS集群可以和多个MRS集群建立连接，但一个DWS集群只能与同一个MRS集群建立一个连接。
 
 2.  创建一个HDFS外表，外表通过外部服务器的接口，从MRS集群查询数据。
 

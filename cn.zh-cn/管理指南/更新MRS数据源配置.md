@@ -1,4 +1,4 @@
-# 更新MRS数据源配置<a name="zh-cn_topic_0065840666"></a>
+# 更新MRS数据源配置<a name="dws_01_0156"></a>
 
 ## 操作场景<a name="section31806539111657"></a>
 

@@ -1,4 +1,4 @@
-# 使用JDBC和ODBC连接集群<a name="dws_01_0086"></a>
+# 使用JDBC和ODBC连接集群<a name="dws_01_0081"></a>
 
 -   **[开发规范](开发规范.md)**  
 

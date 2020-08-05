@@ -1,4 +1,4 @@
-# 使用ODBC连接数据库<a name="zh-cn_topic_0056218063"></a>
+# 使用ODBC连接数据库<a name="dws_01_0086"></a>
 
 DWS支持使用ODBC应用程序连接数据库。应用程序可以在公有云环境的弹性云服务器中，或者互联网环境连接数据库。
 
@@ -164,8 +164,8 @@ ODBC接口的使用方法，请自行查阅官方文档。
     </tbody>
     </table>
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >其中，参数“Servername”和“Port”的值，可以在DWS的管理控制台查看。请登录DWS管理控制台，单击“连接管理”， 在“数据仓库连接字符串”区域，选择指定的集群，获取该集群的“内网访问地址“或“公网访问地址“。具体步骤请参见[获取集群连接地址](获取集群连接地址.md)。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >其中，参数“Servername”和“Port”的值，可以在DWS的管理控制台查看。请登录DWS管理控制台，单击“连接管理”， 在“数据仓库连接字符串”区域，选择指定的集群，获取该集群的“内网访问地址“或“公网访问地址“。具体步骤请参见[获取集群连接地址](获取集群连接地址.md)。
 
 7.  配置环境变量。
 
@@ -219,8 +219,8 @@ ODBC接口的使用方法，请自行查阅官方文档。
 
     双击"sslcert\_env.bat"文件，即可完成证书的默认位置的部署。
 
-    >![](public_sys-resources/icon-note.gif) **说明：**   
-    >该sslcert\_env.bat为了保证证书环境的纯净，在%APPDATA%\\postgresql目录存在时，会提示是否需要移除相关目录。如果有需要，请备份该目录中的文件。  
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >该sslcert\_env.bat为了保证证书环境的纯净，在%APPDATA%\\postgresql目录存在时，会提示是否需要移除相关目录。如果有需要，请备份该目录中的文件。
 
     手动部署：
 
@@ -236,8 +236,8 @@ ODBC接口的使用方法，请自行查阅官方文档。
 
         请勿直接使用“控制面板-\>系统和安全-\>管理工具-\>数据源\(ODBC\)”。
 
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >WoW64的全称是"Windows 32-bit on Windows 64-bit"，C:\\Windows\\SysWOW64\\存放的是64位系统上的32位运行环境。而C:\\Windows\\System32\\存放的是与操作系统一致的运行环境，具体的技术信息请查阅Windows的相关技术文档。  
+        >![](public_sys-resources/icon-note.gif) **说明：** 
+        >WoW64的全称是"Windows 32-bit on Windows 64-bit"，C:\\Windows\\SysWOW64\\存放的是64位系统上的32位运行环境。而C:\\Windows\\System32\\存放的是与操作系统一致的运行环境，具体的技术信息请查阅Windows的相关技术文档。
 
     -   32位操作系统请使用：C:\\Windows\\System32\\odbcad32.exe
 

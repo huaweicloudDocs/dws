@@ -53,20 +53,21 @@ DWS也支持开源的ODBC驱动程序：PostgreSQL ODBC 09.01.0200或更高版�
 
     -   **ODBC驱动**
 
-        选择“Microsoft Windows x86/x64“或“Linux x64“，然后单击“下载“可以下载与集群版本匹配的ODBC驱动。如果同时拥有不同版本的集群，单击“下载”时会下载与集群最低版本相对应的ODBC驱动。如果当前没有集群，单击“下载”时将下载到低版本的ODBC驱动。DWS集群可向下兼容低版本的ODBC驱动。
+        选择相应的版本，然后单击“下载“可以下载与集群版本匹配的ODBC驱动。如果同时拥有不同版本的集群，单击“下载”时会下载与集群最低版本相对应的ODBC驱动。如果当前没有集群，单击“下载”时将下载到低版本的ODBC驱动。DWS集群可向下兼容低版本的ODBC驱动。
 
         单击“历史版本”可根据操作系统和集群版本下载相应版本的ODBC驱动，建议按集群版本进行下载。
 
         ODBC驱动支持在以下系统中使用：
 
-        -   Windows Server 2008及以上，或Windows 7及以上。
-        -   RHEL6.4、6.5、6.6、6.7、7.1、7.2。
-        -   CentOS6.4、6.5、6.6、6.7。
-        -   EulerOS 2.0 SP2
-        -   SUSE11 SP1、11 SP2、11 SP3、11 SP4。
+        -   Windows Server 2008，或Windows 7及以上。
+        -   x86下：RHEL 6.4\~7.6。
+        -   x86下：CentOS 6.4\~7.4。
+        -   x86下：SUSE11.1\~11.4,12.0\~12.3。
+        -   Kunpeng下：EulerOS 2.8。
+        -   Stream下：EulerOS 2.2,2.8。
 
-        >![](public_sys-resources/icon-note.gif) **说明：**   
-        >Windows驱动只支持32位版本，可以在32或64位操作系统使用，但是应用程序必须为32位。  
+        >![](public_sys-resources/icon-note.gif) **说明：** 
+        >Windows驱动只支持32位版本，可以在32或64位操作系统使用，但是应用程序必须为32位。
 
 
 
