@@ -70,7 +70,7 @@
 <td class="cellrowborder" valign="top" headers="mcps1.1.4.1.2 "><p id="p1261453911123"><a name="p1261453911123"></a><a name="p1261453911123"></a>使用快照ID查询快照详情。</p>
 </td>
 </tr>
-<tr id="row10912123512121"><td class="cellrowborder" valign="top" headers="mcps1.1.4.1.1 "><p id="p1494103112124"><a name="p1494103112124"></a><a name="p1494103112124"></a><a href="删除快照.md">删除快照</a></p>
+<tr id="row10912123512121"><td class="cellrowborder" valign="top" headers="mcps1.1.4.1.1 "><p id="p1494103112124"><a name="p1494103112124"></a><a name="p1494103112124"></a><a href="删除手动快照.md">删除手动快照</a></p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.1.4.1.2 "><p id="p109138355127"><a name="p109138355127"></a><a name="p109138355127"></a>删除一个指定快照。</p>
 </td>

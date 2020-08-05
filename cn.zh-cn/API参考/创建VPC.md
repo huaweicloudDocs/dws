@@ -6,8 +6,8 @@
 
 如果用户已有VPC，可重复使用，不需多次创建。
 
->![](public_sys-resources/icon-note.gif) **说明：**   
->关于创建VPC的详细信息可以参考《虚拟私有云用户指南》中的[创建虚拟私有云和子网](https://support.huaweicloud.com/usermanual-vpc/zh-cn_topic_0013935842.html)章节。  
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>关于创建VPC的详细信息可以参考《虚拟私有云用户指南》中的[创建虚拟私有云和子网](https://support.huaweicloud.com/usermanual-vpc/zh-cn_topic_0013935842.html)章节。
 
 ## 操作步骤<a name="s46f28ae5845c454daad876db98c0fa95"></a>
 
