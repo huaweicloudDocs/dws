@@ -1,14 +1,14 @@
 # 使用ODBC连接数据库<a name="dws_01_0086"></a>
 
-DWS支持使用ODBC应用程序连接数据库。应用程序可以在公有云环境的弹性云服务器中，或者互联网环境连接数据库。
+GaussDB\(DWS\) 支持使用ODBC应用程序连接数据库。应用程序可以在公有云环境的弹性云服务器中，或者互联网环境连接数据库。
 
 ODBC接口的使用方法，请自行查阅官方文档。
 
 ## 前提条件<a name="section17871125219214"></a>
 
--   已下载Linux版本的ODBC驱动包“dws\_odbc\_driver\_for\_linux.tar.gz“和Windows版本的ODBC驱动包“dws\_odbc\_driver\_for\_windows.tar.gz“，请参见[下载JDBC或ODBC驱动](下载JDBC或ODBC驱动.md)。
+-   已下载Linux版本的ODBC驱动包“dws\_odbc\_driver\_for\_linux.zip“和Windows版本的ODBC驱动包“dws\_odbc\_driver\_for\_windows.zip“，请参见[下载JDBC或ODBC驱动](下载JDBC或ODBC驱动.md)。
 
-    DWS也支持开源的ODBC驱动程序：PostgreSQL ODBC 09.01.0200或更高版本。
+    GaussDB\(DWS\) 也支持开源的ODBC驱动程序：PostgreSQL ODBC 09.01.0200或更高版本。
 
 -   已下载开源unixODBC代码文件，支持版本为2.3.0，下载地址：[https://sourceforge.net/projects/unixodbc/files/unixODBC/2.3.0/unixODBC-2.3.0.tar.gz/download](https://sourceforge.net/projects/unixodbc/files/unixODBC/2.3.0/unixODBC-2.3.0.tar.gz/download)
 -   已下载SSL证书文件，请参见[（可选）下载SSL证书](（可选）下载SSL证书.md)。
@@ -46,14 +46,14 @@ ODBC接口的使用方法，请自行查阅官方文档。
         ```
 
 4.  替换驱动文件。
-    1.  解压“dws\_odbc\_driver\_for\_linux.tar.gz“。
+    1.  解压“dws\_odbc\_driver\_for\_linux.zip“。
 
         ```
-        tar -xvf dws_odbc_driver_for_linux.tar.gz
+        unzip dws_odbc_driver_for_linux.zip
         ```
 
-    2.  将“dws\_odbc\_driver\_for\_linux.tar.gz“解压后“lib“目录下所有文件，替换到“/usr/local/lib“。
-    3.  将“dws\_odbc\_driver\_for\_linux.tar.gz“解压后“odbc/lib“目录下的“psqlodbcw.la“和“psqlodbcw.so“，保存到“/usr/local/lib“。
+    2.  将“dws\_odbc\_driver\_for\_linux.zip“解压后“lib“目录下所有文件，替换到“/usr/local/lib“。
+    3.  将“dws\_odbc\_driver\_for\_linux.zip“解压后“odbc/lib“目录下的“psqlodbcw.la“和“psqlodbcw.so“，保存到“/usr/local/lib“。
 
 5.  执行以下命令，修改驱动文件配置。
 
@@ -154,8 +154,8 @@ ODBC接口的使用方法，请自行查阅官方文档。
     </td>
     <td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.4.1.2 "><p id="p54763265191057"><a name="p54763265191057"></a><a name="p54763265191057"></a>SSL认证工作模式。集群默认开启。</p>
     <p id="p1442353513431"><a name="p1442353513431"></a><a name="p1442353513431"></a>取值及含义：</p>
-    <a name="ul1438325020436"></a><a name="ul1438325020436"></a><ul id="ul1438325020436"><li>disable：只尝试非SSL连接。</li><li>allow：首先尝试非SSL连接，如果连接失败，再尝试SSL连接。</li><li>prefer：首先尝试SSL连接，如果连接失败，将尝试非SSL连接。</li><li>require：只尝试SSL连接。如果存在CA文件，则按设置成verify-ca的方式验证。</li><li>verify-ca：只尝试SSL连接，并且验证服务器是否具有由可信任的证书机构签发的证书。</li><li>verify-full：DWS不支持此模式。</li></ul>
-    <div class="note" id="note94497271018"><a name="note94497271018"></a><a name="note94497271018"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="p444916277012"><a name="p444916277012"></a><a name="p444916277012"></a>SSL模式安全性高于普通模式，建议在使用ODBC连接DWS集群时采用SSL模式。</p>
+    <a name="ul1438325020436"></a><a name="ul1438325020436"></a><ul id="ul1438325020436"><li>disable：只尝试非SSL连接。</li><li>allow：首先尝试非SSL连接，如果连接失败，再尝试SSL连接。</li><li>prefer：首先尝试SSL连接，如果连接失败，将尝试非SSL连接。</li><li>require：只尝试SSL连接。如果存在CA文件，则按设置成verify-ca的方式验证。</li><li>verify-ca：只尝试SSL连接，并且验证服务器是否具有由可信任的证书机构签发的证书。</li><li>verify-full：GaussDB(DWS) 不支持此模式。</li></ul>
+    <div class="note" id="note94497271018"><a name="note94497271018"></a><a name="note94497271018"></a><span class="notetitle"> 说明： </span><div class="notebody"><p id="p444916277012"><a name="p444916277012"></a><a name="p444916277012"></a>SSL模式安全性高于普通模式，建议在使用ODBC连接GaussDB(DWS) 集群时采用SSL模式。</p>
     </div></div>
     </td>
     <td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.4.1.3 "><p id="p6639467191057"><a name="p6639467191057"></a><a name="p6639467191057"></a>Sslmode=allow</p>
@@ -165,7 +165,7 @@ ODBC接口的使用方法，请自行查阅官方文档。
     </table>
 
     >![](public_sys-resources/icon-note.gif) **说明：** 
-    >其中，参数“Servername”和“Port”的值，可以在DWS的管理控制台查看。请登录DWS管理控制台，单击“连接管理”， 在“数据仓库连接字符串”区域，选择指定的集群，获取该集群的“内网访问地址“或“公网访问地址“。具体步骤请参见[获取集群连接地址](获取集群连接地址.md)。
+    >其中，参数“Servername”和“Port”的值，可以在GaussDB\(DWS\) 的管理控制台查看。请登录GaussDB\(DWS\) 管理控制台，单击“连接管理”， 在“数据仓库连接字符串”区域，选择指定的集群，获取该集群的“内网访问地址“或“公网访问地址“。具体步骤请参见[获取集群连接地址](获取集群连接地址.md)。
 
 7.  配置环境变量。
 
@@ -210,7 +210,7 @@ ODBC接口的使用方法，请自行查阅官方文档。
 
 ## 在Windows环境使用ODBC连接<a name="section31086112145338"></a>
 
-1.  解压Windows版本的ODBC驱动包“dws\_odbc\_driver\_for\_windows.tar.gz“，并安装“psqlodbc.msi“。
+1.  解压Windows版本的ODBC驱动包“dws\_odbc\_driver\_for\_windows.zip“，并安装“psqlodbc.msi“。
 2.  解压SSL证书压缩包，并准备证书文件。
 
     用户可以根据实际情况选择自动或手动部署方法
@@ -230,7 +230,7 @@ ODBC接口的使用方法，请自行查阅官方文档。
 
 3.  打开驱动管理器
 
-    因为目前DWS只提供了32位的ODBC驱动程序，**所以只支持32位的应用程序开发**；在配置数据源时，也请使用32位的驱动管理器（假设操作系统安装盘符为C:盘，如果是其他盘符，请对路径做相应修改）：
+    因为目前GaussDB\(DWS\) 只提供了32位的ODBC驱动程序，**所以只支持32位的应用程序开发**；在配置数据源时，也请使用32位的驱动管理器（假设操作系统安装盘符为C:盘，如果是其他盘符，请对路径做相应修改）：
 
     -   64位操作系统请使用：C:\\Windows\\SysWOW64\\odbcad32.exe
 
@@ -249,7 +249,7 @@ ODBC接口的使用方法，请自行查阅官方文档。
         **图 1**  配置连接数据源<a name="fig46625912141933"></a>  
         ![](figures/配置连接数据源.png "配置连接数据源")
 
-        其中，配置项“Server“和“Port“的值，可以在DWS的管理控制台查看。请登录DWS管理控制台，单击“连接管理“， 在“数据仓库连接字符串“区域，选择指定的集群，获取该集群的“内网访问地址“或“公网访问地址“。具体步骤请参见[获取集群连接地址](获取集群连接地址.md)。
+        其中，配置项“Server“和“Port“的值，可以在GaussDB\(DWS\) 的管理控制台查看。请登录GaussDB\(DWS\) 管理控制台，单击“连接管理“， 在“数据仓库连接字符串“区域，选择指定的集群，获取该集群的“内网访问地址“或“公网访问地址“。具体步骤请参见[获取集群连接地址](获取集群连接地址.md)。
 
     2.  单击“Test“验证连接正确，界面提示“Connection successful“。
 
@@ -260,7 +260,7 @@ ODBC接口的使用方法，请自行查阅官方文档。
     样例代码如下：
 
     ```
-    // 此示例演示如何通过ODBC方式获取DWS中的数据。
+    // 此示例演示如何通过ODBC方式获取GaussDB(DWS) 中的数据。
     // DBtest.c (compile with: libodbc.so)  
     #include <stdlib.h> 
     #include <stdio.h> 

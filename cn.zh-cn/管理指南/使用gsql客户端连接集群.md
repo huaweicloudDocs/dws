@@ -1,6 +1,6 @@
 # 使用gsql客户端连接集群<a name="dws_01_0037"></a>
 
-用户在创建好数据仓库集群，开始使用集群数据库之前，需要使用数据库SQL客户端连接到数据库。DWS提供了与集群版本配套的gsql命令行客户端工具，您可以使用gsql客户端通过集群的公网地址或者内网地址访问集群。
+用户在创建好数据仓库集群，开始使用集群数据库之前，需要使用数据库SQL客户端连接到数据库。GaussDB\(DWS\) 提供了与集群版本配套的gsql命令行客户端工具，您可以使用gsql客户端通过集群的公网地址或者内网地址访问集群。
 
 ## 使用gsql命令行客户端连接集群<a name="section2664278815443"></a>
 
@@ -15,7 +15,7 @@
     或者，您也可以先SSH远程登录到需要安装gsql的Linux主机，然后在Linux命令窗口，执行以下命令下载gsql客户端：
 
     ```
-    wget https://obs.myhwclouds.com/dws/download/dws_client_redhat_x64.tar.gz --no-check-certificate
+    wget https://obs.cn-north-4.myhuaweicloud.com/dws /download/dws_client_redhat_x64.zip --no-check-certificate
     ```
 
 3.  使用SSH会话工具，远程登录客户端主机。
@@ -31,13 +31,13 @@
 
     ```
     cd <客户端存放路径>
-    tar -xvf dws_client_redhat_x86.tar.gz
+    unzip dws_client_redhat_x86.zip
     ```
 
     其中：
 
     -   <客户端存放路径\>：请替换为实际的客户端存放路径。
-    -   dws\_client\_redhat\_x86.tar.gz：这是“RedHat x86“对应的客户端工具包名称，请替换为实际下载的包名。
+    -   dws\_client\_redhat\_x86.zip：这是“RedHat x86“对应的客户端工具包名称，请替换为实际下载的包名。
 
 6.  执行以下命令配置客户端。
 
@@ -51,9 +51,9 @@
     All things done.
     ```
 
-    配置后可以马上使用客户端连接DWS集群。
+    配置后可以马上使用客户端连接GaussDB\(DWS\) 集群。
 
-7.  执行以下命令，使用gsql客户端连接DWS集群中的数据库。
+7.  执行以下命令，使用gsql客户端连接GaussDB\(DWS\) 集群中的数据库。
 
     ```
     gsql -d <数据库名称> -h <集群地址> -U <数据库用户> -p <数据库端口> -r
@@ -66,7 +66,7 @@
     -   “数据库用户“：输入集群数据库的用户名。首次使用客户端连接集群时，请指定为创建集群时设置的默认管理员用户，例如“dbadmin“。
     -   “数据库端口“：输入创建集群时设置的“数据库端口“。
 
-    例如，执行以下命令连接DWS集群的默认数据库postgres：
+    例如，执行以下命令连接GaussDB\(DWS\) 集群的默认数据库postgres：
 
     ```
     gsql -d postgres -h 10.168.0.74 -U dbadmin -p 8000 -r
@@ -85,7 +85,7 @@
 
 ## （可选）使用gsql导入TPC-DS样例数据<a name="section16360114045919"></a>
 
-DWS支持用户将数据从集群外导入到集群中。用户可以参考以下指导，快速将样例数据从OBS导入集群，并对样例数据进行查询和分析。导入的样例数据是使用TPC-DS测试基准生成的标准性能测试数据。
+GaussDB\(DWS\) 支持用户将数据从集群外导入到集群中。用户可以参考以下指导，快速将样例数据从OBS导入集群，并对样例数据进行查询和分析。导入的样例数据是使用TPC-DS测试基准生成的标准性能测试数据。
 
 TPC-DS是数据库决策支持测试基准。通过使用TPC-DS的测试数据以及测试案例，用户可以模拟真实场景下大数据集的统计、报表生成、联机查询、数据挖掘等复杂场景，从而了解数据库应用的功能和性能。
 
@@ -94,7 +94,7 @@ TPC-DS是数据库决策支持测试基准。通过使用TPC-DS的测试数据�
 
     ```
     cd ./sample
-    /bin/bash setup.sh -ak <Access_Key_Id> -sk <Secret_Access_Key> -obs_location obs.myhwclouds.com
+    /bin/bash setup.sh -ak <Access_Key_Id> -sk <Secret_Access_Key> -obs_location obs.cn-north-4.myhuaweicloud.com
     ```
 
     系统显示以下信息表示设置成功：
@@ -121,7 +121,7 @@ TPC-DS是数据库决策支持测试基准。通过使用TPC-DS的测试数据�
     ```
 
     >![](public_sys-resources/icon-note.gif) **说明：** 
-    >命令中样例数据脚本“tpcds\_load\_data\_from\_obs.sql“存放在DWS客户端的sample目录下，如“dws\_client\_redhat\_x64\\sample“。
+    >命令中样例数据脚本“tpcds\_load\_data\_from\_obs.sql“存放在GaussDB\(DWS\) 客户端的sample目录下，如“dws\_client\_redhat\_x64\\sample“。
 
     根据界面提示输入管理员密码，成功连接集群数据库后，系统会自动创建样例数据对应的外表用于关联集群外的数据，然后再创建存放样例数据的目标表，最后通过外表将数据导入到目标表中。
 

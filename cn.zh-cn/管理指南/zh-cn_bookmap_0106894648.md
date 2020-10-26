@@ -1,15 +1,15 @@
 # 管理指南
 
--   [DWS使用简介](DWS使用简介.md)
+-   [GaussDB\(DWS\) 使用简介](GaussDB(DWS)-使用简介.md)
 -   [准备工作](准备工作.md)
 -   [权限管理](权限管理.md)
-    -   [创建用户并授权使用DWS](创建用户并授权使用DWS.md)
-    -   [DWS自定义策略](DWS自定义策略.md)
+    -   [创建用户并授权使用GaussDB\(DWS\)](创建用户并授权使用GaussDB(DWS).md)
+    -   [GaussDB\(DWS\) 自定义策略](GaussDB(DWS)-自定义策略.md)
     -   [策略语法：细粒度策略](策略语法-细粒度策略.md)
     -   [策略语法：RBAC](策略语法-RBAC.md)
 
 -   [管理集群](管理集群.md)
-    -   [登录DWS管理控制台](登录DWS管理控制台.md)
+    -   [登录GaussDB\(DWS\) 管理控制台](登录GaussDB(DWS)-管理控制台.md)
     -   [创建集群](创建集群.md)
     -   [购买包年包月套餐](购买包年包月套餐.md)
     -   [查看集群状态](查看集群状态.md)
@@ -38,11 +38,6 @@
     -   [删除集群](删除集群.md)
     -   [集群工作负载管理](集群工作负载管理.md)
         -   [工作负载管理简介](工作负载管理简介.md)
-        -   [添加工作负载队列](添加工作负载队列.md)
-        -   [修改工作负载队列](修改工作负载队列.md)
-        -   [查询概览](查询概览.md)
-        -   [删除工作负载队列](删除工作负载队列.md)
-
 
 -   [连接集群](连接集群.md)
     -   [连接集群的方式](连接集群的方式.md)
@@ -65,7 +60,7 @@
 
     -   [使用IAM认证方式连接集群](使用IAM认证方式连接集群.md)
         -   [概述](概述.md)
-        -   [授予IAM用户DWS Database Access权限](授予IAM用户DWS-Database-Access权限.md)
+        -   [授予IAM用户GaussDB\(DWS\) Database Access权限](授予IAM用户GaussDB(DWS)-Database-Access权限.md)
         -   [创建IAM用户凭证](创建IAM用户凭证.md)
         -   [配置JDBC连接使用IAM认证方式连接集群](配置JDBC连接使用IAM认证方式连接集群.md)
 

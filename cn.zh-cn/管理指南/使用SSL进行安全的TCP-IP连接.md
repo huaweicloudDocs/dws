@@ -1,6 +1,6 @@
 # 使用SSL进行安全的TCP/IP连接<a name="dws_01_0038"></a>
 
-如果客户端或JDBC/ODBC应用程序要使用SSL连接方式，用户必须在客户端或应用程序代码中配置相关的SSL连接参数。DWS管理控制台提供了客户端所需的SSL证书，该SSL证书包含了客户端所需的默认证书、私钥、根证书以及私钥密码加密文件。请将该SSL证书下载到客户端所在的主机上，然后在客户端中指定证书所在的路径。
+如果客户端或JDBC/ODBC应用程序要使用SSL连接方式，用户必须在客户端或应用程序代码中配置相关的SSL连接参数。GaussDB\(DWS\) 管理控制台提供了客户端所需的SSL证书，该SSL证书包含了客户端所需的默认证书、私钥、根证书以及私钥密码加密文件。请将该SSL证书下载到客户端所在的主机上，然后在客户端中指定证书所在的路径。
 
 >![](public_sys-resources/icon-note.gif) **说明：** 
 >使用默认的证书可能存在安全风险，为了提高系统安全性，强烈建议用户定期更换证书以避免被破解的风险。如果需要更换证书，请联系客服。
@@ -12,9 +12,9 @@
 
 ## 在gsql客户端配置SSL认证相关的数字证书参数<a name="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_s559f387461c440218ff2b33983a69004"></a>
 
-DWS在集群部署完成后，默认已开启SSL认证模式。服务器端证书，私钥以及根证书已经默认配置完成。用户需要配置客户端的相关参数。
+GaussDB\(DWS\) 在集群部署完成后，默认已开启SSL认证模式。服务器端证书，私钥以及根证书已经默认配置完成。用户需要配置客户端的相关参数。
 
-1.  登录DWS管理控制台，进入“连接管理”页面，下载SSL证书。
+1.  登录GaussDB\(DWS\) 管理控制台，进入“连接管理”页面，下载SSL证书。
 
     关于SSL证书的更多信息，请参见[（可选）下载SSL证书](（可选）下载SSL证书.md)。
 
@@ -23,13 +23,13 @@ DWS在集群部署完成后，默认已开启SSL认证模式。服务器端证�
 
 2.  使用文件传输工具（例如WinSCP工具）将SSL证书上传到客户端主机。
 
-    例如，将下载的证书“dws\_ssl\_cert.tar.gz”存放到“/home/dbadmin/dws\_ssl/”目录下。
+    例如，将下载的证书“dws\_ssl\_cert.zip”存放到“/home/dbadmin/dws\_ssl/”目录下。
 
 3.  使用SSH远程连接工具（例如PuTTY）登录gsql客户端主机，然后执行以下命令进入SSL证书的存放目录，并解压SSL证书：
 
     ```
     cd /home/dbadmin/dws_ssl/
-    tar -xvf dws_ssl_cert.tar.gz
+    unzip dws_ssl_cert.zip
     ```
 
 4.  在gsql客户端主机上，执行export命令，配置SSL认证相关的数字证书参数。
@@ -148,7 +148,7 @@ SSL认证有两种认证方式，如[表1](#table267519441727)所示。从安全
 <td class="cellrowborder" valign="top" width="30.5%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_a0c97d7d4943249a79adec5801937ecb7"><a name="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_a0c97d7d4943249a79adec5801937ecb7"></a><a name="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_a0c97d7d4943249a79adec5801937ecb7"></a>设置是否和服务器进行SSL连接协商，以及指定SSL连接的优先级。</p>
 </td>
 <td class="cellrowborder" valign="top" width="56.44%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_aee9d6bd66fde45c2bfa2efab0cf85cee"><a name="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_aee9d6bd66fde45c2bfa2efab0cf85cee"></a><a name="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_aee9d6bd66fde45c2bfa2efab0cf85cee"></a><strong id="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_a10d47a31a1c542e2afa4193adcbf332b"><a name="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_a10d47a31a1c542e2afa4193adcbf332b"></a><a name="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_a10d47a31a1c542e2afa4193adcbf332b"></a>取值及含义：</strong></p>
-<a name="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_u5a3aa83f2351407caf0185281284d463"></a><a name="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_u5a3aa83f2351407caf0185281284d463"></a><ul id="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_u5a3aa83f2351407caf0185281284d463"><li>disable：只尝试非SSL连接。</li><li>allow：首先尝试非SSL连接，如果连接失败，再尝试SSL连接。</li><li>prefer：首先尝试SSL连接，如果连接失败，将尝试非SSL连接。</li><li>require：只尝试SSL连接。如果存在CA文件，则按设置成verify-ca的方式验证。</li><li>verify-ca：只尝试SSL连接，并且验证服务器是否具有由可信任的证书机构签发的证书。</li><li>verify-full：DWS不支持此模式。</li></ul>
+<a name="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_u5a3aa83f2351407caf0185281284d463"></a><a name="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_u5a3aa83f2351407caf0185281284d463"></a><ul id="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_u5a3aa83f2351407caf0185281284d463"><li>disable：只尝试非SSL连接。</li><li>allow：首先尝试非SSL连接，如果连接失败，再尝试SSL连接。</li><li>prefer：首先尝试SSL连接，如果连接失败，将尝试非SSL连接。</li><li>require：只尝试SSL连接。如果存在CA文件，则按设置成verify-ca的方式验证。</li><li>verify-ca：只尝试SSL连接，并且验证服务器是否具有由可信任的证书机构签发的证书。</li><li>verify-full：GaussDB(DWS) 不支持此模式。</li></ul>
 <p id="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_ad3fef165034244089c01c2d643a6ffdf"><a name="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_ad3fef165034244089c01c2d643a6ffdf"></a><a name="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_ad3fef165034244089c01c2d643a6ffdf"></a><strong id="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_a2364f46f3816402a8672d4288826bda0"><a name="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_a2364f46f3816402a8672d4288826bda0"></a><a name="zh-cn_topic_0111534129_zh-cn_topic_0110494598_zh-cn_topic_0110355482_zh-cn_topic_0085031978_zh-cn_topic_0059778374_a2364f46f3816402a8672d4288826bda0"></a>默认值：</strong>prefer</p>
 </td>
 </tr>

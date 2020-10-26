@@ -3,7 +3,7 @@
 当使用JDBC应用程序连接集群时，您可以在JDBC连接中配置IAM用户名及其用户凭证等信息，在连接数据库时系统就会自动生成临时数据库凭证，从而成功连接到数据库。
 
 >![](public_sys-resources/icon-note.gif) **说明：** 
->当前只支持DWS 1.3.1以上版本（包括1.3.1版本）的集群及其配套的JDBC驱动程序使用IAM认证方式访问数据库。请先参考[下载JDBC或ODBC驱动](下载JDBC或ODBC驱动.md)下载JDBC驱动程序。
+>当前只支持GaussDB\(DWS\)  1.3.1以上版本（包括1.3.1版本）的集群及其配套的JDBC驱动程序使用IAM认证方式访问数据库。请先参考[下载JDBC或ODBC驱动](下载JDBC或ODBC驱动.md)下载JDBC驱动程序。
 
 ## 配置JDBC连接参数<a name="section660621017949"></a>
 
@@ -19,9 +19,9 @@
 <tbody><tr id="row35428286194147"><td class="cellrowborder" valign="top" width="13%" headers="mcps1.2.3.1.1 "><p id="p23266394194147"><a name="p23266394194147"></a><a name="p23266394194147"></a>url</p>
 </td>
 <td class="cellrowborder" valign="top" width="87%" headers="mcps1.2.3.1.2 "><p id="p21919088194147"><a name="p21919088194147"></a><a name="p21919088194147"></a>gsjdbc4.jar/gsjdbc200.jar数据库连接描述符。JDBC接口不提供重试连接的能力，您需要在业务代码中实现重试连接的处理。url示例如下：</p>
-<pre class="screen" id="screen141022042351"><a name="screen141022042351"></a><a name="screen141022042351"></a>jdbc:dws:iam://dws-IAM-demo:cn-north-1/postgres?<strong id="b5483181965"><a name="b5483181965"></a><a name="b5483181965"></a>AccessKeyID</strong>=XXXXXXXXXXXXXXXXXXXX&amp;<strong id="b341214711614"><a name="b341214711614"></a><a name="b341214711614"></a>SecretAccessKey</strong>=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&amp;<strong id="b2226121916612"><a name="b2226121916612"></a><a name="b2226121916612"></a>DbUser</strong>=user_test&amp;<strong id="b57674132619"><a name="b57674132619"></a><a name="b57674132619"></a>AutoCreate</strong>=true</pre>
+<pre class="screen" id="screen141022042351"><a name="screen141022042351"></a><a name="screen141022042351"></a>jdbc:dws:iam://dws-IAM-demo:cn-north-4/postgres?<strong id="b5483181965"><a name="b5483181965"></a><a name="b5483181965"></a>AccessKeyID</strong>=XXXXXXXXXXXXXXXXXXXX&amp;<strong id="b341214711614"><a name="b341214711614"></a><a name="b341214711614"></a>SecretAccessKey</strong>=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&amp;<strong id="b2226121916612"><a name="b2226121916612"></a><a name="b2226121916612"></a>DbUser</strong>=user_test&amp;<strong id="b57674132619"><a name="b57674132619"></a><a name="b57674132619"></a>AutoCreate</strong>=true</pre>
 <p id="p16953174613617"><a name="p16953174613617"></a><a name="p16953174613617"></a><strong id="b72051438995"><a name="b72051438995"></a><a name="b72051438995"></a>JDBC URL参数说明：</strong></p>
-<a name="ul7606351173"></a><a name="ul7606351173"></a><ul id="ul7606351173"><li>jdbc:dws:iam是URL格式的前缀。</li><li>dws-IAM-demo为数据库集群名称。</li><li>cn-north-1是集群所在的区域。<p id="p186020359717"><a name="p186020359717"></a><a name="p186020359717"></a>有关DWS的区域信息，请参考<a href="https://developer.huaweicloud.com/endpoint" target="_blank" rel="noopener noreferrer">地区和终端节点</a>。</p>
+<a name="ul7606351173"></a><a name="ul7606351173"></a><ul id="ul7606351173"><li>jdbc:dws:iam是URL格式的前缀。</li><li>dws-IAM-demo为数据库集群名称。</li><li>cn-north-4是集群所在的区域。<p id="p186020359717"><a name="p186020359717"></a><a name="p186020359717"></a>有关GaussDB(DWS) 的区域信息，请参考<a href="https://developer.huaweicloud.com/endpoint" target="_blank" rel="noopener noreferrer">地区和终端节点</a>。</p>
 </li><li>postgres是要连接的数据库名。</li><li>AccessKeyID/SecretAccessKey为参数DbUser指定的IAM用户所对应的访问密钥ID和秘密访问密钥。</li><li>DbUser请设置为IAM用户名，注意，当前版本暂不支持IAM用户名中含有中划线的情况。<a name="ul116012358717"></a><a name="ul116012358717"></a><ul id="ul116012358717"><li>如果数据库中已存在DbUser指定的用户，则临时用户凭证具有与现有用户相同的权限。</li><li>如果数据库中不存在DbUser指定的用户，且AutoCreate参数值为true，则自动创建一个以DbUser参数值作为用户名的新用户，默认创建的用户为数据库普通用户。</li></ul>
 </li><li>AutoCreate可以不设置，默认为false。该参数表示是否在数据库中自动创建一个以DbUser参数值作为用户名的数据库用户。<a name="ul761335979"></a><a name="ul761335979"></a><ul id="ul761335979"><li>true表示自动创建。如果用户已存在则不会再创建。</li><li>false表示不会自动创建。如果数据库中不存在DbUser指定的用户名将返回失败。</li></ul>
 </li></ul>

@@ -1,14 +1,14 @@
 # 使用pgAdmin连接集群<a name="dws_01_0090"></a>
 
-pgAdmin是一款常用的开源PostgreSQL客户端工具。DWS支持的更多开源客户端工具，请参见[DWS支持的开源客户端](使用pgAdmin连接集群.md#section6082040915224)。
+pgAdmin是一款常用的开源PostgreSQL客户端工具。GaussDB\(DWS\) 支持的更多开源客户端工具，请参见[GaussDB\(DWS\) 支持的开源客户端](使用pgAdmin连接集群.md#section6082040915224)。
 
 本章节主要介绍在Windows操作系统下如何使用pgAdmin客户端连接集群。
 
-## DWS支持的开源客户端<a name="section6082040915224"></a>
+## GaussDB\(DWS\) 支持的开源客户端<a name="section6082040915224"></a>
 
 用户在创建好数据仓库集群，开始使用数据库服务前，需要使用数据库客户端连接到数据库。
 
-DWS支持开源PostgreSQL客户端。
+GaussDB\(DWS\) 支持开源PostgreSQL客户端。
 
 兼容的开源客户端有：
 
@@ -27,17 +27,17 @@ DWS支持开源PostgreSQL客户端。
 
 ## 连接集群前的准备<a name="section5781841515252"></a>
 
--   DWS集群已绑定弹性IP。
--   已获取DWS集群的数据库管理员用户名和密码。
--   已获取DWS集群的公网访问地址，含IP地址和端口。具体请参见[获取集群连接地址](获取集群连接地址.md)。
--   已配置DWS集群所属的安全组，添加入规则允许用户的IP地址使用TCP访问端口。
+-   GaussDB\(DWS\) 集群已绑定弹性IP。
+-   已获取GaussDB\(DWS\) 集群的数据库管理员用户名和密码。
+-   已获取GaussDB\(DWS\) 集群的公网访问地址，含IP地址和端口。具体请参见[获取集群连接地址](获取集群连接地址.md)。
+-   已配置GaussDB\(DWS\) 集群所属的安全组，添加入规则允许用户的IP地址使用TCP访问端口。
 
     具体步骤，请参见《虚拟私有云用户指南》中的[添加安全组规则](https://support.huaweicloud.com/usermanual-vpc/zh-cn_topic_0030969470.html)章节。
 
 
 ## 使用pgAdmin连接集群<a name="section2825650154610"></a>
 
-DWS支持在互联网环境中使用pgAdmin工具连接集群中的数据库。如下操作以在Windows操作系统下使用pgAdmin客户端为例。
+GaussDB\(DWS\) 支持在互联网环境中使用pgAdmin工具连接集群中的数据库。如下操作以在Windows操作系统下使用pgAdmin客户端为例。
 
 1.  访问如下链接下载合适的pgAdmin客户端：[https://www.pgadmin.org/download/](https://www.pgadmin.org/download/)。
 
@@ -70,7 +70,7 @@ DWS支持在互联网环境中使用pgAdmin工具连接集群中的数据库。�
 
     下载SSL证书，参见[（可选）下载SSL证书](（可选）下载SSL证书.md)，解压证书文件到指定路径。
 
-    -   “SSL mode“：在下拉列表中选择SSL模式：“Allow“，“Prefer“，“Require“，“Disable“，“Verify-CA“\(DWS不支持“Verify-Full“模式\)。如果将“SSL mode“设为“Verify-CA“，则必须选择根证书。
+    -   “SSL mode“：在下拉列表中选择SSL模式：“Allow“，“Prefer“，“Require“，“Disable“，“Verify-CA“\(GaussDB\(DWS\) 不支持“Verify-Full“模式\)。如果将“SSL mode“设为“Verify-CA“，则必须选择根证书。
     -   “Client certificate“：单击![](figures/icon_dws_pg_login_set_parm.png)，选择解压目录下的“sslcert\\client.crt“文件。
     -   “Client certificate key“：单击![](figures/icon_dws_pg_login_set_parm.png)，选择解压目录下的“sslcert\\client.key“文件。
     -   “Root certificate“：根据所选的“SSL模式“，单击![](figures/icon_dws_pg_login_set_parm.png)，选择解压目录下的“sslcert\\cacert.pem“文件。
@@ -82,7 +82,7 @@ DWS支持在互联网环境中使用pgAdmin工具连接集群中的数据库。�
 
 8.  连接配置完成后，单击“Save“。
 
-    系统将尝试连接集群数据库，成功连接后在左侧导航栏会显示刚创建的DWS服务数据库。
+    系统将尝试连接集群数据库，成功连接后在左侧导航栏会显示刚创建的GaussDB\(DWS\) 服务数据库。
 
 9.  左侧导航栏节点开展至数据库节点，选中postgres，鼠标右键单击“Query Tool“。
 

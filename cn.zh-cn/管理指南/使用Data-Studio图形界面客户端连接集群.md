@@ -1,32 +1,32 @@
 # 使用Data Studio图形界面客户端连接集群<a name="dws_01_0094"></a>
 
-Data Studio是一款运行在Windows操作系统上的SQL客户端工具，有着丰富的GUI界面，能够管理数据库和数据库对象，编辑、运行、调试SQL脚本，查看执行计划等。在DWS管理控制台下载Data Studio软件包，解压后免安装即可使用。
+Data Studio是一款运行在Windows操作系统上的SQL客户端工具，有着丰富的GUI界面，能够管理数据库和数据库对象，编辑、运行、调试SQL脚本，查看执行计划等。在GaussDB\(DWS\) 管理控制台下载Data Studio软件包，解压后免安装即可使用。
 
 DataStudio可供下载的版本分为“Windows x86“和“Windows x64“两种版本，分别支持32位和64位Windows操作系统。
 
 ## 连接集群前的准备<a name="section83156195500"></a>
 
--   DWS集群已绑定弹性IP。
--   已获取DWS集群的数据库管理员用户名和密码。
--   已获取DWS集群的公网访问地址，含IP地址和端口。具体请参见[获取集群连接地址](获取集群连接地址.md)。
--   已配置DWS集群所属的安全组，添加入规则允许用户的IP地址使用TCP访问端口。
+-   GaussDB\(DWS\) 集群已绑定弹性IP。
+-   已获取GaussDB\(DWS\) 集群的数据库管理员用户名和密码。
+-   已获取GaussDB\(DWS\) 集群的公网访问地址，含IP地址和端口。具体请参见[获取集群连接地址](获取集群连接地址.md)。
+-   已配置GaussDB\(DWS\) 集群所属的安全组，添加入规则允许用户的IP地址使用TCP访问端口。
 
     具体步骤，请参见《虚拟私有云用户指南》中的[添加安全组规则](https://support.huaweicloud.com/usermanual-vpc/zh-cn_topic_0030969470.html)章节。
 
 
 ## 使用Data Studio连接到集群数据库<a name="section12757151571018"></a>
 
-1.  DWS提供了基于Windows平台的Data Studio图形界面客户端，该工具依赖JDK，请先在客户端主机上安装Java 1.8.0\_141或以上版本的JDK，但是只支持java8版本。
+1.  GaussDB\(DWS\) 提供了基于Windows平台的Data Studio图形界面客户端，该工具依赖JDK，请先在客户端主机上安装Java 1.8.0\_141或以上版本的JDK，但是只支持java8版本。
 
     在Windows操作系统中，您可以访问[JDK官网](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)，下载符合操作系统版本的JDK，并根据指导进行安装。
 
-2.  通过访问以下地址登录DWS管理控制台：[https://console.huaweicloud.com/dws](https://console.huaweicloud.com/dws)。
+2.  登录GaussDB\(DWS\) 管理控制台。
 3.  单击“连接管理“。
 4.  在“下载客户端和驱动“页面，下载“Data Studio图形界面客户端“。
 
     -   请根据操作系统类型，选择“Windows x86“或“Windows x64“，再单击“下载“，可以下载与现有集群版本匹配的Data Studio工具。
 
-        如果同时拥有不同版本的集群，单击“下载”时会下载与集群最低版本相对应的Data Studio工具。如果当前没有集群，单击“下载”时将下载到低版本的Data Studio工具。DWS集群可向下兼容低版本的Data Studio工具。
+        如果同时拥有不同版本的集群，单击“下载”时会下载与集群最低版本相对应的Data Studio工具。如果当前没有集群，单击“下载”时将下载到低版本的Data Studio工具。GaussDB\(DWS\) 集群可向下兼容低版本的Data Studio工具。
 
     -   单击“历史版本”可根据集群版本下载相应版本的Data Studio工具，建议按集群版本下载配套的工具。
 
@@ -64,9 +64,9 @@ DataStudio可供下载的版本分为“Windows x86“和“Windows x64“两种
     </thead>
     <tbody><tr id="zh-cn_topic_0107187019_row1816716134011"><td class="cellrowborder" valign="top" width="19.01190119011901%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0107187019_p51683131702"><a name="zh-cn_topic_0107187019_p51683131702"></a><a name="zh-cn_topic_0107187019_p51683131702"></a>数据库类型</p>
     </td>
-    <td class="cellrowborder" valign="top" width="58.8058805880588%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0107187019_p3297172210156"><a name="zh-cn_topic_0107187019_p3297172210156"></a><a name="zh-cn_topic_0107187019_p3297172210156"></a>选择“HUAWEI CLOUD DWS”。</p>
+    <td class="cellrowborder" valign="top" width="58.8058805880588%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0107187019_p3297172210156"><a name="zh-cn_topic_0107187019_p3297172210156"></a><a name="zh-cn_topic_0107187019_p3297172210156"></a>选择“GaussDB(DWS) ”。</p>
     </td>
-    <td class="cellrowborder" valign="top" width="22.182218221822183%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0107187019_p916914138012"><a name="zh-cn_topic_0107187019_p916914138012"></a><a name="zh-cn_topic_0107187019_p916914138012"></a>HUAWEI CLOUD DWS</p>
+    <td class="cellrowborder" valign="top" width="22.182218221822183%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0107187019_p916914138012"><a name="zh-cn_topic_0107187019_p916914138012"></a><a name="zh-cn_topic_0107187019_p916914138012"></a>GaussDB(DWS)</p>
     </td>
     </tr>
     <tr id="zh-cn_topic_0107187019_row138017153913"><td class="cellrowborder" valign="top" width="19.01190119011901%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0107187019_p38131716399"><a name="zh-cn_topic_0107187019_p38131716399"></a><a name="zh-cn_topic_0107187019_p38131716399"></a>名称</p>
@@ -163,9 +163,9 @@ DataStudio可供下载的版本分为“Windows x86“和“Windows x64“两种
     </tr>
     <tr id="zh-cn_topic_0107187019_row1916155583118"><td class="cellrowborder" valign="top" width="19.38%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0107187019_p616115515312"><a name="zh-cn_topic_0107187019_p616115515312"></a><a name="zh-cn_topic_0107187019_p616115515312"></a>SSL模式</p>
     </td>
-    <td class="cellrowborder" valign="top" width="80.62%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0107187019_p1380624518403"><a name="zh-cn_topic_0107187019_p1380624518403"></a><a name="zh-cn_topic_0107187019_p1380624518403"></a>DWS支持的SSL模式有：</p>
+    <td class="cellrowborder" valign="top" width="80.62%" headers="mcps1.2.3.1.2 "><p id="zh-cn_topic_0107187019_p1380624518403"><a name="zh-cn_topic_0107187019_p1380624518403"></a><a name="zh-cn_topic_0107187019_p1380624518403"></a>GaussDB(DWS) 支持的SSL模式有：</p>
     <a name="zh-cn_topic_0107187019_ul174486715440"></a><a name="zh-cn_topic_0107187019_ul174486715440"></a><ul id="zh-cn_topic_0107187019_ul174486715440"><li>require</li><li>verify-ca</li></ul>
-    <p id="zh-cn_topic_0107187019_p10351254114217"><a name="zh-cn_topic_0107187019_p10351254114217"></a><a name="zh-cn_topic_0107187019_p10351254114217"></a>DWS不支持<span class="parmvalue" id="zh-cn_topic_0107187019_parmvalue11879175512423"><a name="zh-cn_topic_0107187019_parmvalue11879175512423"></a><a name="zh-cn_topic_0107187019_parmvalue11879175512423"></a>“verify-full”</span>模式。</p>
+    <p id="zh-cn_topic_0107187019_p10351254114217"><a name="zh-cn_topic_0107187019_p10351254114217"></a><a name="zh-cn_topic_0107187019_p10351254114217"></a>GaussDB(DWS) 不支持<span class="parmvalue" id="zh-cn_topic_0107187019_parmvalue11879175512423"><a name="zh-cn_topic_0107187019_parmvalue11879175512423"></a><a name="zh-cn_topic_0107187019_parmvalue11879175512423"></a>“verify-full”</span>模式。</p>
     </td>
     </tr>
     </tbody>

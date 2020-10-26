@@ -2,7 +2,7 @@
 
 -   **[概述](概述.md)**  
 
--   **[授予IAM用户DWS Database Access权限](授予IAM用户DWS-Database-Access权限.md)**  
+-   **[授予IAM用户GaussDB\(DWS\) Database Access权限](授予IAM用户GaussDB(DWS)-Database-Access权限.md)**  
 
 -   **[创建IAM用户凭证](创建IAM用户凭证.md)**  
 

@@ -21,7 +21,7 @@
                 {
                         "Effect": "Allow",
                         "Action": [
-                                "DWS:DWS:*"
+                                "dws:dws:*"
                         ]
                 }
         ],
@@ -58,10 +58,10 @@
 </td>
 <td class="cellrowborder" valign="top" width="17.17171717171717%" headers="mcps1.1.5.1.1 "><p id="p10671730184110"><a name="p10671730184110"></a><a name="p10671730184110"></a>Action</p>
 </td>
-<td class="cellrowborder" valign="top" width="28.28282828282828%" headers="mcps1.1.5.1.2 "><p id="p166818306418"><a name="p166818306418"></a><a name="p166818306418"></a>定义对DWS的具体操作。</p>
+<td class="cellrowborder" valign="top" width="28.28282828282828%" headers="mcps1.1.5.1.2 "><p id="p166818306418"><a name="p166818306418"></a><a name="p166818306418"></a>定义对GaussDB(DWS) 的具体操作。</p>
 </td>
 <td class="cellrowborder" valign="top" width="37.37373737373737%" headers="mcps1.1.5.1.3 "><p id="p26833014419"><a name="p26833014419"></a><a name="p26833014419"></a>格式为：服务名:资源类型:操作</p>
-<p id="p146833094114"><a name="p146833094114"></a><a name="p146833094114"></a>"DWS:DWS:*"，表示对DWS的所有操作，其中DWS为服务名称；“*”为通配符，表示对所有DWS的资源类型可以执行所有操作。</p>
+<p id="p146833094114"><a name="p146833094114"></a><a name="p146833094114"></a>"dws:dws:*"，表示对GaussDB(DWS) 的所有操作，其中dws为服务名称；“*”为通配符，表示对所有GaussDB(DWS) 的资源类型可以执行所有操作。</p>
 </td>
 </tr>
 <tr id="row868173017418"><td class="cellrowborder" valign="top" headers="mcps1.1.5.1.1 "><p id="p76873044115"><a name="p76873044115"></a><a name="p76873044115"></a>Effect</p>

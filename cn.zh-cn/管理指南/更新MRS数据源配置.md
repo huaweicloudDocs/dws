@@ -2,7 +2,7 @@
 
 ## 操作场景<a name="section31806539111657"></a>
 
-MRS的HDFS集群的如下参数配置变更时，可能造成DWS集群无法从HDFS集群导入数据。使用HDFS集群导入数据前，需要执行MRS数据源配置的更新操作。
+MRS的HDFS集群的如下参数配置变更时，可能造成GaussDB\(DWS\) 集群无法从HDFS集群导入数据。使用HDFS集群导入数据前，需要执行MRS数据源配置的更新操作。
 
 <a name="table4618184514293"></a>
 <table><thead align="left"><tr id="row7619194592917"><th class="cellrowborder" valign="top" width="41%" id="mcps1.1.3.1.1"><p id="p12589614152910"><a name="p12589614152910"></a><a name="p12589614152910"></a>参数名</p>
@@ -73,15 +73,15 @@ MRS的HDFS集群的如下参数配置变更时，可能造成DWS集群无法从H
 
 ## 前提条件<a name="section45940751111911"></a>
 
-DWS集群已创建MRS数据源连接。
+GaussDB\(DWS\) 集群已创建MRS数据源连接。
 
 ## 对系统的影响<a name="section178972158583"></a>
 
-更新MRS数据源连接时，DWS集群会自动重启并无法提供服务。
+更新MRS数据源连接时，GaussDB\(DWS\) 集群会自动重启并无法提供服务。
 
 ## 操作步骤<a name="section4276196111818"></a>
 
-1.  在DWS管理管制台，单击“集群管理“。
+1.  在GaussDB\(DWS\) 管理管制台，单击“集群管理“。
 2.  在集群列表，单击指定集群的名称，然后单击“MRS数据源“。
 3.  在MRS数据源列表中，选中需要更新的MRS数据源，在“操作“列中，单击“更新配置“。
 

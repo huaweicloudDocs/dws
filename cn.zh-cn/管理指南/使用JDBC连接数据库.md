@@ -1,11 +1,11 @@
 # 使用JDBC连接数据库<a name="dws_01_0077"></a>
 
-DWS支持在Linux或Windows环境下使用JDBC应用程序连接数据库。应用程序可以在公有云环境的弹性云服务器中，或者互联网环境连接数据库。
+GaussDB\(DWS\) 支持在Linux或Windows环境下使用JDBC应用程序连接数据库。应用程序可以在公有云环境的弹性云服务器中，或者互联网环境连接数据库。
 
-用户通过JDBC连接DWS集群时，可以选择是否采用SSL认证方式。SSL认证用于加密客户端和服务器之间的通讯数据，为敏感数据在Internet上的传输提供了一种安全保障手段。DWS管理控制台提供了自签的证书供用户下载。使用该证书，用户需要配置客户端程序，使证书可用，此过程依赖于openssl工具以及java自带的keytool工具。
+用户通过JDBC连接GaussDB\(DWS\) 集群时，可以选择是否采用SSL认证方式。SSL认证用于加密客户端和服务器之间的通讯数据，为敏感数据在Internet上的传输提供了一种安全保障手段。GaussDB\(DWS\) 管理控制台提供了自签的证书供用户下载。使用该证书，用户需要配置客户端程序，使证书可用，此过程依赖于openssl工具以及java自带的keytool工具。
 
 >![](public_sys-resources/icon-note.gif) **说明：** 
->SSL模式安全性高于普通模式，建议在使用JDBC连接DWS集群时采用SSL模式。
+>SSL模式安全性高于普通模式，建议在使用JDBC连接GaussDB\(DWS\) 集群时采用SSL模式。
 
 JDBC接口的使用方法，请自行查阅官方文档。
 
@@ -14,7 +14,7 @@ JDBC接口的使用方法，请自行查阅官方文档。
 -   已安装JDK 1.6或以上版本，并配置环境变量。
 -   已下载JDBC驱动，请参见[下载JDBC或ODBC驱动](下载JDBC或ODBC驱动.md)。
 
-    DWS也支持开源的JDBC驱动程序：PostgreSQL JDBC驱动程序9.3-1103或更高版本。
+    GaussDB\(DWS\) 也支持开源的JDBC驱动程序：PostgreSQL JDBC驱动程序9.3-1103或更高版本。
 
 -   已下载SSL证书文件，请参见[（可选）下载SSL证书](（可选）下载SSL证书.md)。
 
@@ -22,15 +22,15 @@ JDBC接口的使用方法，请自行查阅官方文档。
 
 在Linux和Windows环境下操作方法相同，以下步骤以Windows环境为例。
 
-1.  是否采用SSL方式连接DWS集群。
+1.  是否采用SSL方式连接GaussDB\(DWS\) 集群。
     -   是：
-        1.  为DWS集群开启SSL连接，默认为开启。具体操作，请参见[（可选）设置SSL连接](（可选）设置SSL连接.md)。
+        1.  为GaussDB\(DWS\) 集群开启SSL连接，默认为开启。具体操作，请参见[（可选）设置SSL连接](（可选）设置SSL连接.md)。
         2.  请确认是采用证书认证方式还是密码认证方式。
             -   采用证书认证方式：执行[2](#li55435426144245)。
             -   采用密码认证方式：执行[4](#li19649431459)。
 
     -   否：
-        1.  为DWS集群关闭SSL连接，默认为开启。具体操作，请参见[（可选）设置SSL连接](（可选）设置SSL连接.md)。
+        1.  为GaussDB\(DWS\) 集群关闭SSL连接，默认为开启。具体操作，请参见[（可选）设置SSL连接](（可选）设置SSL连接.md)。
         2.  执行[4](#li19649431459)。
 
 2.  <a name="li55435426144245"></a>（可选）如果使用Linux环境，使用WinScp工具将SSL证书上传到Linux环境上。
@@ -66,7 +66,7 @@ JDBC接口的使用方法，请自行查阅官方文档。
         keytool -importkeystore -deststorepass Gauss@MppDB -destkeystore client.jks -srckeystore client.pkcs12 -srcstorepass key123 -srcstoretype PKCS12 -alias 1
         ```
 
-4.  <a name="li19649431459"></a>解压已下载的JDBC驱动得到“gsjdbc4.jar“，
+4.  <a name="li19649431459"></a>解压已下载的JDBC驱动得到“gsjdbc4.jar“。
 5.  在应用程序的工程中，设置引用Jar包。
 
     以Eclipse工程为例，先将jar包存放在工程目录下，例如将jar包放在工程目录的lib目录下，然后在Eclipse工程中，右键单击lib目录下的该jar包，再选择菜单“Build Path”，即可引用此jar包。
@@ -74,11 +74,11 @@ JDBC接口的使用方法，请自行查阅官方文档。
     **图 1**  引用jar包<a name="fig18599113514410"></a>  
     ![](figures/引用jar包.png "引用jar包")
 
-    或者，您也可以使用另一种方式，在Maven工程中，可以直接将DWS JDBC驱动作为依赖项添加进POM文件，配置如下所示：
+    或者，您也可以使用另一种方式，在Maven工程中，可以直接将GaussDB\(DWS\)  JDBC驱动作为依赖项添加进POM文件，配置如下所示：
 
     ```
     <dependency>
-        <groupId>com.huaweicloud.dws</groupId>
+        <groupId>com.huaweicloud.dws </groupId>
         <artifactId>huaweicloud-dws-jdbc</artifactId>
         <version>1.0.0</version> 
     </dependency>
@@ -91,7 +91,7 @@ JDBC接口的使用方法，请自行查阅官方文档。
     -   在代码中隐含装载：Class.forName\("org.postgresql.Driver"\);
     -   在JVM启动时参数传递：java -Djdbc.drivers=org.postgresql.Driver jdbctest
 
-7.  调用JDBC的数据库连接方法DriverManager.getConnection\(\)连接DWS数据库。
+7.  调用JDBC的数据库连接方法DriverManager.getConnection\(\)连接GaussDB\(DWS\) 数据库。
 
     JDBC接口不提供重试连接的能力，您需要在业务代码中实现重试处理。
 
@@ -257,7 +257,7 @@ JDBC接口的使用方法，请自行查阅官方文档。
 
 ## 示例代码<a name="section12107104719399"></a>
 
-此示例将演示如何基于DWS提供的JDBC接口开发应用程序。
+此示例将演示如何基于GaussDB\(DWS\) 提供的JDBC接口开发应用程序。
 
 ```
 //DBtest.java
