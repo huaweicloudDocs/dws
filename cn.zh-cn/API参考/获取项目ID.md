@@ -1,4 +1,4 @@
-# 获取项目ID<a name="dws_02_0011"></a>
+# 获取项目ID<a name="ZH-CN_TOPIC_0000001098656812"></a>
 
 ## 调用API获取项目ID<a name="section1691341861315"></a>
 
@@ -15,7 +15,7 @@
             "domain_id": "65382450e8f64ac0870cd180d14e684b",
             "is_domain": false,
             "parent_id": "65382450e8f64ac0870cd180d14e684b",
-            "name": "cn-north-1b",
+            "name": "cn-north-4b",
             "description": "",
             "links": {
                 "next": null,
