@@ -1,4 +1,4 @@
-# 策略语法：RBAC<a name="ZH-CN_TOPIC_0000001098816680"></a>
+# 策略语法：RBAC<a name="ZH-CN_TOPIC_0000001455716765"></a>
 
 ## 策略结构<a name="section16899132910417"></a>
 

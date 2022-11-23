@@ -1,6 +1,6 @@
-# GaussDB\(DWS\) 使用简介<a name="ZH-CN_TOPIC_0000001145816557"></a>
+# GaussDB\(DWS\) 使用简介<a name="ZH-CN_TOPIC_0000001405636742"></a>
 
-数据仓库服务是一种基于公有云基础架构和平台的在线数据处理数据库，提供即开即用、可扩展且完全托管的分析型数据库服务。GaussDB\(DWS\) 是基于华为融合数据仓库GaussDB产品的云原生服务，兼容标准ANSI SQL 99和SQL 2003，同时兼容PostgreSQL/Oracle数据库生态，为各行业PB级海量大数据分析提供有竞争力的解决方案。
+数据仓库服务是一种基于华为云基础架构和平台的在线数据处理数据库，提供即开即用、可扩展且完全托管的分析型数据库服务。GaussDB\(DWS\) 是基于华为融合数据仓库GaussDB产品的云原生服务，兼容标准ANSI SQL 99和SQL 2003，同时兼容PostgreSQL/Oracle数据库生态，为各行业PB级海量大数据分析提供有竞争力的解决方案。
 
 GaussDB\(DWS\) 提供了简单易用的Web管理控制台，帮助您快速创建数据仓库集群，轻松执行数据仓库管理任务。
 
@@ -37,7 +37,7 @@ GaussDB\(DWS\) 提供了简单易用的Web管理控制台，帮助您快速创�
 </td>
 <td class="cellrowborder" valign="top" width="39.269999999999996%" headers="mcps1.2.5.1.3 "><p id="p126301614114213"><a name="p126301614114213"></a><a name="p126301614114213"></a>在使用GaussDB(DWS) 执行数据分析任务前，您首先要创建一个集群。一个GaussDB(DWS) 集群由多个在相同子网中的节点组成，共同提供服务。创建集群时，系统会创建一个默认数据库。</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.44%" headers="mcps1.2.5.1.4 "><a name="ul665919136919"></a><a name="ul665919136919"></a><ul id="ul665919136919"><li><a href="创建集群.md">创建集群</a></li><li><a href="购买折扣套餐.md">购买折扣套餐</a>（推荐购买）</li></ul>
+<td class="cellrowborder" valign="top" width="31.44%" headers="mcps1.2.5.1.4 "><a name="ul665919136919"></a><a name="ul665919136919"></a><ul id="ul665919136919"><li><a href="创建集群.md">创建集群</a></li><li><a href="购买折扣套餐.md">购买折扣套餐</a><span id="ph2036011558312"><a name="ph2036011558312"></a><a name="ph2036011558312"></a>（不推荐购买）</span></li></ul>
 </td>
 </tr>
 <tr id="row7867168102818"><td class="cellrowborder" valign="top" width="16.41%" headers="mcps1.2.5.1.1 "><p id="p10115122932111"><a name="p10115122932111"></a><a name="p10115122932111"></a>连接集群</p>
@@ -66,21 +66,22 @@ GaussDB\(DWS\) 提供了简单易用的Web管理控制台，帮助您快速创�
 </td>
 <td class="cellrowborder" valign="top" width="39.269999999999996%" headers="mcps1.2.5.1.3 "><p id="p2580842184411"><a name="p2580842184411"></a><a name="p2580842184411"></a>您可以查看集群状态，修改集群配置，添加集群标签，对集群进行扩容、重启、删除等管理操作。</p>
 </td>
-<td class="cellrowborder" valign="top" width="31.44%" headers="mcps1.2.5.1.4 "><p id="p6913258125512"><a name="p6913258125512"></a><a name="p6913258125512"></a><a href="登录GaussDB(DWS)-管理控制台.md">管理集群</a></p>
+<td class="cellrowborder" valign="top" width="31.44%" headers="mcps1.2.5.1.4 "><p id="p6913258125512"><a name="p6913258125512"></a><a name="p6913258125512"></a><a href="登录GaussDB(DWS)管理控制台.md">管理集群</a></p>
 </td>
 </tr>
 <tr id="row18970322194014"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="p59704229407"><a name="p59704229407"></a><a name="p59704229407"></a>管理快照</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.5.1.2 "><p id="p10970522124011"><a name="p10970522124011"></a><a name="p10970522124011"></a>通过创建集群快照，可以对集群进行备份，使用快照可以恢复集群。</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.5.1.3 "><p id="p49701122144018"><a name="p49701122144018"></a><a name="p49701122144018"></a><a href="快照概述.md">管理快照</a></p>
+<td class="cellrowborder" valign="top" headers="mcps1.2.5.1.3 "><p id="p49701122144018"><a name="p49701122144018"></a><a name="p49701122144018"></a><a href="管理快照.md">管理快照</a></p>
 </td>
 </tr>
 <tr id="row10253419154015"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="p5254101913407"><a name="p5254101913407"></a><a name="p5254101913407"></a>运维与监控</p>
 </td>
 <td class="cellrowborder" valign="top" headers="mcps1.2.5.1.2 "><p id="p72541519114012"><a name="p72541519114012"></a><a name="p72541519114012"></a>您可以通过监控集群、审计日志、事件通知和资源负载管理了解集群的运行状况和性能。</p>
 </td>
-<td class="cellrowborder" valign="top" headers="mcps1.2.5.1.3 "><a name="ul8102554205215"></a><a name="ul8102554205215"></a><ul id="ul8102554205215"><li><a href="监控集群.md">监控集群</a></li><li><a href="事件通知概述.md">事件通知</a></li><li><a href="审计日志.md">审计日志</a></li><li><a href="https://support.huaweicloud.com/devg-dws/dws_04_0921.html" target="_blank" rel="noopener noreferrer">资源负载管理</a></li></ul>
+<td class="cellrowborder" valign="top" headers="mcps1.2.5.1.3 "><a name="ul8102554205215"></a><a name="ul8102554205215"></a><ul id="ul8102554205215"><li><a href="Cloud-Eye监控集群.md">Cloud Eye监控集群</a></li><li><a href="事件通知概述.md">事件通知</a></li><li><a href="审计日志.md">审计日志</a></li><li><p id="p470532310018"><a name="p470532310018"></a><a name="p470532310018"></a><a href="资源管理.md">资源管理</a></p>
+</li></ul>
 </td>
 </tr>
 </tbody>

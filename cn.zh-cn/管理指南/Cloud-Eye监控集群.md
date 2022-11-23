@@ -1,0 +1,608 @@
+# Cloud Eye监控集群<a name="ZH-CN_TOPIC_0000001405317074"></a>
+
+## 功能说明<a name="section43782126162722"></a>
+
+用户需要查看集群的监控指标信息时，可以通过云监控（Cloud Eye）确认集群各项指标情况。通过监控集群运行时的各项指标，用户可以识别出数据库集群状态异常的时间段，然后在数据库日志中，分析可能存在问题的活动，从而优化数据库性能。本章节定义了数据仓库服务上报云监控服务的监控指标的命名空间、监控指标列表和维度定义。用户可以通过云监控服务提供的管理控制台或[API接口](https://support.huaweicloud.com/api-ces/zh-cn_topic_0171212514.html)来检索数据仓库服务产生的监控指标和告警信息。
+
+## 命名空间<a name="section54481685355"></a>
+
+SYS.DWS
+
+## 集群监控指标<a name="section185715586432"></a>
+
+通过云监控提供的数据仓库服务相关监控指标，用户可以获取有关集群运行状况和性能的信息，并深入了解节点级别的对应信息。
+
+数据仓库服务相关监控指标，具体请参见[表1](#table17857105810438)。
+
+**表 1**  数据仓库服务支持的监控指标
+
+<a name="table17857105810438"></a>
+<table><thead align="left"><tr id="row3845105854319"><th class="cellrowborder" valign="top" width="19.560000000000002%" id="mcps1.2.7.1.1"><p id="p6381131419376"><a name="p6381131419376"></a><a name="p6381131419376"></a><strong id="b1667212298376"><a name="b1667212298376"></a><a name="b1667212298376"></a>指标ID</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="15.240000000000004%" id="mcps1.2.7.1.2"><p id="p784515581437"><a name="p784515581437"></a><a name="p784515581437"></a><strong id="b884518582433"><a name="b884518582433"></a><a name="b884518582433"></a>指标名称</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="28.370000000000005%" id="mcps1.2.7.1.3"><p id="p284513586434"><a name="p284513586434"></a><a name="p284513586434"></a><strong id="b14845858114310"><a name="b14845858114310"></a><a name="b14845858114310"></a>指标含义</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="13.600000000000003%" id="mcps1.2.7.1.4"><p id="p78458586432"><a name="p78458586432"></a><a name="p78458586432"></a><strong id="b6845105817433"><a name="b6845105817433"></a><a name="b6845105817433"></a>取值范围</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="16.28%" id="mcps1.2.7.1.5"><p id="p1384520586435"><a name="p1384520586435"></a><a name="p1384520586435"></a><strong id="b38451589434"><a name="b38451589434"></a><a name="b38451589434"></a>测量对象</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="6.950000000000002%" id="mcps1.2.7.1.6"><p id="p181431935163611"><a name="p181431935163611"></a><a name="p181431935163611"></a><strong id="b1098016551365"><a name="b1098016551365"></a><a name="b1098016551365"></a>监控周期（原始指标）</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row128461658104319"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p9314105219548"><a name="p9314105219548"></a><a name="p9314105219548"></a>dws001_shared_buffer_hit_ratio</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p1484615884315"><a name="p1484615884315"></a><a name="p1484615884315"></a>缓存命中率</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p784620587438"><a name="p784620587438"></a><a name="p784620587438"></a>该指标用于表示需要访问的数据，在内存中可以直接获取的数据量比例，以百分比为单位。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p1846145854311"><a name="p1846145854311"></a><a name="p1846145854311"></a>0%～100%</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p08460585439"><a name="p08460585439"></a><a name="p08460585439"></a>数据仓库集群</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p269324211011"><a name="p269324211011"></a><a name="p269324211011"></a>4分钟</p>
+</td>
+</tr>
+<tr id="row1084745818438"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p1631420529542"><a name="p1631420529542"></a><a name="p1631420529542"></a>dws002_in_memory_sort_ratio</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p158461558144311"><a name="p158461558144311"></a><a name="p158461558144311"></a>内存中排序比率</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p10846185824315"><a name="p10846185824315"></a><a name="p10846185824315"></a>该指标用于表示在数据进行排序时，可以直接在内存中排序的数据量比例，以百分比为单位。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p084765824317"><a name="p084765824317"></a><a name="p084765824317"></a>0%～100%</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p16298133121613"><a name="p16298133121613"></a><a name="p16298133121613"></a>数据仓库集群</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p1869334221013"><a name="p1869334221013"></a><a name="p1869334221013"></a>4分钟</p>
+</td>
+</tr>
+<tr id="row1384711586430"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p5314152135410"><a name="p5314152135410"></a><a name="p5314152135410"></a>dws003_physical_reads</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p2084735817433"><a name="p2084735817433"></a><a name="p2084735817433"></a>文件读取次数</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p1584725804320"><a name="p1584725804320"></a><a name="p1584725804320"></a>该指标用于表示读取数据库文件的累计次数。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p5847175804315"><a name="p5847175804315"></a><a name="p5847175804315"></a>&gt; 0</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p165535181617"><a name="p165535181617"></a><a name="p165535181617"></a>数据仓库集群</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p1469354251013"><a name="p1469354251013"></a><a name="p1469354251013"></a>4分钟</p>
+</td>
+</tr>
+<tr id="row1984835818434"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p173141523543"><a name="p173141523543"></a><a name="p173141523543"></a>dws004_physical_writes</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p0847195817435"><a name="p0847195817435"></a><a name="p0847195817435"></a>文件写入次数</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p884895864319"><a name="p884895864319"></a><a name="p884895864319"></a>该指标用于表示写入数据库文件的累计次数。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p1384865811434"><a name="p1384865811434"></a><a name="p1384865811434"></a>&gt; 0</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p290826141613"><a name="p290826141613"></a><a name="p290826141613"></a>数据仓库集群</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p15694124251013"><a name="p15694124251013"></a><a name="p15694124251013"></a>4分钟</p>
+</td>
+</tr>
+<tr id="row6848195824313"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p431475225417"><a name="p431475225417"></a><a name="p431475225417"></a>dws005_physical_reads_per_second</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p3848185884320"><a name="p3848185884320"></a><a name="p3848185884320"></a>每秒文件读取次数</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p128481058154310"><a name="p128481058154310"></a><a name="p128481058154310"></a>该指标用于表示每秒读取数据库文件的次数。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p108486588432"><a name="p108486588432"></a><a name="p108486588432"></a>≥ 0</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p19481128111620"><a name="p19481128111620"></a><a name="p19481128111620"></a>数据仓库集群</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p19694742131011"><a name="p19694742131011"></a><a name="p19694742131011"></a>4分钟</p>
+</td>
+</tr>
+<tr id="row28491058174310"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p83144520546"><a name="p83144520546"></a><a name="p83144520546"></a>dws006_physical_writes_per_second</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p1184805813438"><a name="p1184805813438"></a><a name="p1184805813438"></a>每秒文件写入次数</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p4848958114313"><a name="p4848958114313"></a><a name="p4848958114313"></a>该指标用于表示每秒写入数据库文件的次数。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p38481158124317"><a name="p38481158124317"></a><a name="p38481158124317"></a>≥ 0</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p1404101081610"><a name="p1404101081610"></a><a name="p1404101081610"></a>数据仓库集群</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p169417423102"><a name="p169417423102"></a><a name="p169417423102"></a>4分钟</p>
+</td>
+</tr>
+<tr id="row11849195834313"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p15314852105419"><a name="p15314852105419"></a><a name="p15314852105419"></a>dws007_db_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p28491958194310"><a name="p28491958194310"></a><a name="p28491958194310"></a>数据量大小</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p284955854314"><a name="p284955854314"></a><a name="p284955854314"></a>该指标用于表示数据库中所有数据总量大小。</p>
+<p id="p114082057131917"><a name="p114082057131917"></a><a name="p114082057131917"></a>单位：兆字节（MB）</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p1484985824317"><a name="p1484985824317"></a><a name="p1484985824317"></a>≥0MB</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p19990211161619"><a name="p19990211161619"></a><a name="p19990211161619"></a>数据仓库集群</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p16944429106"><a name="p16944429106"></a><a name="p16944429106"></a>4分钟</p>
+</td>
+</tr>
+<tr id="row1285095884312"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p14314205218543"><a name="p14314205218543"></a><a name="p14314205218543"></a>dws008_active_sql_count</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p784912582432"><a name="p784912582432"></a><a name="p784912582432"></a>活跃SQL数</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p785012582438"><a name="p785012582438"></a><a name="p785012582438"></a>该指标用于表示数据库当前活动的SQL个数。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p17850175894315"><a name="p17850175894315"></a><a name="p17850175894315"></a>≥ 0</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p2932111351617"><a name="p2932111351617"></a><a name="p2932111351617"></a>数据仓库集群</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p13694242121016"><a name="p13694242121016"></a><a name="p13694242121016"></a>4分钟</p>
+</td>
+</tr>
+<tr id="row385012587435"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p19314155217543"><a name="p19314155217543"></a><a name="p19314155217543"></a>dws009_session_count</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p185011582431"><a name="p185011582431"></a><a name="p185011582431"></a>会话数</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p1850195844317"><a name="p1850195844317"></a><a name="p1850195844317"></a>该指标用于表示数据库当前访问的连接个数。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p785035874315"><a name="p785035874315"></a><a name="p785035874315"></a>≥ 0</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p05982153167"><a name="p05982153167"></a><a name="p05982153167"></a>数据仓库集群</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p36941142171017"><a name="p36941142171017"></a><a name="p36941142171017"></a>4分钟</p>
+</td>
+</tr>
+<tr id="row08511458144319"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p113149522544"><a name="p113149522544"></a><a name="p113149522544"></a>dws010_cpu_usage</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p13850135819436"><a name="p13850135819436"></a><a name="p13850135819436"></a>CPU使用率</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p9851175874310"><a name="p9851175874310"></a><a name="p9851175874310"></a>该指标用于统计每个集群节点的CPU使用率，以百分比为单位。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p1385185884315"><a name="p1385185884315"></a><a name="p1385185884315"></a>0%～100%</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p198511458204314"><a name="p198511458204314"></a><a name="p198511458204314"></a>数据仓库节点</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p969415424103"><a name="p969415424103"></a><a name="p969415424103"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row2851458144317"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p73154522544"><a name="p73154522544"></a><a name="p73154522544"></a>dws011_mem_usage</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p168511658124318"><a name="p168511658124318"></a><a name="p168511658124318"></a>内存使用率</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p2851105820435"><a name="p2851105820435"></a><a name="p2851105820435"></a>该指标用于统计每个集群节点的内存使用率，以百分比为单位。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p1851658184320"><a name="p1851658184320"></a><a name="p1851658184320"></a>0%～100%</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p142230181612"><a name="p142230181612"></a><a name="p142230181612"></a>数据仓库节点</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p156944426109"><a name="p156944426109"></a><a name="p156944426109"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row3851135815433"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p23151052145416"><a name="p23151052145416"></a><a name="p23151052145416"></a>dws012_iops</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p3851155818437"><a name="p3851155818437"></a><a name="p3851155818437"></a>IOPS</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p1485185818433"><a name="p1485185818433"></a><a name="p1485185818433"></a>该指标用于统计每个集群节点每秒处理的I/O请求数量。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p2085135819437"><a name="p2085135819437"></a><a name="p2085135819437"></a>≥ 0</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p1145914315167"><a name="p1145914315167"></a><a name="p1145914315167"></a>数据仓库节点</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p1469515421109"><a name="p1469515421109"></a><a name="p1469515421109"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row14853125812437"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p1531514526546"><a name="p1531514526546"></a><a name="p1531514526546"></a>dws013_bytes_in</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p168513588430"><a name="p168513588430"></a><a name="p168513588430"></a>网络输入吞吐量</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p7851185820438"><a name="p7851185820438"></a><a name="p7851185820438"></a>该指标用于统计每秒从网络输入每个集群节点的数据总量。</p>
+<p id="p26183389267"><a name="p26183389267"></a><a name="p26183389267"></a>单位：字节/秒</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p5851195819434"><a name="p5851195819434"></a><a name="p5851195819434"></a>≥ 0字节/秒</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p186571633121615"><a name="p186571633121615"></a><a name="p186571633121615"></a>数据仓库节点</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p86951542151012"><a name="p86951542151012"></a><a name="p86951542151012"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row20853195816432"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p231525265411"><a name="p231525265411"></a><a name="p231525265411"></a>dws014_bytes_out</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p12853125884310"><a name="p12853125884310"></a><a name="p12853125884310"></a>网络输出吞吐量</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p118532586431"><a name="p118532586431"></a><a name="p118532586431"></a>该指标用于统计从每个节点每秒发送到网络的数据总量。</p>
+<p id="p9205949112614"><a name="p9205949112614"></a><a name="p9205949112614"></a>单位：字节/秒</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p785385854318"><a name="p785385854318"></a><a name="p785385854318"></a>≥ 0字节/秒</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p188906345164"><a name="p188906345164"></a><a name="p188906345164"></a>数据仓库节点</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p76957421100"><a name="p76957421100"></a><a name="p76957421100"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row158532585437"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p1631511521545"><a name="p1631511521545"></a><a name="p1631511521545"></a>dws015_disk_usage</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p1853115894318"><a name="p1853115894318"></a><a name="p1853115894318"></a>磁盘利用率</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p1285335824312"><a name="p1285335824312"></a><a name="p1285335824312"></a>该指标用于统计每个集群节点的磁盘使用情况，以百分比为单位。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p1585365884316"><a name="p1585365884316"></a><a name="p1585365884316"></a>0%～100%</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p069473651610"><a name="p069473651610"></a><a name="p069473651610"></a>数据仓库节点</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p76952421105"><a name="p76952421105"></a><a name="p76952421105"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row7854358184310"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p7315165216542"><a name="p7315165216542"></a><a name="p7315165216542"></a>dws016_disk_total_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p9854115819432"><a name="p9854115819432"></a><a name="p9854115819432"></a>磁盘总大小</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p2085420588436"><a name="p2085420588436"></a><a name="p2085420588436"></a>该指标用于统计每个集群节点的数据磁盘总大小。</p>
+<p id="p1357833219201"><a name="p1357833219201"></a><a name="p1357833219201"></a>单位：吉字节（GB）</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p6854658184320"><a name="p6854658184320"></a><a name="p6854658184320"></a>100GB～2000GB</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p174001138201618"><a name="p174001138201618"></a><a name="p174001138201618"></a>数据仓库节点</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p1169534212107"><a name="p1169534212107"></a><a name="p1169534212107"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row138541258204314"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p15315105225410"><a name="p15315105225410"></a><a name="p15315105225410"></a>dws017_disk_used_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p2085418580434"><a name="p2085418580434"></a><a name="p2085418580434"></a>磁盘使用量</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p15854175834314"><a name="p15854175834314"></a><a name="p15854175834314"></a>该指标用于统计每个集群节点的数据磁盘已用大小。</p>
+<p id="p4281553202014"><a name="p4281553202014"></a><a name="p4281553202014"></a>单位：吉字节（GB）</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p785412581437"><a name="p785412581437"></a><a name="p785412581437"></a>0GB～3600GB</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p573143916167"><a name="p573143916167"></a><a name="p573143916167"></a>数据仓库节点</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p17695342201013"><a name="p17695342201013"></a><a name="p17695342201013"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row17854958194315"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p1631575210548"><a name="p1631575210548"></a><a name="p1631575210548"></a>dws018_disk_read_throughput</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p1985455854314"><a name="p1985455854314"></a><a name="p1985455854314"></a>磁盘读吞吐量</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p1985415586433"><a name="p1985415586433"></a><a name="p1985415586433"></a>该指标用于统计集群节点数据磁盘每秒读取的数据量。</p>
+<p id="p1161515152114"><a name="p1161515152114"></a><a name="p1161515152114"></a>单位：字节/秒</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p18854165834316"><a name="p18854165834316"></a><a name="p18854165834316"></a>≥ 0字节/秒</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p135349412167"><a name="p135349412167"></a><a name="p135349412167"></a>数据仓库节点</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p1569517424107"><a name="p1569517424107"></a><a name="p1569517424107"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row1385425815435"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p631515275416"><a name="p631515275416"></a><a name="p631515275416"></a>dws019_disk_write_throughput</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p7854358114310"><a name="p7854358114310"></a><a name="p7854358114310"></a>磁盘写吞吐量</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p15854135894318"><a name="p15854135894318"></a><a name="p15854135894318"></a>该指标用于统计集群节点数据磁盘每秒写入的数据量。</p>
+<p id="p2612173432111"><a name="p2612173432111"></a><a name="p2612173432111"></a>单位：字节/秒</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p085420584433"><a name="p085420584433"></a><a name="p085420584433"></a>≥ 0字节/秒</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p115431043111618"><a name="p115431043111618"></a><a name="p115431043111618"></a>数据仓库节点</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p16695144281010"><a name="p16695144281010"></a><a name="p16695144281010"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row7855195834313"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p10316952125415"><a name="p10316952125415"></a><a name="p10316952125415"></a>dws020_avg_disk_sec_per_read</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p1885417580434"><a name="p1885417580434"></a><a name="p1885417580434"></a>磁盘读耗时</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p2085435818431"><a name="p2085435818431"></a><a name="p2085435818431"></a>该指标用于统计集群节点数据磁盘每次读取数据的平均耗时。</p>
+<p id="p14291337182116"><a name="p14291337182116"></a><a name="p14291337182116"></a>单位：秒</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p16854258114318"><a name="p16854258114318"></a><a name="p16854258114318"></a>&gt; 0秒</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p13364132141710"><a name="p13364132141710"></a><a name="p13364132141710"></a>数据仓库节点</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p06961642101019"><a name="p06961642101019"></a><a name="p06961642101019"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row38551583436"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p831619525547"><a name="p831619525547"></a><a name="p831619525547"></a>dws021_avg_disk_sec_per_write</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p19855125813435"><a name="p19855125813435"></a><a name="p19855125813435"></a>磁盘写耗时</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p1885516586439"><a name="p1885516586439"></a><a name="p1885516586439"></a>该指标用于统计集群节点数据磁盘每次写入数据的平均耗时。</p>
+<p id="p564415496218"><a name="p564415496218"></a><a name="p564415496218"></a>单位：秒</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p4855145804311"><a name="p4855145804311"></a><a name="p4855145804311"></a>&gt; 0秒</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p1776120331713"><a name="p1776120331713"></a><a name="p1776120331713"></a>数据仓库节点</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p2069654291012"><a name="p2069654291012"></a><a name="p2069654291012"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row385715581436"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p1831655216546"><a name="p1831655216546"></a><a name="p1831655216546"></a>dws022_avg_disk_queue_length</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p7855358184319"><a name="p7855358184319"></a><a name="p7855358184319"></a>磁盘平均队列长度</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p5855165818437"><a name="p5855165818437"></a><a name="p5855165818437"></a>该指标用于统计每个集群节点数据磁盘平均的I/O队列长度。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p5857145818432"><a name="p5857145818432"></a><a name="p5857145818432"></a>≥ 0</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p79011669179"><a name="p79011669179"></a><a name="p79011669179"></a>数据仓库节点</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p6696242191018"><a name="p6696242191018"></a><a name="p6696242191018"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row8816103433815"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p544404418192"><a name="p544404418192"></a><a name="p544404418192"></a>dws_023_avg_diskio_util</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p194444444192"><a name="p194444444192"></a><a name="p194444444192"></a>平均磁盘I/O使用率</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p944474412191"><a name="p944474412191"></a><a name="p944474412191"></a>该指标用于统计集群节点磁盘平均I/O使用率</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p044424421917"><a name="p044424421917"></a><a name="p044424421917"></a>0%～100%</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p54441744101918"><a name="p54441744101918"></a><a name="p54441744101918"></a>数据仓库节点</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p7444744161911"><a name="p7444744161911"></a><a name="p7444744161911"></a>1分钟</p>
+</td>
+</tr>
+<tr id="row59793914386"><td class="cellrowborder" valign="top" width="19.560000000000002%" headers="mcps1.2.7.1.1 "><p id="p191615110192"><a name="p191615110192"></a><a name="p191615110192"></a>dws_024_dn_diskio_util</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.240000000000004%" headers="mcps1.2.7.1.2 "><p id="p12161651181917"><a name="p12161651181917"></a><a name="p12161651181917"></a>DN实例I/O使用率</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.370000000000005%" headers="mcps1.2.7.1.3 "><p id="p5166514199"><a name="p5166514199"></a><a name="p5166514199"></a>该指标用于统计集群DN实例磁盘平均I/O使用率</p>
+</td>
+<td class="cellrowborder" valign="top" width="13.600000000000003%" headers="mcps1.2.7.1.4 "><p id="p1816165110198"><a name="p1816165110198"></a><a name="p1816165110198"></a>0%～100%</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.28%" headers="mcps1.2.7.1.5 "><p id="p116165141917"><a name="p116165141917"></a><a name="p116165141917"></a>数据仓库实例</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.950000000000002%" headers="mcps1.2.7.1.6 "><p id="p61685191920"><a name="p61685191920"></a><a name="p61685191920"></a>1分钟</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## 维度<a name="section6596194111819"></a>
+
+<a name="table6596541121814"></a>
+<table><thead align="left"><tr id="row15596641121813"><th class="cellrowborder" valign="top" width="46.07%" id="mcps1.1.3.1.1"><p id="p19596154131811"><a name="p19596154131811"></a><a name="p19596154131811"></a>Key</p>
+</th>
+<th class="cellrowborder" valign="top" width="53.93%" id="mcps1.1.3.1.2"><p id="p11596174117181"><a name="p11596174117181"></a><a name="p11596174117181"></a>Value</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1359614113186"><td class="cellrowborder" valign="top" width="46.07%" headers="mcps1.1.3.1.1 "><p id="p1559664191815"><a name="p1559664191815"></a><a name="p1559664191815"></a>datastore_id</p>
+</td>
+<td class="cellrowborder" valign="top" width="53.93%" headers="mcps1.1.3.1.2 "><p id="p1959618414187"><a name="p1959618414187"></a><a name="p1959618414187"></a>数据仓库集群ID</p>
+</td>
+</tr>
+<tr id="row165971241201816"><td class="cellrowborder" valign="top" width="46.07%" headers="mcps1.1.3.1.1 "><p id="p17597134112186"><a name="p17597134112186"></a><a name="p17597134112186"></a>dws_instance_id</p>
+</td>
+<td class="cellrowborder" valign="top" width="53.93%" headers="mcps1.1.3.1.2 "><p id="p659712418183"><a name="p659712418183"></a><a name="p659712418183"></a>数据仓库节点ID</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+## 查看集群监控和节点监控信息<a name="section26007147165750"></a>
+
+1.  登录GaussDB\(DWS\) 管理控制台，进入“集群管理“页面。
+2.  **查看集群信息：**在集群列表中，在指定集群所在行，单击“查看监控指标“，打开云监控管理控制台。默认显示的是集群监控信息。
+
+    用户可以根据需要，选择指定的监控指标名称以及时间范围，从而显示监控指标的性能曲线。
+
+3.  **查看节点信息**：单击![](figures/zh-cn_image_0000001405637198.png)可回到云监控管理控制台，默认显示“数据仓库节点”页签，可以从集群节点维度查看每个节点的指标。
+
+    用户可以根据需要，选择指定的监控指标名称以及时间范围，从而显示监控指标的性能曲线。
+
+    云监控也支持多个节点间的监控指标对比，具体操作请参见[多节点间的监控指标对比](#section20548025153518)。
+
+
+## 多节点间的监控指标对比<a name="section20548025153518"></a>
+
+1.  在云监控管理控制台的左侧导航栏中，选择“总览  \>  监控面板“。
+2.  在“监控面板“页面，单击“创建监控面板“，在弹出对话框中，输入“名称“后，单击“确定“。
+3.  在“监控面板“页面，单击右上角的“添加监控视图“。
+4.  在弹出的“添加监控视图“窗口中，配置标题和监控项。
+
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >单击“添加监控项“可以添加多个监控指标。
+
+    **图 1**  添加监控视图<a name="fig259081012442"></a>  
+    ![](figures/添加监控视图.png "添加监控视图")
+
+    以对比两个节点间的CPU使用率为例，参数设置如下表所示。
+
+    **表 2**  配置样例
+
+    <a name="table531634516736"></a>
+    <table><thead align="left"><tr id="row4060451616736"><th class="cellrowborder" valign="top" width="43.169999999999995%" id="mcps1.2.3.1.1"><p id="p568376716736"><a name="p568376716736"></a><a name="p568376716736"></a>参数名</p>
+    </th>
+    <th class="cellrowborder" valign="top" width="56.830000000000005%" id="mcps1.2.3.1.2"><p id="p5773201616736"><a name="p5773201616736"></a><a name="p5773201616736"></a>样例值</p>
+    </th>
+    </tr>
+    </thead>
+    <tbody><tr id="row4982610116736"><td class="cellrowborder" valign="top" width="43.169999999999995%" headers="mcps1.2.3.1.1 "><p id="p2261359816417"><a name="p2261359816417"></a><a name="p2261359816417"></a>资源类型</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="56.830000000000005%" headers="mcps1.2.3.1.2 "><p id="p2177264216736"><a name="p2177264216736"></a><a name="p2177264216736"></a>数据仓库服务</p>
+    </td>
+    </tr>
+    <tr id="row6173605316736"><td class="cellrowborder" valign="top" width="43.169999999999995%" headers="mcps1.2.3.1.1 "><p id="p3456440016736"><a name="p3456440016736"></a><a name="p3456440016736"></a>维度</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="56.830000000000005%" headers="mcps1.2.3.1.2 "><p id="p52128907161035"><a name="p52128907161035"></a><a name="p52128907161035"></a>数据仓库节点</p>
+    </td>
+    </tr>
+    <tr id="row3162373816736"><td class="cellrowborder" valign="top" width="43.169999999999995%" headers="mcps1.2.3.1.1 "><p id="p1138595516736"><a name="p1138595516736"></a><a name="p1138595516736"></a>监控对象</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="56.830000000000005%" headers="mcps1.2.3.1.2 "><p id="p134366356159"><a name="p134366356159"></a><a name="p134366356159"></a>dws-demo-dws-cn-cn-2-1</p>
+    <p id="p11436153561513"><a name="p11436153561513"></a><a name="p11436153561513"></a>dws-demo-dws-cn-cn-1-1</p>
+    <p id="p343673591518"><a name="p343673591518"></a><a name="p343673591518"></a>dws-demo-dws-dn-1-1</p>
+    </td>
+    </tr>
+    <tr id="row4150216216921"><td class="cellrowborder" valign="top" width="43.169999999999995%" headers="mcps1.2.3.1.1 "><p id="p623199316921"><a name="p623199316921"></a><a name="p623199316921"></a>监控指标</p>
+    </td>
+    <td class="cellrowborder" valign="top" width="56.830000000000005%" headers="mcps1.2.3.1.2 "><p id="p3502938716921"><a name="p3502938716921"></a><a name="p3502938716921"></a>CPU使用率</p>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+
+5.  单击“确定“。
+
+    添加成功后，可在“监控面板“区域看到对应的监控视图。鼠标移至监控视图单击右上角的![](figures/icon_dws_monitor_detail.png)，可放大监控视图，查看详细的指标对比数据。
+
+    **图 2**  查看监控视图<a name="fig127615196143"></a>  
+    ![](figures/查看监控视图.png "查看监控视图")
+
+
+## 创建告警规则<a name="section104751927123616"></a>
+
+通过设置GaussDB\(DWS\) 的告警规则，用户可以自定义监控目标和通知策略，及时了解GaussDB\(DWS\) 运行状态，从而起到预警作用。
+
+设置GaussDB\(DWS\) 的告警规则包括设置告警规则名称、监控对象、监控指标、告警阈值、监控周期和是否发送通知等参数。本节介绍设置GaussDB\(DWS\) 规则的具体方法。
+
+1.  登录GaussDB\(DWS\) 管理控制台。
+2.  在左侧导航栏中选择“集群管理”。
+3.  在指定集群所在行的“操作”列中，单击“查看监控指标”，进入云监控管理控制台，查看数据仓库服务监控信息。
+
+    确认待查看“监控信息”的集群状态必须为“可用”，否则不能进行创建告警操作。
+
+4.  在云监控管理控制台的左侧导航树上，选择“告警 \> 告警规则“。
+5.  在“告警规则”界面，单击右上方“创建告警规则”。
+6.  在“创建告警规则”界面，根据界面提示配置参数。
+    1.  配置规则名称和描述。
+    2.  配置告警内容，根据界面提示配置参数。
+
+        **图 3**  选择监控对象<a name="fig16260912182512"></a>  
+        ![](figures/选择监控对象.png "选择监控对象")
+
+        **图 4**  设置告警策略<a name="fig136346301268"></a>  
+        ![](figures/设置告警策略.png "设置告警策略")
+
+        **表 3**  配置告警内容
+
+        <a name="table27181331123616"></a>
+        <table><thead align="left"><tr id="row1471833113618"><th class="cellrowborder" valign="top" width="16.36163616361636%" id="mcps1.2.4.1.1"><p id="p1718831173613"><a name="p1718831173613"></a><a name="p1718831173613"></a>参数名称</p>
+        </th>
+        <th class="cellrowborder" valign="top" width="50.305030503050304%" id="mcps1.2.4.1.2"><p id="p197186311367"><a name="p197186311367"></a><a name="p197186311367"></a>参数说明</p>
+        </th>
+        <th class="cellrowborder" valign="top" width="33.33333333333333%" id="mcps1.2.4.1.3"><p id="p107181731163612"><a name="p107181731163612"></a><a name="p107181731163612"></a>取值样例</p>
+        </th>
+        </tr>
+        </thead>
+        <tbody><tr id="row571873153613"><td class="cellrowborder" valign="top" width="16.36163616361636%" headers="mcps1.2.4.1.1 "><p id="p8719193111362"><a name="p8719193111362"></a><a name="p8719193111362"></a>资源类型</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="50.305030503050304%" headers="mcps1.2.4.1.2 "><p id="p471993183610"><a name="p471993183610"></a><a name="p471993183610"></a>配置告警规则监控的云服务资源名称。</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.3 "><p id="p271910312363"><a name="p271910312363"></a><a name="p271910312363"></a>数据仓库服务</p>
+        </td>
+        </tr>
+        <tr id="row67197315367"><td class="cellrowborder" valign="top" width="16.36163616361636%" headers="mcps1.2.4.1.1 "><p id="p19719103115363"><a name="p19719103115363"></a><a name="p19719103115363"></a>维度</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="50.305030503050304%" headers="mcps1.2.4.1.2 "><p id="p5719631103620"><a name="p5719631103620"></a><a name="p5719631103620"></a>用于指定告警规则对应指标的维度名称。可以选择“数据仓库节点”或“数据仓库服务”。</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.3 "><p id="p1971914318369"><a name="p1971914318369"></a><a name="p1971914318369"></a>数据仓库节点</p>
+        </td>
+        </tr>
+        <tr id="row77191311367"><td class="cellrowborder" valign="top" width="16.36163616361636%" headers="mcps1.2.4.1.1 "><p id="p1071993173616"><a name="p1071993173616"></a><a name="p1071993173616"></a>监控范围</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="50.305030503050304%" headers="mcps1.2.4.1.2 "><p id="p1073262955416"><a name="p1073262955416"></a><a name="p1073262955416"></a>告警规则适用的资源范围，选择<span class="parmvalue" id="parmvalue18732142975412"><a name="parmvalue18732142975412"></a><a name="parmvalue18732142975412"></a>“指定资源”</span>，然后勾选具体的监控对象，可以是一个或多个。对于GaussDB(DWS) 而言，选择您创建的集群实例ID或节点ID。单击<a name="image71137585216"></a><a name="image71137585216"></a><span><img id="image71137585216" src="figures/dws_icon_ces_add_resouce.png"></span>将监控对象同步到右侧对话框。</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.3 "><p id="p11719113112368"><a name="p11719113112368"></a><a name="p11719113112368"></a>指定资源</p>
+        </td>
+        </tr>
+        <tr id="row694314468559"><td class="cellrowborder" valign="top" width="16.36163616361636%" headers="mcps1.2.4.1.1 "><p id="p89430461559"><a name="p89430461559"></a><a name="p89430461559"></a>选择类型</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="50.305030503050304%" headers="mcps1.2.4.1.2 "><p id="p79441046135514"><a name="p79441046135514"></a><a name="p79441046135514"></a>根据需要可选择从模板导入或自定义创建。</p>
+        <a name="ul72371548161018"></a><a name="ul72371548161018"></a><ul id="ul72371548161018"><li>如果当前没有告警模板，<span class="parmname" id="parmname9444172471017"><a name="parmname9444172471017"></a><a name="parmname9444172471017"></a>“选择类型”</span>设置为<span class="parmvalue" id="parmvalue154441724131020"><a name="parmvalue154441724131020"></a><a name="parmvalue154441724131020"></a>“自定义创建”</span>，然后根据界面提示配置参数创建自定义告警规则。</li><li>如果当前已有告警模板，可以将<span class="parmname" id="parmname81451343398"><a name="parmname81451343398"></a><a name="parmname81451343398"></a>“选择类型”</span>设置为<span class="parmvalue" id="parmvalue2014512433915"><a name="parmvalue2014512433915"></a><a name="parmvalue2014512433915"></a>“从模板导入”</span>，从而可以使用告警模板快速创建告警规则。</li></ul>
+        </td>
+        <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.3 "><p id="p194494617557"><a name="p194494617557"></a><a name="p194494617557"></a>自定义创建</p>
+        </td>
+        </tr>
+        <tr id="row9378193220581"><td class="cellrowborder" valign="top" width="16.36163616361636%" headers="mcps1.2.4.1.1 "><p id="p2378143213582"><a name="p2378143213582"></a><a name="p2378143213582"></a>模板</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="50.305030503050304%" headers="mcps1.2.4.1.2 "><p id="p1037893219582"><a name="p1037893219582"></a><a name="p1037893219582"></a>当告警内容选择从模板导入时，该参数有效。</p>
+        <p id="p87487451387"><a name="p87487451387"></a><a name="p87487451387"></a>选择需要导入的模板。如果当前没有告警模板，可以单击<span class="uicontrol" id="uicontrol132796317125"><a name="uicontrol132796317125"></a><a name="uicontrol132796317125"></a>“创建自定义告警模板”</span>创建一个符合您需求的告警模板。</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.3 "><p id="p1037893210589"><a name="p1037893210589"></a><a name="p1037893210589"></a>-</p>
+        </td>
+        </tr>
+        <tr id="row152721236175813"><td class="cellrowborder" valign="top" width="16.36163616361636%" headers="mcps1.2.4.1.1 "><p id="p727293635810"><a name="p727293635810"></a><a name="p727293635810"></a>告警策略</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="50.305030503050304%" headers="mcps1.2.4.1.2 "><p id="p1425615951513"><a name="p1425615951513"></a><a name="p1425615951513"></a>当告警内容选择从自定义创建时，该参数有效。</p>
+        <p id="p75331472119"><a name="p75331472119"></a><a name="p75331472119"></a>设置触发告警的告警策略。例如，CPU使用率连续三个周期原始值≥80%。</p>
+        <p id="p648511161838"><a name="p648511161838"></a><a name="p648511161838"></a>数据仓库服务支持的监控指标请参见<a href="#table17857105810438">表1</a>。</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.3 "><p id="p4500135014617"><a name="p4500135014617"></a><a name="p4500135014617"></a>-</p>
+        </td>
+        </tr>
+        <tr id="row974019216566"><td class="cellrowborder" valign="top" width="16.36163616361636%" headers="mcps1.2.4.1.1 "><p id="p117411525561"><a name="p117411525561"></a><a name="p117411525561"></a>告警级别</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="50.305030503050304%" headers="mcps1.2.4.1.2 "><p id="p15259641029"><a name="p15259641029"></a><a name="p15259641029"></a>根据告警的严重程度不同等级，可选择紧急、重要、次要、提示。</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="33.33333333333333%" headers="mcps1.2.4.1.3 "><p id="p625916415220"><a name="p625916415220"></a><a name="p625916415220"></a>重要</p>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+
+    3.  配置告警通知，根据界面提示配置参数。
+
+        **图 5**  配置告警通知<a name="fig480313101182"></a>  
+        ![](figures/配置告警通知.png "配置告警通知")
+
+        **表 4**  配置告警通知
+
+        <a name="table514135314176"></a>
+        <table><thead align="left"><tr id="row1113755311716"><th class="cellrowborder" valign="top" width="14.879999999999999%" id="mcps1.2.4.1.1"><p id="p613717535170"><a name="p613717535170"></a><a name="p613717535170"></a>参数名称</p>
+        </th>
+        <th class="cellrowborder" valign="top" width="66.08000000000001%" id="mcps1.2.4.1.2"><p id="p4137145371719"><a name="p4137145371719"></a><a name="p4137145371719"></a>参数说明</p>
+        </th>
+        <th class="cellrowborder" valign="top" width="19.040000000000003%" id="mcps1.2.4.1.3"><p id="p81372538175"><a name="p81372538175"></a><a name="p81372538175"></a>取值样例</p>
+        </th>
+        </tr>
+        </thead>
+        <tbody><tr id="row213965351715"><td class="cellrowborder" valign="top" width="14.879999999999999%" headers="mcps1.2.4.1.1 "><p id="p1213925313174"><a name="p1213925313174"></a><a name="p1213925313174"></a>发送通知</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="66.08000000000001%" headers="mcps1.2.4.1.2 "><p id="p3139753201713"><a name="p3139753201713"></a><a name="p3139753201713"></a>配置是否发送邮件、短信、HTTP和HTTPS通知用户。</p>
+        <p id="p191390533176"><a name="p191390533176"></a><a name="p191390533176"></a>选择“是”（推荐选择），会发送通知；选择“否”，不会发送通知。</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="19.040000000000003%" headers="mcps1.2.4.1.3 "><p id="p8139145391710"><a name="p8139145391710"></a><a name="p8139145391710"></a>是</p>
+        </td>
+        </tr>
+        <tr id="row1314035311178"><td class="cellrowborder" valign="top" width="14.879999999999999%" headers="mcps1.2.4.1.1 "><p id="p12139155318179"><a name="p12139155318179"></a><a name="p12139155318179"></a>生效时间</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="66.08000000000001%" headers="mcps1.2.4.1.2 "><p id="p5139185331710"><a name="p5139185331710"></a><a name="p5139185331710"></a>该告警规则仅在生效时间内发送通知消息。</p>
+        <p id="p313915391712"><a name="p313915391712"></a><a name="p313915391712"></a>如生效时间为00:00-8:00，则该告警规则仅在00:00-8:00发送通知消息。</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="19.040000000000003%" headers="mcps1.2.4.1.3 "><p id="p1140125316176"><a name="p1140125316176"></a><a name="p1140125316176"></a>-</p>
+        </td>
+        </tr>
+        <tr id="row11140753141720"><td class="cellrowborder" valign="top" width="14.879999999999999%" headers="mcps1.2.4.1.1 "><p id="p6140175361714"><a name="p6140175361714"></a><a name="p6140175361714"></a>通知对象</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="66.08000000000001%" headers="mcps1.2.4.1.2 "><p id="p01401353141713"><a name="p01401353141713"></a><a name="p01401353141713"></a>需要发送告警通知的主题名称。</p>
+        <p id="p161401253161715"><a name="p161401253161715"></a><a name="p161401253161715"></a>当发送通知选择“是”时，需要选择已有的主题名称，若此处没有需要的主题则需先创建主题，该功能会调用消息通知服务（SMN），创建主题请参见《消息通知服务用户指南》。</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="19.040000000000003%" headers="mcps1.2.4.1.3 "><p id="p5140135321720"><a name="p5140135321720"></a><a name="p5140135321720"></a>-</p>
+        </td>
+        </tr>
+        <tr id="row1814017539172"><td class="cellrowborder" valign="top" width="14.879999999999999%" headers="mcps1.2.4.1.1 "><p id="p16140053101717"><a name="p16140053101717"></a><a name="p16140053101717"></a>触发条件</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="66.08000000000001%" headers="mcps1.2.4.1.2 "><p id="p1814045310172"><a name="p1814045310172"></a><a name="p1814045310172"></a>可以选择“出现告警”、“恢复正常”两种状态，作为触发告警通知的条件。</p>
+        </td>
+        <td class="cellrowborder" valign="top" width="19.040000000000003%" headers="mcps1.2.4.1.3 "><p id="p1714055311176"><a name="p1714055311176"></a><a name="p1714055311176"></a>-</p>
+        </td>
+        </tr>
+        </tbody>
+        </table>
+
+    4.  配置完成后，单击“立即创建“，完成告警规则的创建。
+
+        告警规则添加完成后，当监控指标触发设定的阈值时，云监控会在第一时间通过消息通知服务实时告知您资源异常，以免因此造成业务损失。
+
+
+
+## 配置OBS转储<a name="section61821139193716"></a>
+
+云监控各监控指标的原始数据的保留周期为两天，超过保留周期后原始数据将不再保存。用户可以开通对象存储服务，然后将原始数据同步保存至OBS，以保存更长时间。
+
+关于如何配置OBS转储，具体请参见《云监控服务用户指南》中的[配置OBS数据存储](https://support.huaweicloud.com/usermanual-ces/ces_01_0065.html)章节。
+
+## 相关链接<a name="section1151123119154"></a>
+
+-   [资源负载管理](https://support.huaweicloud.com/devg-dws/dws_04_0921.html)
+-   [资源监控](https://support.huaweicloud.com/devg-dws/dws_04_0663.html)
+
