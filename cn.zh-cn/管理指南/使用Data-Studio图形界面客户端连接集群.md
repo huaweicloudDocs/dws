@@ -1,4 +1,4 @@
-# 使用Data Studio图形界面客户端连接集群<a name="ZH-CN_TOPIC_0000001099136642"></a>
+# 使用Data Studio图形界面客户端连接集群<a name="ZH-CN_TOPIC_0000001405317050"></a>
 
 Data Studio是一款运行在Windows操作系统上的SQL客户端工具，有着丰富的GUI界面，能够管理数据库和数据库对象，编辑、运行、调试SQL脚本，查看执行计划等。在GaussDB\(DWS\) 管理控制台下载Data Studio软件包，解压后免安装即可使用。
 
@@ -6,7 +6,6 @@ DataStudio可供下载的版本分为“Windows x86“和“Windows x64“两种
 
 ## 连接集群前的准备<a name="section83156195500"></a>
 
--   GaussDB\(DWS\) 集群已绑定弹性IP。
 -   已获取GaussDB\(DWS\) 集群的数据库管理员用户名和密码。
 -   已获取GaussDB\(DWS\) 集群的公网访问地址，含IP地址和端口。具体请参见[获取集群连接地址](获取集群连接地址.md)。
 -   已配置GaussDB\(DWS\) 集群所属的安全组，添加入规则允许用户的IP地址使用TCP访问端口。
@@ -19,7 +18,7 @@ DataStudio可供下载的版本分为“Windows x86“和“Windows x64“两种
 1.  GaussDB\(DWS\) 提供了基于Windows平台的Data Studio图形界面客户端，该工具依赖JDK，请先在客户端主机上安装JDK。
 
     >![](public_sys-resources/icon-notice.gif) **须知：** 
-    >仅支持Java 1.8.0\_141或以上版本的JDK。
+    >仅支持Java 1.8版本的JDK。
 
     在Windows操作系统中，您可以访问[JDK官网](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)网站，下载符合操作系统版本的JDK，并根据指导进行安装。
 
@@ -36,7 +35,7 @@ DataStudio可供下载的版本分为“Windows x86“和“Windows x64“两种
     **图 1**  下载客户端<a name="f61631d3c53004c5a82cea77f41476136"></a>  
     ![](figures/下载客户端.png "下载客户端")
 
-    如果同时拥有不同版本的集群，系统会弹出对话框，提示您选择“集群版本“然后下载与集群版本相对应的客户端。在“集群管理“页面的集群列表中，单击指定集群的名称，再选择“基本信息“页签，可查看集群版本。
+    如果同时拥有不同版本的集群，系统会弹出对话框，提示您选择“集群版本“然后下载与集群版本相对应的客户端。在“集群管理“页面的集群列表中，单击指定集群的名称，再选择“集群详情“页签，可查看集群版本。
 
 5.  解压下载的客户端软件包（32位或64位）到需要安装的路径。
 6.  打开安装目录，双击Data Studio.exe，启动Data Studio客户端，如[图2](#febe974d888e24ddd8948572b362f7ef2)所示。
@@ -52,13 +51,7 @@ DataStudio可供下载的版本分为“Windows x86“和“Windows x64“两种
     **图 3**  新建连接<a name="f5e30eb5f20c9434e971d8b2786b02dbf"></a>  
     ![](figures/新建连接.png "新建连接")
 
-    **图 4**  新建连接<a name="fc80fe1f82b464c5aa5c4ae569c9c1be9"></a>  
-    ![](figures/新建连接-0.png "新建连接-0")
-
 8.  在弹出的“新建/选择数据库连接“页面中，如下图所示，输入连接参数。
-
-    **图 5**  配置连接参数<a name="f7120a03e20a34b16b1eae0e75443bfd0"></a>  
-    ![](figures/配置连接参数.png "配置连接参数")
 
     **表 1**  配置连接参数
 
@@ -85,7 +78,7 @@ DataStudio可供下载的版本分为“Windows x86“和“Windows x64“两种
     <td class="cellrowborder" valign="top" width="22.182218221822183%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0107187019_p11813172392"><a name="zh-cn_topic_0107187019_p11813172392"></a><a name="zh-cn_topic_0107187019_p11813172392"></a>dws-demo</p>
     </td>
     </tr>
-    <tr id="rb5e8545bc43e4b8a9a021ba41aeefe11"><td class="cellrowborder" valign="top" width="19.01190119011901%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0107187019_p12812176393"><a name="zh-cn_topic_0107187019_p12812176393"></a><a name="zh-cn_topic_0107187019_p12812176393"></a>主机名</p>
+    <tr id="rb5e8545bc43e4b8a9a021ba41aeefe11"><td class="cellrowborder" valign="top" width="19.01190119011901%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0107187019_p12812176393"><a name="zh-cn_topic_0107187019_p12812176393"></a><a name="zh-cn_topic_0107187019_p12812176393"></a>主机</p>
     </td>
     <td class="cellrowborder" valign="top" width="58.8058805880588%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0107187019_p38191720395"><a name="zh-cn_topic_0107187019_p38191720395"></a><a name="zh-cn_topic_0107187019_p38191720395"></a>所要连接的集群IP地址（IPv4）或域名。</p>
     </td>
@@ -138,7 +131,7 @@ DataStudio可供下载的版本分为“Windows x86“和“Windows x64“两种
     </tbody>
     </table>
 
-    当“启用SSL”设置为开启时，请先参见[下载SSL证书](https://support.huaweicloud.com/mgtg-dws/dws_01_0083.html)下载SSL证书，并解压证书文件。然后，在如所示的窗口[图5](#f7120a03e20a34b16b1eae0e75443bfd0)中单击“SSL“页签，设置如下参数：
+    当“启用SSL”设置为开启时，请先参见[下载SSL证书](https://support.huaweicloud.com/mgtg-dws/dws_01_0038.html)下载SSL证书，并解压证书文件。然后单击“SSL“页签，设置如下参数：
 
     **表 2**  配置SSL参数
 
@@ -179,7 +172,7 @@ DataStudio可供下载的版本分为“Windows x86“和“Windows x64“两种
     </tbody>
     </table>
 
-    **图 6**  配置SSL参数<a name="f5782e5489c5843a0be779dfbfbcd3a42"></a>  
+    **图 4**  配置SSL参数<a name="f5782e5489c5843a0be779dfbfbcd3a42"></a>  
     ![](figures/配置SSL参数.png "配置SSL参数")
 
 9.  单击“确定“建立数据库连接。
@@ -188,9 +181,12 @@ DataStudio可供下载的版本分为“Windows x86“和“Windows x64“两种
 
     登录成功后，将弹出“最近登录活动“提示框，表示Data Studio已经连接到数据库。用户即可在Data Studio界面的“SQL终端“窗口中执行SQL语句。
 
-    **图 7**  登录成功<a name="fba153892b20741e79591551a71842471"></a>  
+    **图 5**  登录成功<a name="fba153892b20741e79591551a71842471"></a>  
     ![](figures/登录成功.png "登录成功")
 
     欲详细了解Data Studio其他功能的使用方法，请按“F1“查看Data Studio用户手册。
+
+    >![](public_sys-resources/icon-note.gif) **说明：** 
+    >Data Studio中执行增删改查操作后不支持回滚数据。
 
 

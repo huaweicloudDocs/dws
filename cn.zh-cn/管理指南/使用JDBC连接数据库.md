@@ -1,6 +1,6 @@
-# 使用JDBC连接数据库<a name="ZH-CN_TOPIC_0000001145496745"></a>
+# 使用JDBC连接数据库<a name="ZH-CN_TOPIC_0000001405476774"></a>
 
-GaussDB\(DWS\) 支持在Linux或Windows环境下使用JDBC应用程序连接数据库。应用程序可以在公有云平台环境的弹性云服务器中，或者互联网环境连接数据库。
+GaussDB\(DWS\) 支持在Linux或Windows环境下使用JDBC应用程序连接数据库。应用程序可以在华为云平台环境的弹性云服务器中，或者互联网环境连接数据库。
 
 用户通过JDBC连接GaussDB\(DWS\) 集群时，可以选择是否采用SSL认证方式。SSL认证用于加密客户端和服务器之间的通讯数据，为敏感数据在Internet上的传输提供了一种安全保障手段。GaussDB\(DWS\) 管理控制台提供了自签的证书供用户下载。使用该证书，用户需要配置客户端程序，使证书可用，此过程依赖于openssl工具以及java自带的keytool工具。
 
@@ -16,30 +16,30 @@ JDBC接口的使用方法，请自行查阅官方文档。
 
     GaussDB\(DWS\) 也支持开源的JDBC驱动程序：PostgreSQL JDBC驱动程序9.3-1103或更高版本。
 
--   已下载SSL证书文件，请参见[（可选）下载SSL证书](（可选）下载SSL证书.md)。
+-   已下载SSL证书文件，请参见[下载SSL证书](使用SSL进行安全的TCP-IP连接.md#li13478842115911)。
 
 ## 使用JDBC连接数据库<a name="section2993721114437"></a>
 
 在Linux和Windows环境下操作方法相同，以下步骤以Windows环境为例。
 
 1.  是否采用SSL方式连接GaussDB\(DWS\) 集群。
-    -   是，参见[（可选）设置SSL连接](（可选）设置SSL连接.md)开启SSL连接，默认为开启。执行[2](#li55435426144245)。
-    -   否，参见[（可选）设置SSL连接](（可选）设置SSL连接.md)关闭SSL连接，执行[4](#li19649431459)。
+    -   是，参见[设置SSL连接](使用SSL进行安全的TCP-IP连接.md#section131774823014)开启SSL连接，默认为开启。执行[2](#li55435426144245)。
+    -   否，参见[设置SSL连接](使用SSL进行安全的TCP-IP连接.md#section131774823014)关闭SSL连接，执行[4](#li19193115114292)。
 
 2.  <a name="li55435426144245"></a>（可选）如果使用Linux环境，使用WinScp工具将SSL证书上传到Linux环境上。
 3.  配置证书以使用SSL加密连接。
-    1.  下载windows版本的OpenSSL工具。下载地址：[http://slproweb.com/products/Win32OpenSSL.html](http://slproweb.com/products/Win32OpenSSL.html)，当前不支持OpenSSL 3.0.0，请选择下载“Win64 OpenSSL v1.1.1L Light”版本。
-    2.  双击安装包“Win64OpenSSL\_Light-1\_1\_1L.exe”安装到C盘默认路径即可，选择复制 DLLs文件到OpenSSL目录下，如下图，剩余步骤默认单击下一步直到安装成功。
+    1.  下载windows版本的OpenSSL工具。下载地址：[https://slproweb.com/products/Win32OpenSSL.html](https://slproweb.com/products/Win32OpenSSL.html)，当前不支持OpenSSL 3.0.0，请选择下载“Win64 OpenSSL v1.1.1L Light”版本。
+    2.  双击安装包“Win64OpenSSL\_Light-1\_1\_1L.exe”安装到C盘默认路径即可，选择复制DLLs文件到OpenSSL目录下，如下图，剩余步骤默认单击下一步直到安装成功。
 
-        ![](figures/zh-cn_image_0000001204309867.png)
+        ![](figures/zh-cn_image_0000001405477006.png)
 
     3.  安装环境变量。单击本地PC左下角“开始”，右击“此电脑”，选择“更多 \> 属性 \> 高级系统设置”，切换到“高级”，单击“环境变量”。
 
-        ![](figures/zh-cn_image_0000001158832338.png)
+        ![](figures/zh-cn_image_0000001405317170.png)
 
     4.  在下方“系统变量”，双击“Path”变量，单击“新建”，在最后一行增加Openssl的bin路径，例如“C:\\Program Files\\OpenSSL-Win64\\bin”，单击“确定”，再次单击“确定”，配置变量成功。
 
-        ![](figures/zh-cn_image_0000001158992202.png)
+        ![](figures/zh-cn_image_0000001405636982.png)
 
     5.  解压压缩包得到证书文件。假设解压路径为“C:\\”。
 
@@ -56,9 +56,9 @@ JDBC接口的使用方法，请自行查阅官方文档。
         -   “cacert.crt.der“为生成的中间文件。根据实际情况，可以填写保存到其他路径，也可以自定义文件名称。
         -   “mytruststore“为生成的可信库名称，“cacert“为别名用户，二者可以根据需要进行修改。
 
-        请用户根据提示信息输入自定义的**可信库密码**并确认密码，然后输入“y“确认信任证书。
+        请用户根据提示信息输入自定义的可信库密码并确认密码，然后输入“y“确认信任证书。
 
-        ![](figures/zh-cn_image_0000001158993558.png)
+        ![](figures/zh-cn_image_0000001455917165.png)
 
     7.  执行以下命令转化客户端私钥。
 
@@ -71,17 +71,17 @@ JDBC接口的使用方法，请自行查阅官方文档。
     8.  执行以下命令，将私钥导入到keyStore中。
 
         ```
-        keytool -importkeystore -deststorepass Gauss@MppDB -destkeystore client.jks -srckeystore client.pkcs12 -srcstorepass key123 -srcstoretype PKCS12 -alias 1
+        keytool -importkeystore -deststorepass Gauss@MppDB -destkeystore client.jks -srckeystore client.pkcs12 -srcstorepass password -srcstoretype PKCS12 -alias 1
         ```
 
         >![](public_sys-resources/icon-note.gif) **说明：** 
-        >命令中“key123”为示例自定义密码，具体请根据用户实际输入密码为准。
-        >回显如下类似信息且没有报错，则表示导入成功。此时“C:\\dws\_ssl\_cert\\sslcert”下会生成目标密钥文件：client.jks。
-        >![](figures/zh-cn_image_0000001204075211.png)
-        >![](figures/zh-cn_image_0000001159154150.png)
+        >-   命令中“_password_”为示例自定义密码，具体请根据用户实际输入密码为准。
+        >-   回显如下类似信息且没有报错，则表示导入成功。此时“C:\\dws\_ssl\_cert\\sslcert”下会生成目标密钥文件：client.jks。
+        >    ![](figures/zh-cn_image_0000001455716813.png)
+        >    ![](figures/zh-cn_image_0000001455556973.png)
 
 
-4.  <a name="li19649431459"></a>解压已下载的JDBC驱动得到“gsjdbc4.jar“。
+4.  <a name="li19193115114292"></a>下载包名为dws\_8.1.x\_jdbc\_driver.zip的驱动包，解压后有两个JDBC的驱动jar包“gsjdbc4.jar”和“gsjdbc200.jar”，用户可根据需求选择。
 5.  在应用程序的工程中，设置引用Jar包。
 
     以Eclipse工程为例，先将jar包存放在工程目录下，例如将jar包放在工程目录的lib目录下，然后在Eclipse工程中，右键单击lib目录下的该jar包，再选择菜单“Build Path”，即可引用此jar包。
@@ -105,10 +105,10 @@ JDBC接口的使用方法，请自行查阅官方文档。
 
         ```
         <dependency>
-            <groupId>com.huawei.m2m.gauss</groupId>
-            <artifactId>gsjdbc200</artifactId>
-            <version>8.0.0</version>
-        </dependency> 
+            <groupId>com.huaweicloud.dws</groupId>
+            <artifactId>huaweicloud-dws-jdbc</artifactId>
+            <version>8.1.1.1-200</version>
+        </dependency>  
         ```
 
 6.  加载驱动。
@@ -118,11 +118,12 @@ JDBC接口的使用方法，请自行查阅官方文档。
     -   在代码中隐含装载：Class.forName\("org.postgresql.Driver"\);
     -   在JVM启动时参数传递：java -Djdbc.drivers=org.postgresql.Driver jdbctest
 
-    >![](public_sys-resources/icon-note.gif) **说明：** 
-    >GaussDB\(DWS\) 下载的JDBC驱动包中，同时提供gsjdbc4.jar和gsjdbc200.jar。
-    >-   gsjdbc4.jar：与PostgreSQL保持兼容，其中类名、类结构与PostgreSQL驱动完全一致，曾经运行于PostgreSQL的应用程序可以直接移植到当前系统中使用。
-    >-   gsjdbc200.jar：如果同一JVM进程内需要同时访问PostgreSQL及GaussDB\(DWS\) 请使用该驱动包。该包主类名为“com.huawei.gauss200.jdbc.Driver”（即将“org.postgresql”替换为“com.huawei.gauss200.jdbc”） ,数据库连接的URL前缀为“jdbc:gaussdb”，其余与gsjdbc4.jar相同。
-    >-   从Maven仓库中下载的GaussDB\(DWS\) 驱动包和gsjdbc4相同。
+        >![](public_sys-resources/icon-note.gif) **说明：** 
+        >GaussDB\(DWS\) 下载的JDBC驱动包中，同时提供gsjdbc4.jar和gsjdbc200.jar。
+        >-   gsjdbc4.jar：与PostgreSQL保持兼容，其中类名、类结构与PostgreSQL驱动完全一致，曾经运行于PostgreSQL的应用程序可以直接移植到当前系统中使用。
+        >-   gsjdbc200.jar：如果同一JVM进程内需要同时访问PostgreSQL及GaussDB\(DWS\) 请使用该驱动包。该包主类名为“com.huawei.gauss200.jdbc.Driver”（即将“org.postgresql”替换为“com.huawei.gauss200.jdbc”） ,数据库连接的URL前缀为“jdbc:gaussdb”，其余与gsjdbc4.jar相同。
+        >-   从Maven仓库中下载的GaussDB\(DWS\) 驱动包和gsjdbc4相同。
+
 
 7.  调用JDBC的数据库连接方法DriverManager.getConnection\(\)连接GaussDB\(DWS\) 数据库。
 
@@ -145,15 +146,13 @@ JDBC接口的使用方法，请自行查阅官方文档。
     </thead>
     <tbody><tr id="zh-cn_topic_0004406724_row42455976"><td class="cellrowborder" valign="top" width="13.44%" headers="mcps1.2.3.1.1 "><p id="zh-cn_topic_0004406724_p57939919"><a name="zh-cn_topic_0004406724_p57939919"></a><a name="zh-cn_topic_0004406724_p57939919"></a>url</p>
     </td>
-    <td class="cellrowborder" valign="top" width="86.56%" headers="mcps1.2.3.1.2 "><p id="p61624548134633"><a name="p61624548134633"></a><a name="p61624548134633"></a>数据库连接描述符，可以在管理控制台查看，具体步骤请参见<a href="获取集群连接地址.md">获取集群连接地址</a>。</p>
-    <p id="zh-cn_topic_0004406724_p59332072"><a name="zh-cn_topic_0004406724_p59332072"></a><a name="zh-cn_topic_0004406724_p59332072"></a>url的格式如下：</p>
+    <td class="cellrowborder" valign="top" width="86.56%" headers="mcps1.2.3.1.2 "><p id="p20249474372"><a name="p20249474372"></a><a name="p20249474372"></a>数据库连接描述符，可以在管理控制台查看，具体步骤请参见<a href="获取集群连接地址.md">获取集群连接地址</a>。</p>
+    <p id="p524947173710"><a name="p524947173710"></a><a name="p524947173710"></a>url的格式如下：</p>
     <a name="ude90174d20344cc1aa2bffac0ce922db"></a><a name="ude90174d20344cc1aa2bffac0ce922db"></a><ul id="ude90174d20344cc1aa2bffac0ce922db"><li>jdbc:postgresql:database</li><li>jdbc:postgresql://host/database</li><li>jdbc:postgresql://host:port/database</li><li>jdbc:postgresql://host:port[,host:port][...]/database</li></ul>
-    <div class="note" id="zh-cn_topic_0004406724_note1343464"><a name="zh-cn_topic_0004406724_note1343464"></a><a name="zh-cn_topic_0004406724_note1343464"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul32509781145934"></a><a name="ul32509781145934"></a><ul id="ul32509781145934"><li>database为要连接的数据库名称。</li><li>host为数据库服务器名称。</li><li>port为数据库服务器端口。缺省情况下，会尝试连接到localhost的8000端口的database。</li><li>使用gsjdbc200.jar时，将“jdbc:postgresql”修改为“jdbc:gaussdb”<a name="ue24edf2cc0a9448495fbf4a286ba0e10"></a><a name="ue24edf2cc0a9448495fbf4a286ba0e10"></a><ul id="ue24edf2cc0a9448495fbf4a286ba0e10"><li>database为要连接的数据库名称。</li><li>host为数据库服务器名称或IP地址。<p id="zh-cn_topic_0059779354_p461072082618"><a name="zh-cn_topic_0059779354_p461072082618"></a><a name="zh-cn_topic_0059779354_p461072082618"></a><span id="text13769170184720"><a name="text13769170184720"></a><a name="text13769170184720"></a>GaussDB(DWS)</span>管理控制台上集群的连接IP，根据网络环境判断，如果连接<span id="text6504155284713"><a name="text6504155284713"></a><a name="text6504155284713"></a>GaussDB(DWS)</span>的机器跟<span id="text19939356184718"><a name="text19939356184718"></a><a name="text19939356184718"></a>GaussDB(DWS)</span>集群在同一个网络下，则选择内网IP，不在同一个网络下，则选择公网IP。</p>
-    <p id="p1441610315219"><a name="p1441610315219"></a><a name="p1441610315219"></a>由于安全原因，数据库CN禁止集群内部其他节点无认证接入。如果要在集群内部访问CN，请将JDBC程序部署在CN所在机器，host使用"127.0.0.1"。否则可能会出现“FATAL: Forbid remote connection with trust method!”错误。</p>
-    <p id="p572510297236"><a name="p572510297236"></a><a name="p572510297236"></a>建议业务系统单独部署在集群外部，否则可能会影响数据库运行性能。</p>
-    </li><li>port为数据库服务器端口。</li><li>支持多ip端口配置形式，以","隔开，例如jdbc:postgresql://10.10.0.13:8000,10.10.0.14:8000/database</li></ul>
-    <p id="p15007591336"><a name="p15007591336"></a><a name="p15007591336"></a>缺省情况下，会尝试连接到localhost的8000端口的database。</p>
+    <div class="note" id="note11251117103713"><a name="note11251117103713"></a><a name="note11251117103713"></a><span class="notetitle"> 说明： </span><div class="notebody"><a name="ul14251376376"></a><a name="ul14251376376"></a><ul id="ul14251376376"><li>使用gsjdbc200.jar时，将“jdbc:postgresql”修改为“jdbc:gaussdb”<a name="ue24edf2cc0a9448495fbf4a286ba0e10"></a><a name="ue24edf2cc0a9448495fbf4a286ba0e10"></a><ul id="ue24edf2cc0a9448495fbf4a286ba0e10"><li>database为要连接的数据库名称。</li><li>host为数据库服务器名称或IP地址。<p id="zh-cn_topic_0059779354_p461072082618"><a name="zh-cn_topic_0059779354_p461072082618"></a><a name="zh-cn_topic_0059779354_p461072082618"></a><span id="text13769170184720"><a name="text13769170184720"></a><a name="text13769170184720"></a>GaussDB(DWS)</span>管理控制台上集群的连接IP，根据网络环境判断，如果连接<span id="text6504155284713"><a name="text6504155284713"></a><a name="text6504155284713"></a>GaussDB(DWS)</span>的机器跟<span id="text19939356184718"><a name="text19939356184718"></a><a name="text19939356184718"></a>GaussDB(DWS)</span>集群在同一个网络下，则选择内网IP，不在同一个网络下，则选择公网IP。</p>
+    </li><li>port为数据库服务器端口。缺省情况下，会尝试连接到localhost的8000端口的database。</li><li>支持多ip端口配置形式，jdbc自动实现了负载均衡，多ip端口配置形式是采取随机访问+failover的方式，这个过程系统会自动忽略不可达IP。<p id="p168955922812"><a name="p168955922812"></a><a name="p168955922812"></a>以","隔开，例如jdbc:postgresql://10.10.0.13:8000,10.10.0.14:8000/database</p>
     </li></ul>
+    </li><li>使用JDBC连接集群时集群链接地址只支持指定jdbc连接参数，不支持增加变量参数。</li></ul>
     </div></div>
     </td>
     </tr>
@@ -284,10 +283,10 @@ import java.sql.CallableStatement;
 import java.sql.Types;
 
 public class DBTest {
-  //创建数据库连接。
+  //创建数据库连接，以下IP地址和database替换为对应的数据库连接地址和数据库名称。
   public static Connection GetConnection(String username, String passwd) {
     String driver = "org.postgresql.Driver";
-    String sourceURL = "jdbc:postgresql://10.10.0.13:8000/gaussdb";
+    String sourceURL = "jdbc:postgresql://10.10.0.13:8000/database";
     Connection conn = null;
     try {
       //加载数据库驱动。
@@ -414,8 +413,8 @@ public class DBTest {
    * @param args
   */
   public static void main(String[] args) {
-    //创建数据库连接。
-    Connection conn = GetConnection("tester", "Password1234");
+    //创建数据库连接，以下User、Password替换为实际连接的数据库用户和密码。
+    Connection conn = GetConnection("User", "Password");
 
     //创建表。
     CreateTable(conn);

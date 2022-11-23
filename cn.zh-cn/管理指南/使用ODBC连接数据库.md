@@ -1,6 +1,6 @@
-# 使用ODBC连接数据库<a name="ZH-CN_TOPIC_0000001145816587"></a>
+# 使用ODBC连接数据库<a name="ZH-CN_TOPIC_0000001405317098"></a>
 
-GaussDB\(DWS\) 支持使用ODBC应用程序连接数据库。应用程序可以在公有云平台环境的弹性云服务器中，或者互联网环境连接数据库。
+GaussDB\(DWS\) 支持使用ODBC应用程序连接数据库。应用程序可以在华为云平台环境的弹性云服务器中，或者互联网环境连接数据库。
 
 ODBC接口的使用方法，请自行查阅官方文档。
 
@@ -11,7 +11,7 @@ ODBC接口的使用方法，请自行查阅官方文档。
     GaussDB\(DWS\) 也支持开源的ODBC驱动程序：PostgreSQL ODBC 09.01.0200或更高版本。
 
 -   已下载开源unixODBC代码文件，支持版本为2.3.0，下载地址：[https://sourceforge.net/projects/unixodbc/files/unixODBC/2.3.0/unixODBC-2.3.0.tar.gz/download](https://sourceforge.net/projects/unixodbc/files/unixODBC/2.3.0/unixODBC-2.3.0.tar.gz/download)
--   已下载SSL证书文件，请参见[（可选）下载SSL证书](（可选）下载SSL证书.md)。
+-   已下载SSL证书文件，请参见[下载SSL证书](使用SSL进行安全的TCP-IP连接.md#li13478842115911)。
 
 ## 在Linux环境使用ODBC连接<a name="section42307202184151"></a>
 
@@ -87,7 +87,7 @@ ODBC接口的使用方法，请自行查阅官方文档。
     Servername=10.10.0.13
     Database=gaussdb
     Username=dbadmin
-    Password=Abcd@123
+    Password=password
     Port=8000
     Sslmode=allow
     ```
@@ -140,7 +140,7 @@ ODBC接口的使用方法，请自行查阅官方文档。
     </td>
     <td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.4.1.2 "><p id="p40674054191057"><a name="p40674054191057"></a><a name="p40674054191057"></a>数据库用户密码。</p>
     </td>
-    <td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.4.1.3 "><p id="p6264077191057"><a name="p6264077191057"></a><a name="p6264077191057"></a>Password=Abcd@123</p>
+    <td class="cellrowborder" valign="top" width="40%" headers="mcps1.1.4.1.3 "><p id="p6264077191057"><a name="p6264077191057"></a><a name="p6264077191057"></a>Password=<em id="i2810155813383"><a name="i2810155813383"></a><a name="i2810155813383"></a>password</em></p>
     </td>
     </tr>
     <tr id="row56376696191057"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.1.4.1.1 "><p id="p3109667191057"><a name="p3109667191057"></a><a name="p3109667191057"></a>Port</p>
@@ -335,7 +335,7 @@ ODBC接口的使用方法，请自行查阅官方文档。
               printf("SQLGetData ----ID = %d\n",V_OD_id);
               V_OD_erg=SQLFetch(V_OD_hstmt);
           };
-          printf("Done !\n");pgadmin
+          printf("Done !\n");
           // 16. 断开数据源连接并释放句柄资源
           SQLFreeHandle(SQL_HANDLE_STMT,V_OD_hstmt);    
           SQLDisconnect(V_OD_hdbc);         
